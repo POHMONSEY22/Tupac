@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sitio web dedicado a la vida y legado de Tupac Shakur (2Pac)">
+  <title>2Pac - Leyenda del Hip-Hop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Teko:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="logo.css">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Cursor personalizado -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <header class="transparent-header">
+    <nav class="menu">
+      <div class="logo-box">
+        <a href="index.html">
+          <img src="img/logo.png" alt="2Pac Logo" class="logo">
+        </a>
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">INICIO</a></li>
+        <li><a href="biografia.html">QUIÉN ES 2PAC</a></li>
+        <li><a href="discografia.html">DISCOGRAFÍA</a></li>
+        <li><a href="legado.html">LEGADO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section con video de fondo -->
+    <section id="hero" class="hero-v2">
+      <div class="video-container">
+        <video id="bg-video" autoplay muted loop poster="img/img.jpg">
+          <source src="video/2pac-hero.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+      </div>
+      <div class="hero-social">
+        <a href="https://open.spotify.com/artist/1ZwdS5xdxEREPySFridCfh" class="hero-social-link" target="_blank"
+          aria-label="Spotify">
+          <i class="fab fa-spotify"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCP6Y5xLQ9NSXgC1P1l6KgQw" class="hero-social-link" target="_blank"
+          aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/2pac" class="hero-social-link" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title-v2" data-text="2PAC">2PAC</h1>
+        <div class="hero-subtitle">La Leyenda de <span class="hero-subtitle-highlight">Tupac Shakur</span></div>
+        <div class="hero-quote">"Reality is wrong. Dreams are for real."</div>
+
+        <!-- Botones de navegación -->
+        <div class="hero-nav-buttons">
+          <a href="biografia.html" class="hero-nav-button">
+            <i class="fas fa-user-alt btn-icon"></i>Biografía
+          </a>
+          <a href="discografia.html" class="hero-nav-button">
+            <i class="fas fa-compact-disc btn-icon"></i>Discografía
+          </a>
+          <a href="legado.html" class="hero-nav-button">
+            <i class="fas fa-star btn-icon"></i>Legado
+          </a>
+        </div>
+
+        <div class="hero-scroll-indicator">
+          <div class="scroll-text">Descubre su historia</div>
+          <div class="scroll-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+      </div>
+
+      <div class="hero-years">
+        <div class="year">1971</div>
+        <div class="separator"></div>
+        <div class="year">1996</div>
+      </div>
+    </section>
+
+    <!-- Sección de introducción -->
+    <section class="intro-section">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-image">
+            <img src="img/img1.jpg" alt="2Pac" loading="lazy">
+            <div class="image-overlay"></div>
+          </div>
+          <div class="intro-content">
+            <h2 class="section-title">La Voz de una Generación</h2>
+            <p>Tupac Amaru Shakur, conocido mundialmente como 2Pac, fue mucho más que un rapero: fue un poeta,
+              activista, actor y un símbolo de resistencia que cambió para siempre el panorama del hip-hop y la cultura
+              popular.</p>
+            <p>Con su lírica profunda y su carisma inigualable, 2Pac abordó temas como la desigualdad racial, la
+              pobreza, la violencia y las luchas de la comunidad afroamericana, convirtiéndose en la voz de aquellos que
+              no tenían voz.</p>
+            <div class="stats-container">
+              <div class="stat-item">
+                <div class="stat-number">75M+</div>
+                <div class="stat-label">Discos vendidos</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">11</div>
+                <div class="stat-label">Álbumes #1</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Premios Grammy</div>
+              </div>
+            </div>
+            <a href="biografia.html" class="btn-primary">Conocer más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de frases célebres -->
+    <section class="frases-inmersivas">
+      <div class="container">
+        <h2 class="section-title-v2">Frases Inmortales</h2>
+        <div class="frases-carousel">
+          <div class="frase-slide active">
+            <div class="frase-content">
+              <div class="frase-quote">"Death is not the greatest loss in life. The greatest loss is what dies inside
+                while still alive."</div>
+              <div class="frase-source">2Pac</div>
+            </div>
+          </div>
+          <div class="frase-slide">
+            <div class="frase-content">
+              <div class="frase-quote">"I'm not saying I'm gonna change the world, but I guarantee that I will spark the
+                brain that will change the world."</div>
+              <div class="frase-source">2Pac</div>
+            </div>
+          </div>
+          <div class="frase-slide">
+            <div class="frase-content">
+              <div class="frase-quote">"The only thing that comes to a sleeping man is dreams."</div>
+              <div class="frase-source">2Pac</div>
+            </div>
+          </div>
+        </div>
+        <div class="frases-navigation">
+          <div class="frases-dots">
+            <span class="frase-dot active" data-index="0"></span>
+            <span class="frase-dot" data-index="1"></span>
+            <span class="frase-dot" data-index="2"></span>
+          </div>
+          <div class="frases-arrows">
+            <button class="frase-arrow prev" aria-label="Frase anterior"><i class="fas fa-arrow-left"></i></button>
+            <button class="frase-arrow next" aria-label="Frase siguiente"><i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de álbumes destacados -->
+    <section class="albums-destacados">
+      <div class="container">
+        <h2 class="section-title-v2">Discografía Esencial</h2>
+        <div class="albums-grid">
+          <div class="album-card">
+            <div class="album-cover">
+              <img src="img/all-eyez-on-me.jpg" alt="All Eyez On Me" loading="lazy">
+              <div class="album-overlay">
+                <a href="https://open.spotify.com/album/1Mhn9VosyjtWn4dMSWJzRl" class="album-play" target="_blank">
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">All Eyez On Me</h3>
+              <p class="album-year">1996</p>
+              <div class="album-tracks">
+                <div class="track-item">
+                  <span class="track-name">California Love</span>
+                  <span class="track-duration">4:45</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">2 of Amerikaz Most Wanted</span>
+                  <span class="track-duration">4:07</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Ambitionz Az a Ridah</span>
+                  <span class="track-duration">4:39</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="album-card">
+            <div class="album-cover">
+              <img src="img/me-against-the-world.jpg" alt="Me Against The World" loading="lazy">
+              <div class="album-overlay">
+                <a href="https://open.spotify.com/album/6lXOk6IKl8zPPGFIQpDLbZ" class="album-play" target="_blank">
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">Me Against The World</h3>
+              <p class="album-year">1995</p>
+              <div class="album-tracks">
+                <div class="track-item">
+                  <span class="track-name">Dear Mama</span>
+                  <span class="track-duration">4:40</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">So Many Tears</span>
+                  <span class="track-duration">3:59</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Temptations</span>
+                  <span class="track-duration">5:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="album-card">
+            <div class="album-cover">
+              <img src="img/makaveli.jpg" alt="The Don Killuminati" loading="lazy">
+              <div class="album-overlay">
+                <a href="https://open.spotify.com/album/7aGzSSUD8S6IhPPWC3WFV3" class="album-play" target="_blank">
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">The Don Killuminati</h3>
+              <p class="album-year">1996</p>
+              <div class="album-tracks">
+                <div class="track-item">
+                  <span class="track-name">Hail Mary</span>
+                  <span class="track-duration">5:12</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">To Live & Die in L.A.</span>
+                  <span class="track-duration">4:33</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Against All Odds</span>
+                  <span class="track-duration">4:38</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="albums-cta">
+          <a href="discografia.html" class="btn-secondary">Ver discografía completa</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de línea de tiempo -->
+    <section class="timeline-section">
+      <div class="container">
+        <h2 class="section-title-v2">Cronología</h2>
+        <div class="timeline-horizontal">
+          <div class="timeline-item-horizontal">
+            <div class="timeline-year">1971</div>
+            <div class="timeline-content">
+              <h3>Nacimiento</h3>
+              <p>Nace Tupac Amaru Shakur el 16 de junio en East Harlem, Nueva York.</p>
+            </div>
+          </div>
+          <div class="timeline-item-horizontal">
+            <div class="timeline-year">1991</div>
+            <div class="timeline-content">
+              <h3>Debut</h3>
+              <p>Lanza su primer álbum "2Pacalypse Now" con Interscope Records.</p>
+            </div>
+          </div>
+          <div class="timeline-item-horizontal">
+            <div class="timeline-year">1993</div>
+            <div class="timeline-content">
+              <h3>Actuación</h3>
+              <p>Protagoniza la película "Poetic Justice" junto a Janet Jackson.</p>
+            </div>
+          </div>
+          <div class="timeline-item-horizontal">
+            <div class="timeline-year">1995</div>
+            <div class="timeline-content">
+              <h3>Death Row</h3>
+              <p>Firma con Death Row Records mientras cumplía condena en prisión.</p>
+            </div>
+          </div>
+          <div class="timeline-item-horizontal">
+            <div class="timeline-year">1996</div>
+            <div class="timeline-content">
+              <h3>Fallecimiento</h3>
+              <p>Muere el 13 de septiembre en Las Vegas tras un tiroteo seis días antes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de legado -->
+    <section class="legacy-section">
+      <div class="container">
+        <h2 class="section-title-v2">Impacto Cultural</h2>
+        <div class="legacy-grid">
+          <div class="legacy-item">
+            <div class="legacy-icon">
+              <i class="fas fa-music"></i>
+            </div>
+            <h3>Influencia Musical</h3>
+            <p>Su estilo lírico y su capacidad para mezclar temas sociales con ritmos comerciales revolucionó el
+              hip-hop, inspirando a generaciones de artistas como Kendrick Lamar, J. Cole y muchos más.</p>
+          </div>
+          <div class="legacy-item">
+            <div class="legacy-icon">
+              <i class="fas fa-fist-raised"></i>
+            </div>
+            <h3>Activismo</h3>
+            <p>Su voz contra la injusticia social, la brutalidad policial y la desigualdad racial sigue resonando en
+              movimientos contemporáneos como Black Lives Matter.</p>
+          </div>
+          <div class="legacy-item">
+            <div class="legacy-icon">
+              <i class="fas fa-film"></i>
+            </div>
+            <h3>Cine</h3>
+            <p>Su carrera como actor en películas como "Juice", "Poetic Justice" y "Above the Rim" demostró su
+              versatilidad artística y abrió puertas para otros raperos en Hollywood.</p>
+          </div>
+          <div class="legacy-item">
+            <div class="legacy-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <h3>Poesía</h3>
+            <p>Sus poemas, recopilados en "The Rose That Grew From Concrete", revelaron su profundidad intelectual y
+              sensibilidad, elevando el rap a una forma de expresión literaria.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de evolución del legado con gráfico interactivo -->
+    <section class="legacy-evolution">
+      <div class="container">
+        <h2 class="section-title-v2">Evolución del Legado</h2>
+        <div class="legacy-chart-container">
+          <div class="legacy-chart-header">
+            <div class="chart-title">Popularidad a través del tiempo</div>
+            <div class="chart-legend">
+              <div class="legend-item">
+                <span class="legend-color" style="background-color: #9900ff;"></span>
+                <span class="legend-label">2020</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color" style="background-color: #ff00c8;"></span>
+                <span class="legend-label">2021</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color" style="background-color: #ffcc00;"></span>
+                <span class="legend-label">2022</span>
+              </div>
+            </div>
+          </div>
+          <div class="legacy-chart-wrapper">
+            <div class="chart-y-axis">
+              <div class="y-label">250M</div>
+              <div class="y-label">200M</div>
+              <div class="y-label">150M</div>
+              <div class="y-label">100M</div>
+              <div class="y-label">50M</div>
+              <div class="y-label">0M</div>
+            </div>
+            <div id="interactiveChart" class="legacy-chart">
+              <!-- El gráfico se generará con JavaScript -->
+            </div>
+            <div id="chartTooltip" class="chart-tooltip"></div>
+          </div>
+          <div class="chart-x-axis">
+            <div class="x-label">Ene</div>
+            <div class="x-label">Feb</div>
+            <div class="x-label">Mar</div>
+            <div class="x-label">Abr</div>
+            <div class="x-label">May</div>
+            <div class="x-label">Jun</div>
+            <div class="x-label">Jul</div>
+            <div class="x-label">Ago</div>
+            <div class="x-label">Sep</div>
+            <div class="x-label">Oct</div>
+            <div class="x-label">Nov</div>
+            <div class="x-label">Dic</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="call-to-action">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Descubre el legado de 2Pac</h2>
+          <p>Explora la vida, música y el impacto cultural de una de las figuras más influyentes del hip-hop</p>
+          <div class="cta-buttons">
+            <a href="biografia.html" class="cta-button primary">Conocer su historia</a>
+            <a href="discografia.html" class="cta-button secondary">Explorar su música</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-v2">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-logo">
+          <img src="img/logo.png" alt="2Pac Logo" class="logo">
+          <p class="footer-tagline">La leyenda vive</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-nav">
+            <h3>Navegación</h3>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="biografia.html">Biografía</a></li>
+              <li><a href="discografia.html">Discografía</a></li>
+              <li><a href="legado.html">Legado</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>Redes Sociales</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/tupacshakur" class="social-icon" aria-label="Facebook"><i
+                  class="fab fa-facebook"></i></a>
+              <a href="https://twitter.com/2PAC" class="social-icon" aria-label="Twitter"><i
+                  class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/2pac" class="social-icon" aria-label="Instagram"><i
+                  class="fab fa-instagram"></i></a>
+              <a href="https://open.spotify.com/artist/1ZwdS5xdxEREPySFridCfh" class="social-icon"
+                aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="footer-copyright">© 2024 - Sitio web dedicado a Tupac Shakur</p>
+        <p class="footer-tribute">En memoria de Tupac Amaru Shakur (1971-1996)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

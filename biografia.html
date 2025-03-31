@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Biografía de Tupac Shakur (2Pac) - Conoce la vida y legado del legendario rapero">
+  <title>Quién es 2Pac | Biografía Completa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="logo.css">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Cursor personalizado -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <header class="transparent-header">
+    <nav class="menu">
+      <div class="logo-box">
+        <a href="index.html">
+          <img src="img/logo.png" alt="2Pac Logo" class="logo">
+        </a>
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="biografia.html" class="active">QUIÉN ES 2PAC</a></li>
+        <li><a href="discografia.html">DISCOGRAFÍA</a></li>
+        <li><a href="legado.html">LEGADO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section con video de fondo -->
+    <section id="hero" class="hero-v2">
+      <div class="video-container">
+        <video id="bg-video" autoplay muted loop poster="img/bio-hero.jpg">
+          <source src="video/2pac-bio.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+      </div>
+      <div class="hero-social">
+        <a href="https://open.spotify.com/artist/1ZwdS5xdxEREPySFridCfh" class="hero-social-link" target="_blank" aria-label="Spotify">
+          <i class="fab fa-spotify"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCP6Y5xLQ9NSXgC1P1l6KgQw" class="hero-social-link" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/2pac" class="hero-social-link" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title-v2" data-text="BIOGRAFÍA">BIOGRAFÍA</h1>
+        <div class="hero-subtitle">La historia de <span class="hero-subtitle-highlight">Tupac Shakur</span></div>
+        <div class="hero-quote">"La muerte no es la mayor pérdida en la vida. La mayor pérdida es lo que muere dentro mientras aún estamos vivos."</div>
+
+        <!-- Botones de navegación -->
+        <div class="hero-nav-buttons">
+          <a href="#timeline" class="hero-nav-button">
+            <i class="fas fa-history btn-icon"></i>Cronología
+          </a>
+          <a href="#facetas" class="hero-nav-button">
+            <i class="fas fa-user-alt btn-icon"></i>Facetas
+          </a>
+          <a href="#galeria" class="hero-nav-button">
+            <i class="fas fa-images btn-icon"></i>Galería
+          </a>
+        </div>
+
+        <div class="hero-scroll-indicator">
+          <div class="scroll-text">Descubre su historia</div>
+          <div class="scroll-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+      </div>
+
+      <div class="hero-years">
+        <div class="year">1971</div>
+        <div class="separator"></div>
+        <div class="year">1996</div>
+      </div>
+    </section>
+
+    <!-- Línea de tiempo vertical -->
+    <section id="timeline" class="bio-timeline">
+      <div class="container">
+        <h2 class="section-title-v2">Cronología de una Vida Legendaria</h2>
+        
+        <div class="timeline-vertical">
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-year">1971</span>
+              <span class="date-day">16 de Junio</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Nacimiento</h3>
+              <p>Tupac Amaru Shakur nace en East Harlem, Nueva York. Su madre, Afeni Shakur, era miembro activo del Partido Pantera Negra y le puso el nombre de un revolucionario inca que luchó contra el dominio español.</p>
+              <div class="timeline-image">
+                <img src="img/tupac-niño.jpg" alt="Tupac de niño" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-year">1986</span>
+              <span class="date-day"></span>
+            </div>
+            <div class="timeline-content">
+              <h3>Mudanza a Baltimore</h3>
+              <p>La familia se muda a Baltimore, Maryland, donde Tupac asiste a la Escuela de Artes de Baltimore. Allí estudia actuación, poesía y danza, mostrando su talento artístico desde temprana edad.</p>
+              <div class="timeline-image">
+                <img src="img/bio-baltimore.jpg" alt="Tupac en Baltimore" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-year">1988</span>
+              <span class="date-day"></span>
+            </div>
+            <div class="timeline-content">
+              <h3>Mudanza a California</h3>
+              <p>Tupac y su familia se mudan a Marin City, California. Comienza a rapear bajo el nombre de MC New York y se une al grupo Digital Underground como bailarín y roadie.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-year">1991</span>
+              <span class="date-day">Noviembre</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Debut como Solista</h3>
+              <p>Lanza su álbum debut "2Pacalypse Now" con Interscope Records. El álbum aborda temas como el racismo, la brutalidad policial y la pobreza, estableciendo a Tupac como una voz política en el hip-hop.</p>
+              <div class="timeline-image">
+                <img src="img/bio-debut.jpg" alt="2Pacalypse Now" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-year">1992</span>
+              <span class="date-day"></span>
+            </div>
+            <div class="timeline-content">
+              <h3>Debut en el Cine</h3>
+              <p>Protagoniza la película "Juice", su primer papel principal en el cine, interpretando al personaje Bishop. Su actuación recibe elogios de la crítica y demuestra su versatilidad artística.</p>
+              <div class="timeline-image">
+                <img src="img/bio-juice.jpg" alt="Tupac en Juice" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-year">1993</span>
+              <span class="date-day">Febrero</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Segundo Álbum</h3>
+              <p>Lanza "Strictly 4 My N.I.G.G.A.Z...", que incluye los éxitos "Keep Ya Head Up" y "I Get Around". El álbum muestra un equilibrio entre mensajes sociales y temas más comerciales.</p>
+              <div class="timeline-image">
+                <img src="img/bio-strictly.jpg" alt="Strictly 4 My N.I.G.G.A.Z..." loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-year">1994</span>
+              <span class="date-day">Noviembre</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Tiroteo en Quad Studios</h3>
+              <p>Tupac es herido en un tiroteo en Quad Studios en Nueva York. Recibe cinco disparos pero sobrevive. Este incidente marca el inicio de la rivalidad East Coast vs. West Coast en el hip-hop.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-year">1995</span>
+              <span class="date-day">Marzo</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Desde la Prisión</h3>
+              <p>Mientras cumple condena en prisión por abuso sexual, lanza "Me Against the World", considerado por muchos críticos como su obra maestra. El álbum debuta en el número uno del Billboard 200.</p>
+              <div class="timeline-image">
+                <img src="img/bio-prison.jpg" alt="Tupac en prisión" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-year">1995</span>
+              <span class="date-day">Octubre</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Death Row Records</h3>
+              <p>Suge Knight, CEO de Death Row Records, paga la fianza de Tupac y lo ficha para su sello. Comienza a grabar nuevo material a un ritmo frenético.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-year">1996</span>
+              <span class="date-day">Febrero</span>
+            </div>
+            <div class="timeline-content">
+              <h3>All Eyez On Me</h3>
+              <p>Lanza "All Eyez On Me", el primer álbum doble en la historia del hip-hop. Incluye éxitos como "California Love" y "2 of Amerikaz Most Wanted". El álbum es un éxito comercial y crítico.</p>
+              <div class="timeline-image">
+                <img src="img/bio-all-eyez.jpg" alt="All Eyez On Me" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-year">1996</span>
+              <span class="date-day">7 de Septiembre</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Tiroteo en Las Vegas</h3>
+              <p>Después de asistir a la pelea de Mike Tyson en el MGM Grand de Las Vegas, Tupac es herido en un tiroteo mientras viajaba en un automóvil conducido por Suge Knight.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-year">1996</span>
+              <span class="date-day">13 de Septiembre</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Fallecimiento</h3>
+              <p>Tupac fallece a los 25 años debido a las heridas sufridas en el tiroteo. Su muerte conmociona al mundo del hip-hop y a sus millones de seguidores.</p>
+              <div class="timeline-image">
+                <img src="img/bio-memorial.jpg" alt="Memorial de Tupac" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-year">1996</span>
+              <span class="date-day">Noviembre</span>
+            </div>
+            <div class="timeline-content">
+              <h3>The Don Killuminati</h3>
+              <p>Se lanza póstumamente "The Don Killuminati: The 7 Day Theory" bajo el alias de Makaveli. El álbum, grabado en solo siete días, muestra un lado más oscuro y reflexivo de Tupac.</p>
+              <div class="timeline-image">
+                <img src="img/bio-makaveli.jpg" alt="The Don Killuminati" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de facetas -->
+    <section id="facetas" class="bio-facets">
+      <div class="container">
+        <h2 class="section-title-v2">Las Múltiples Facetas de Tupac</h2>
+        
+        <div class="facets-grid">
+          <div class="facet-item">
+            <div class="facet-icon">
+              <i class="fas fa-microphone"></i>
+            </div>
+            <h3>El Rapero</h3>
+            <p>Como MC, Tupac combinaba flow técnico con letras profundas y emotivas. Su capacidad para alternar entre temas políticos, introspectivos y comerciales lo convirtió en uno de los artistas más versátiles del hip-hop.</p>
+          </div>
+          
+          <div class="facet-item">
+            <div class="facet-icon">
+              <i class="fas fa-film"></i>
+            </div>
+            <h3>El Actor</h3>
+            <p>Su talento natural para la actuación le permitió brillar en películas como "Juice", "Poetic Justice" y "Above the Rim". Los críticos elogiaron su presencia en pantalla y su capacidad para transmitir emociones complejas.</p>
+          </div>
+          
+          <div class="facet-item">
+            <div class="facet-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <h3>El Poeta</h3>
+            <p>Sus poemas, recopilados en "The Rose That Grew From Concrete", revelan su sensibilidad artística y su profundidad intelectual. Muchos de estos escritos datan de su adolescencia, mostrando su talento precoz.</p>
+          </div>
+          
+          <div class="facet-item">
+            <div class="facet-icon">
+              <i class="fas fa-fist-raised"></i>
+            </div>
+            <h3>El Activista</h3>
+            <p>Hijo de miembros del Partido Pantera Negra, Tupac heredó una conciencia política que plasmó en su música. Abordó temas como la brutalidad policial, la desigualdad racial y la pobreza sistémica.</p>
+          </div>
+          
+          <div class="facet-item">
+            <div class="facet-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>El Humanista</h3>
+            <p>Detrás de su imagen de "thug", Tupac mostraba una gran empatía y compasión. Canciones como "Dear Mama" y "Keep Ya Head Up" revelan su respeto por las mujeres y su preocupación por los más vulnerables.</p>
+          </div>
+          
+          <div class="facet-item">
+            <div class="facet-icon">
+              <i class="fas fa-chess-king"></i>
+            </div>
+            <h3>El Visionario</h3>
+            <p>Tupac tenía planes ambiciosos más allá de la música, incluyendo proyectos cinematográficos, organizaciones comunitarias y empresas. Su visión trascendía los límites del entretenimiento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de influencias -->
+    <section class="bio-influences">
+      <div class="container">
+        <h2 class="section-title-v2">Influencias y Legado</h2>
+        
+        <div class="influences-content">
+          <div class="influences-text">
+            <h3>Quienes lo Inspiraron</h3>
+            <p>Tupac fue moldeado por diversas influencias, desde activistas políticos como su madre Afeni Shakur y los Panteras Negras, hasta artistas como Shakespeare, Machiavelli y Nietzsche. En el ámbito musical, admiraba a raperos como Rakim, Big Daddy Kane y artistas de soul como Marvin Gaye.</p>
+            
+            <h3>A Quienes Inspiró</h3>
+            <p>El impacto de Tupac en generaciones posteriores es incalculable. Artistas como Kendrick Lamar, J. Cole, Eminem y innumerables raperos citan a Tupac como una influencia fundamental. Su legado trasciende el hip-hop, inspirando a activistas, escritores y cineastas en todo el mundo.</p>
+            
+            <blockquote class="bio-quote">
+              "No voy a cambiar el mundo, pero garantizo que encenderé la mente que lo hará."
+              <cite>- Tupac Shakur</cite>
+            </blockquote>
+          </div>
+          
+          <div class="influences-image">
+            <img src="img/bio-influence.jpg" alt="Tupac influencia" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de controversias -->
+    <section class="bio-controversies">
+      <div class="container">
+        <h2 class="section-title-v2">Controversias y Contradicciones</h2>
+        
+        <div class="controversies-tabs">
+          <div class="tabs-nav">
+            <button class="tab-btn active" data-tab="legal">Problemas Legales</button>
+            <button class="tab-btn" data-tab="rivalry">Rivalidad East vs. West</button>
+            <button class="tab-btn" data-tab="duality">Dualidad Thug Life</button>
+          </div>
+          
+          <div class="tabs-content">
+            <div class="tab-panel active" id="legal">
+              <div class="tab-image">
+                <img src="img/bio-legal.jpg" alt="Tupac problemas legales" loading="lazy">
+              </div>
+              <div class="tab-text">
+                <h3>Enfrentamientos con la Ley</h3>
+                <p>A lo largo de su vida, Tupac tuvo varios encuentros con el sistema judicial. En 1993, fue condenado por agresión sexual, aunque siempre mantuvo su inocencia. También enfrentó cargos por agresión, posesión de armas y otros delitos.</p>
+                <p>Estos problemas legales alimentaron su imagen de "outlaw" pero también interrumpieron su carrera en momentos cruciales. Su tiempo en prisión, sin embargo, le dio material para algunas de sus obras más profundas.</p>
+              </div>
+            </div>
+            
+            <div class="tab-panel" id="rivalry">
+              <div class="tab-image">
+                <img src="img/bio-rivalry.jpg" alt="Tupac y Biggie" loading="lazy">
+              </div>
+              <div class="tab-text">
+                <h3>La Guerra del Hip-Hop</h3>
+                <p>La rivalidad entre East Coast y West Coast, personificada en Tupac y The Notorious B.I.G., definió el hip-hop de los 90s. Lo que comenzó como una amistad se convirtió en una amarga enemistad después del tiroteo de Quad Studios en 1994.</p>
+                <p>Canciones como "Hit 'Em Up" de Tupac y "Who Shot Ya?" de Biggie alimentaron una tensión que trascendió la música y tuvo consecuencias trágicas. Muchos creen que esta rivalidad contribuyó a las muertes de ambos artistas.</p>
+              </div>
+            </div>
+            
+            <div class="tab-panel" id="duality">
+              <div class="tab-image">
+                <img src="img/bio-duality.jpg" alt="Tupac dualidad" loading="lazy">
+              </div>
+              <div class="tab-text">
+                <h3>Entre el Ángel y el Demonio</h3>
+                <p>Una de las características más fascinantes de Tupac era su dualidad. Por un lado, componía canciones sensibles como "Dear Mama" y "Keep Ya Head Up"; por otro, abrazaba la filosofía "Thug Life" y la violencia en temas como "Hit 'Em Up".</p>
+                <p>Esta contradicción no era hipocresía sino un reflejo de las complejidades de su vida y de la realidad de muchos jóvenes afroamericanos. Como él mismo explicó, "Thug Life" era un acrónimo de "The Hate U Give Little Infants Fucks Everyone", una crítica al ciclo de violencia sistémica.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería de imágenes -->
+    <section id="galeria" class="bio-gallery">
+      <div class="container">
+        <h2 class="section-title-v2">Momentos Capturados</h2>
+        
+        <div class="gallery-masonry">
+          <div class="gallery-item large">
+            <img src="img/gallery-1.jpg" alt="Tupac en concierto" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="img/gallery-2.jpg" alt="Tupac joven" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="img/gallery-3.jpg" alt="Tupac sonriendo" loading="lazy">
+          </div>
+          <div class="gallery-item vertical">
+            <img src="img/gallery-4.jpg" alt="Tupac posando" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="img/gallery-5.jpg" alt="Tupac con gafas" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="img/gallery-6.jpg" alt="Tupac en estudio" loading="lazy">
+          </div>
+          <div class="gallery-item large">
+            <img src="img/gallery-7.jpg" alt="Tupac actuando" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="img/gallery-8.jpg" alt="Tupac con amigos" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="call-to-action">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Explora el Legado Musical</h2>
+          <p>Descubre la discografía completa de Tupac Shakur y el impacto de su música en la cultura hip-hop</p>
+          <div class="cta-buttons">
+            <a href="discografia.html" class="cta-button primary">Ver Discografía</a>
+            <a href="legado.html" class="cta-button secondary">Explorar Legado</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-v2">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-logo">
+          <img src="img/logo.png" alt="2Pac Logo" class="logo">
+          <p class="footer-tagline">La leyenda vive</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-nav">
+            <h3>Navegación</h3>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="biografia.html">Biografía</a></li>
+              <li><a href="discografia.html">Discografía</a></li>
+              <li><a href="legado.html">Legado</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>Redes Sociales</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/tupacshakur" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="https://twitter.com/2PAC" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/2pac" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://open.spotify.com/artist/1ZwdS5xdxEREPySFridCfh" class="social-icon" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="footer-copyright">© 2024 - Sitio web dedicado a Tupac Shakur</p>
+        <p class="footer-tribute">En memoria de Tupac Amaru Shakur (1971-1996)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Script específico para la página de biografía
+    document.addEventListener('DOMContentLoaded', () => {
+      // Tabs de controversias
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabPanels = document.querySelectorAll('.tab-panel');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Desactivar todos los botones y paneles
+          tabBtns.forEach(b => b.classList.remove('active'));
+          tabPanels.forEach(p => p.classList.remove('active'));
+          
+          // Activar el botón clickeado
+          btn.classList.add('active');
+          
+          // Activar el panel correspondiente
+          const tabId = btn.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+      
+      // Animación para la línea de tiempo
+      const timelineItems = document.querySelectorAll('.timeline-item');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      });
+      
+      timelineItems.forEach(item => {
+        observer.observe(item);
+      });
+      
+      // Galería con lightbox
+      const galleryItems = document.querySelectorAll('.gallery-item img');
+      
+      galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+          // Crear lightbox
+          const lightbox = document.createElement('div');
+          lightbox.classList.add('lightbox');
+          
+          const lightboxImg = document.createElement('img');
+          lightboxImg.src = item.src;
+          
+          const closeBtn = document.createElement('button');
+          closeBtn.classList.add('lightbox-close');
+          closeBtn.innerHTML = '<i class="fas fa-times"></i>';
+          
+          lightbox.appendChild(lightboxImg);
+          lightbox.appendChild(closeBtn);
+          document.body.appendChild(lightbox);
+          
+          // Animar apertura
+          setTimeout(() => {
+            lightbox.classList.add('active');
+          }, 10);
+          
+          // Cerrar lightbox
+          closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            setTimeout(() => {
+              document.body.removeChild(lightbox);
+            }, 300);
+          });
+          
+          // Cerrar con Escape
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+              closeBtn.click();
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

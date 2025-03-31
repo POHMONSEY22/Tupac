@@ -1,0 +1,43 @@
+/* Estilos para hacer el logo más grande y llamativo */
+.logo-box {
+    text-align: center;
+    transition: all var(--transition-fast);
+  }
+  
+  .logo {
+    height: 13.5rem; /* Aumentado de 5.5rem */
+    transition: height var(--transition-fast);
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
+  }
+  
+  .scrolled .logo {
+    height: 6rem; /* Aumentado de 4.5rem */
+  }
+  
+  /* Efecto de brillo al pasar el cursor */
+  .logo-box:hover .logo {
+    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.8));
+    transform: scale(1.05);
+  }
+  
+  /* Ajustes para el menú con logo más grande */
+  .menu {
+    padding: 1.2rem 5%;
+  }
+  
+  .nav-links {
+    margin-top: 0.5rem;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    .logo {
+      height: 6.5rem;
+    }
+  
+    .scrolled .logo {
+      height: 5.5rem;
+    }
+  }
+  
+  

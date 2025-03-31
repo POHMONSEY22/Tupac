@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="El legado cultural y musical de Tupac Shakur (2Pac) - Impacto y relevancia actual">
+  <title>Legado de 2Pac | Impacto Cultural</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="legado.css">
+  <link rel="stylesheet" href="logo.css">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Cursor personalizado -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <header class="transparent-header">
+    <nav class="menu">
+      <div class="logo-box">
+        <a href="index.html">
+          <img src="img/logo.png" alt="2Pac Logo" class="logo">
+        </a>
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="biografia.html">QUIÉN ES 2PAC</a></li>
+        <li><a href="discografia.html">DISCOGRAFÍA</a></li>
+        <li><a href="legado.html" class="active">LEGADO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section con video de fondo -->
+    <section id="hero" class="hero-v2">
+      <div class="video-container">
+        <video id="bg-video" autoplay muted loop poster="img/legacy-hero.jpg">
+          <source src="video/2pac-legacy.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+      </div>
+      <div class="hero-social">
+        <a href="https://open.spotify.com/artist/1ZwdS5xdxEREPySFridCfh" class="hero-social-link" target="_blank" aria-label="Spotify">
+          <i class="fab fa-spotify"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCP6Y5xLQ9NSXgC1P1l6KgQw" class="hero-social-link" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/2pac" class="hero-social-link" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title-v2" data-text="EL LEGADO">EL LEGADO</h1>
+        <div class="hero-subtitle">Más allá de la música: <span class="hero-subtitle-highlight">el impacto cultural</span> de Tupac Shakur</div>
+        <div class="hero-quote">"No voy a cambiar el mundo, pero garantizo que encenderé la mente que lo hará."</div>
+
+        <div class="hero-scroll-indicator">
+          <div class="scroll-text">Descubre su impacto</div>
+          <div class="scroll-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+      </div>
+
+      <div class="hero-years">
+        <div class="year">1971</div>
+        <div class="separator"></div>
+        <div class="year">1996</div>
+      </div>
+    </section>
+
+    <!-- Slider de frases célebres -->
+    <section class="frases-inmersivas">
+      <div class="container">
+        <h2 class="section-title-v2">Frases que Inspiran</h2>
+        <div class="frases-carousel">
+          <div class="frase-slide active">
+            <div class="frase-content">
+              <div class="frase-quote">"No voy a cambiar el mundo, pero garantizo que encenderé la mente que lo hará."</div>
+              <div class="frase-source">2Pac</div>
+            </div>
+          </div>
+          <div class="frase-slide">
+            <div class="frase-content">
+              <div class="frase-quote">"La única cosa que viene a un hombre dormido son sueños."</div>
+              <div class="frase-source">2Pac</div>
+            </div>
+          </div>
+          <div class="frase-slide">
+            <div class="frase-content">
+              <div class="frase-quote">"La muerte no es la mayor pérdida en la vida. La mayor pérdida es lo que muere dentro mientras aún estamos vivos."</div>
+              <div class="frase-source">2Pac</div>
+            </div>
+          </div>
+        </div>
+        <div class="frases-navigation">
+          <div class="frases-dots">
+            <span class="frase-dot active" data-index="0"></span>
+            <span class="frase-dot" data-index="1"></span>
+            <span class="frase-dot" data-index="2"></span>
+          </div>
+          <div class="frases-arrows">
+            <button class="frase-arrow prev" aria-label="Frase anterior"><i class="fas fa-arrow-left"></i></button>
+            <button class="frase-arrow next" aria-label="Frase siguiente"><i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introducción al legado -->
+    <section class="legacy-intro">
+      <div class="container">
+        <div class="legacy-intro-content">
+          <div class="legacy-intro-text">
+            <h2 class="section-title-v2">Un Legado Eterno</h2>
+            <p>Más de 25 años después de su muerte, Tupac Shakur sigue siendo una de las figuras más influyentes y reverenciadas en la música y la cultura popular. Su impacto trasciende el hip-hop, extendiéndose a la política, el activismo social, la literatura y el cine.</p>
+            <p>Su capacidad para combinar letras poéticas con comentarios sociales incisivos, junto con su carisma magnético y su presencia escénica, lo convirtieron en un ícono cuya relevancia no ha disminuido con el paso del tiempo.</p>
+            <blockquote class="legacy-quote">
+              "No voy a cambiar el mundo, pero garantizo que encenderé la mente que lo hará."
+              <cite>- Tupac Shakur</cite>
+            </blockquote>
+          </div>
+          <div class="legacy-intro-image">
+            <img src="img/legacy-intro.jpg" alt="Tupac legado" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impacto cultural -->
+    <section class="legacy-impact">
+      <div class="container">
+        <h2 class="section-title-v2">Impacto Cultural</h2>
+        
+        <div class="impact-grid">
+          <div class="impact-item">
+            <div class="impact-icon">
+              <i class="fas fa-music"></i>
+            </div>
+            <h3>Revolución Musical</h3>
+            <p>Tupac redefinió el hip-hop al combinar ritmos accesibles con letras profundas y socialmente conscientes. Su versatilidad le permitió crear tanto himnos de fiesta como reflexiones filosóficas, ampliando los límites del género.</p>
+          </div>
+          
+          <div class="impact-item">
+            <div class="impact-icon">
+              <i class="fas fa-fist-raised"></i>
+            </div>
+            <h3>Activismo Social</h3>
+            <p>Sus canciones abordaron temas como la brutalidad policial, la pobreza sistémica y la desigualdad racial, convirtiéndose en himnos para movimientos de justicia social. Su mensaje resuena en movimientos contemporáneos como Black Lives Matter.</p>
+          </div>
+          
+          <div class="impact-item">
+            <div class="impact-icon">
+              <i class="fas fa-film"></i>
+            </div>
+            <h3>Influencia Cinematográfica</h3>
+            <p>Su carrera como actor y su presencia en documentales han inspirado a cineastas. Películas como "All Eyez on Me" y documentales como "Tupac: Resurrection" mantienen viva su historia en la cultura popular.</p>
+          </div>
+          
+          <div class="impact-item">
+            <div class="impact-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Educación e Academia</h3>
+            <p>Universidades como Harvard, Berkeley y Stanford han ofrecido cursos que analizan su obra y legado. Sus letras son estudiadas como textos literarios que reflejan la experiencia afroamericana contemporánea.</p>
+          </div>
+          
+          <div class="impact-item">
+            <div class="impact-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3>Arte y Moda</h3>
+            <p>Su estética y estilo han influido en generaciones de artistas visuales y diseñadores de moda. Su imagen aparece en murales, ropa y arte urbano en todo el mundo, convirtiéndose en un símbolo cultural global.</p>
+          </div>
+          
+          <div class="impact-item">
+            <div class="impact-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <h3>Literatura</h3>
+            <p>Sus poemas, recopilados en "The Rose That Grew From Concrete", han inspirado a poetas y escritores. Su enfoque autobiográfico y su vulnerabilidad emocional ampliaron las posibilidades expresivas del hip-hop.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artistas influenciados -->
+    <section class="legacy-influenced">
+      <div class="container">
+        <h2 class="section-title-v2">Artistas Influenciados</h2>
+        
+        <div class="influenced-slider">
+          <div class="influenced-track">
+            <div class="influenced-item">
+              <div class="influenced-image">
+                <img src="img/influenced-kendrick.jpg" alt="Kendrick Lamar" loading="lazy">
+              </div>
+              <div class="influenced-info">
+                <h3>Kendrick Lamar</h3>
+                <p>"Tupac me mostró cómo equilibrar el arte con el activismo. Su capacidad para ser vulnerable y fuerte a la vez cambió mi perspectiva sobre lo que significa ser un artista."</p>
+              </div>
+            </div>
+            
+            <div class="influenced-item">
+              <div class="influenced-image">
+                <img src="img/influenced-jcole.jpg" alt="J. Cole" loading="lazy">
+              </div>
+              <div class="influenced-info">
+                <h3>J. Cole</h3>
+                <p>"La honestidad de Pac es lo que más me impactó. No tenía miedo de mostrar sus contradicciones, y eso es lo que lo hizo tan humano y tan poderoso como artista."</p>
+              </div>
+            </div>
+            
+            <div class="influenced-item">
+              <div class="influenced-image">
+                <img src="img/influenced-eminem.jpg" alt="Eminem" loading="lazy">
+              </div>
+              <div class="influenced-info">
+                <h3>Eminem</h3>
+                <p>"La pasión con la que Tupac abordaba cada verso es algo que siempre he intentado emular. Su intensidad y su compromiso con cada palabra que escribía eran incomparables."</p>
+              </div>
+            </div>
+            
+            <div class="influenced-item">
+              <div class="influenced-image">
+                <img src="img/influenced-nas.jpg" alt="Nas" loading="lazy">
+              </div>
+              <div class="influenced-info">
+                <h3>Nas</h3>
+                <p>"Tupac entendió que el hip-hop podía ser una plataforma para el cambio social. Su visión trascendió la música y se convirtió en un movimiento cultural."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="legacy-testimonials">
+      <div class="container">
+        <h2 class="section-title-v2">Testimonios</h2>
+        
+        <div class="testimonials-carousel">
+          <div class="testimonial-slide active">
+            <div class="testimonial-content">
+              <div class="testimonial-quote">
+                "Tupac fue un visionario que entendió el poder de la música como herramienta de cambio social. Su legado sigue inspirando a nuevas generaciones de artistas que buscan usar su voz para hacer una diferencia."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="img/author-1.jpg" alt="Dr. Michael Eric Dyson" loading="lazy">
+                </div>
+                <div class="author-name">Dr. Michael Eric Dyson</div>
+                <div class="author-title">Autor de "Holler If You Hear Me"</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="testimonial-quote">
+                "Lo que hizo a Tupac especial fue su capacidad para conectar con personas de todos los orígenes. Su música hablaba de la experiencia afroamericana, pero sus temas de lucha, esperanza y resiliencia son universales."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="img/author-2.jpg" alt="Jada Pinkett Smith" loading="lazy">
+                </div>
+                <div class="author-name">Jada Pinkett Smith</div>
+                <div class="author-title">Actriz y amiga cercana</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="testimonial-quote">
+                "El impacto de Tupac en la cultura hip-hop es inmensurable. Cambió la forma en que los raperos se expresan, demostrando que se puede ser comercialmente exitoso sin comprometer la integridad artística o el mensaje."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="img/author-3.jpg" alt="Chuck D" loading="lazy">
+                </div>
+                <div class="author-name">Chuck D</div>
+                <div class="author-title">Miembro de Public Enemy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonials-navigation">
+          <div class="testimonials-dots">
+            <span class="testimonial-dot active" data-index="0"></span>
+            <span class="testimonial-dot" data-index="1"></span>
+            <span class="testimonial-dot" data-index="2"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Línea de tiempo del legado -->
+    <section class="legacy-timeline">
+      <div class="container">
+        <h2 class="section-title-v2">Evolución del Legado</h2>
+        
+        <div class="legacy-timeline-container">
+          <div class="legacy-timeline-item">
+            <div class="legacy-timeline-date">
+              <span class="legacy-date-year">1997</span>
+            </div>
+            <div class="legacy-timeline-content">
+              <h3>Fundación Tupac Amaru Shakur</h3>
+              <p>Afeni Shakur, madre de Tupac, establece la Fundación Tupac Amaru Shakur para preservar y expandir el legado artístico y activista de su hijo, ofreciendo programas de artes para jóvenes.</p>
+            </div>
+          </div>
+          
+          <div class="legacy-timeline-item">
+            <div class="legacy-timeline-date">
+              <span class="legacy-date-year">2002</span>
+            </div>
+            <div class="legacy-timeline-content">
+              <h3>Documental "Tupac: Resurrection"</h3>
+              <p>El documental nominado al Oscar presenta la vida de Tupac narrada con sus propias palabras, introduciendo su legado a una nueva generación y profundizando en su complejidad como artista.</p>
+            </div>
+          </div>
+          
+          <div class="legacy-timeline-item">
+            <div class="legacy-timeline-date">
+              <span class="legacy-date-year">2010</span>
+            </div>
+            <div class="legacy-timeline-content">
+              <h3>Biblioteca del Congreso</h3>
+              <p>"Dear Mama" es seleccionada para preservación en la Biblioteca del Congreso de EE.UU., reconociendo su importancia cultural, histórica y estética para la nación.</p>
+            </div>
+          </div>
+          
+          <div class="legacy-timeline-item">
+            <div class="legacy-timeline-date">
+              <span class="legacy-date-year">2017</span>
+            </div>
+            <div class="legacy-timeline-content">
+              <h3>Salón de la Fama del Rock & Roll</h3>
+              <p>Tupac se convierte en el primer artista de hip-hop en solitario en ser incluido en el Salón de la Fama del Rock & Roll, reconociendo su impacto revolucionario en la música.</p>
+            </div>
+          </div>
+          
+          <div class="legacy-timeline-item">
+            <div class="legacy-timeline-date">
+              <span class="legacy-date-year">2022</span>
+            </div>
+            <div class="legacy-timeline-content">
+              <h3>Estrella en el Paseo de la Fama</h3>
+              <p>Tupac recibe póstumamente una estrella en el Paseo de la Fama de Hollywood, consolidando su estatus como ícono cultural que trascendió la música para impactar múltiples aspectos de la cultura americana.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fundación Tupac Amaru Shakur -->
+    <section class="legacy-foundation">
+      <div class="container">
+        <h2 class="section-title-v2">Fundación Tupac Amaru Shakur</h2>
+        
+        <div class="foundation-content">
+          <div class="foundation-text">
+            <h3>Continuando su Misión</h3>
+            <p>Establecida por Afeni Shakur en 1997, la Fundación Tupac Amaru Shakur se dedica a proporcionar oportunidades para que los jóvenes desarrollen su creatividad a través de las artes y construyan comunidades más fuertes.</p>
+            <p>La fundación ofrece programas de educación artística, becas y recursos para jóvenes desfavorecidos, manteniendo vivo el espíritu de activismo y empoderamiento que Tupac defendió durante toda su vida.</p>
+            
+            <div class="foundation-stats">
+              <div class="foundation-stat">
+                <div class="foundation-stat-number">10,000+</div>
+                <div class="foundation-stat-label">Jóvenes beneficiados</div>
+              </div>
+              <div class="foundation-stat">
+                <div class="foundation-stat-number">150+</div>
+                <div class="foundation-stat-label">Becas otorgadas</div>
+              </div>
+              <div class="foundation-stat">
+                <div class="foundation-stat-number">25</div>
+                <div class="foundation-stat-label">Años de impacto</div>
+              </div>
+            </div>
+            
+            <a href="https://www.tasf.org" class="foundation-cta" target="_blank">Conocer más</a>
+          </div>
+          
+          <div class="foundation-image">
+            <img src="img/foundation.jpg" alt="Fundación Tupac Amaru Shakur" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Museo y memoriales -->
+    <section class="legacy-memorials">
+      <div class="container">
+        <h2 class="section-title-v2">Museo y Memoriales</h2>
+        
+        <div class="memorials-grid">
+          <div class="memorial-item">
+            <div class="memorial-image">
+              <img src="img/memorial-1.jpg" alt="Centro Tupac Amaru Shakur" loading="lazy">
+            </div>
+            <div class="memorial-info">
+              <h3>Centro Tupac Amaru Shakur</h3>
+              <div class="memorial-location">
+                <i class="fas fa-map-marker-alt"></i> Atlanta, Georgia
+              </div>
+              <p>Un espacio dedicado a preservar y celebrar el legado artístico y activista de Tupac, con exhibiciones, programas educativos y eventos comunitarios.</p>
+              <a href="#" class="memorial-link">Más información <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="memorial-item">
+            <div class="memorial-image">
+              <img src="img/memorial-2.jpg" alt="Estatua de Tupac" loading="lazy">
+            </div>
+            <div class="memorial-info">
+              <h3>Estatua de Tupac</h3>
+              <div class="memorial-location">
+                <i class="fas fa-map-marker-alt"></i> Museu da Música, Brasil
+              </div>
+              <p>Una estatua de bronce que honra la influencia global de Tupac, reconociendo su impacto en la música y la cultura brasileña.</p>
+              <a href="#" class="memorial-link">Más información <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="memorial-item">
+            <div class="memorial-image">
+              <img src="img/memorial-3.jpg" alt="Murales de Tupac" loading="lazy">
+            </div>
+            <div class="memorial-info">
+              <h3>Murales Globales</h3>
+              <div class="memorial-location">
+                <i class="fas fa-map-marker-alt"></i> Todo el mundo
+              </div>
+              <p>Artistas de todo el mundo han creado murales que celebran la vida y el legado de Tupac, convirtiendo espacios urbanos en galerías que mantienen viva su memoria.</p>
+              <a href="#" class="memorial-link">Más información <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="call-to-action">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Explora su Música</h2>
+          <p>Descubre la discografía completa de Tupac Shakur y comprende cómo su música sigue siendo relevante hoy</p>
+          <div class="cta-buttons">
+            <a href="discografia.html" class="cta-button primary">Ver Discografía</a>
+            <a href="biografia.html" class="cta-button secondary">Conocer su Historia</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-v2">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-logo">
+          <img src="img/logo.png" alt="2Pac Logo" class="logo">
+          <p class="footer-tagline">La leyenda vive</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-nav">
+            <h3>Navegación</h3>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="biografia.html">Biografía</a></li>
+              <li><a href="discografia.html">Discografía</a></li>
+              <li><a href="legado.html">Legado</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>Redes Sociales</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/tupacshakur" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="https://twitter.com/2PAC" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/2pac" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://open.spotify.com/artist/1ZwdS5xdxEREPySFridCfh" class="social-icon" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="footer-copyright">© 2024 - Sitio web dedicado a Tupac Shakur</p>
+        <p class="footer-tribute">En memoria de Tupac Amaru Shakur (1971-1996)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Script específico para la página de legado
+    document.addEventListener('DOMContentLoaded', () => {
+      // Testimonios carrusel
+      const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+      const testimonialDots = document.querySelectorAll('.testimonial-dot');
+      let currentTestimonial = 0;
+      let testimonialInterval;
+      
+      function showTestimonial(index) {
+        testimonialSlides.forEach(slide => {
+          slide.classList.remove('active');
+        });
+        
+        testimonialDots.forEach(dot => {
+          dot.classList.remove('active');
+        });
+        
+        testimonialSlides[index].classList.add('active');
+        testimonialDots[index].classList.add('active');
+      }
+      
+      function nextTestimonial() {
+        currentTestimonial++;
+        if (currentTestimonial >= testimonialSlides.length) {
+          currentTestimonial = 0;
+        }
+        showTestimonial(currentTestimonial);
+      }
+      
+      function startTestimonialInterval() {
+        testimonialInterval = setInterval(nextTestimonial, 6000);
+      }
+      
+      testimonialDots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const slideIndex = parseInt(dot.getAttribute('data-index'));
+          currentTestimonial = slideIndex;
+          showTestimonial(currentTestimonial);
+          
+          clearInterval(testimonialInterval);
+          startTestimonialInterval();
+        });
+      });
+      
+      startTestimonialInterval();
+      
+      // Animación para elementos al hacer scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      });
+      
+      const elements = document.querySelectorAll('.impact-item, .influenced-item, .legacy-timeline-item, .memorial-item');
+      
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+
+</html>
+

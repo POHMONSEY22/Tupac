@@ -1,0 +1,875 @@
+/* Estilos específicos para la página de legado */
+
+/* Hero de legado */
+.legacy-hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .legacy-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.7)), url('../img/legacy-hero.jpg') no-repeat center center/cover;
+    z-index: 0;
+  }
+  
+  .legacy-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+  }
+  
+  .legacy-title {
+    font-family: var(--font-display);
+    font-size: 8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+  }
+  
+  .legacy-subtitle {
+    font-size: 2.4rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--color-light);
+    position: relative;
+    display: inline-block;
+  }
+  
+  .legacy-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-gold);
+  }
+  
+  /* Introducción al legado */
+  .legacy-intro {
+    padding: 10rem 0;
+    background-color: var(--color-darker);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .legacy-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(138, 43, 226, 0.1), transparent 70%);
+    pointer-events: none;
+  }
+  
+  .legacy-intro-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  
+  .legacy-intro-text p {
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+  
+  .legacy-quote {
+    position: relative;
+    font-size: 2.2rem;
+    font-style: italic;
+    padding: 2rem 3rem;
+    margin: 3rem 0;
+    border-left: 4px solid var(--color-primary);
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  }
+  
+  .legacy-quote cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    color: var(--color-primary);
+  }
+  
+  .legacy-intro-image {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: all var(--transition-medium);
+  }
+  
+  .legacy-intro-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(138, 43, 226, 0.2));
+    z-index: 1;
+  }
+  
+  .legacy-intro-image img {
+    width: 100%;
+    height: auto;
+    transition: transform var(--transition-medium);
+    filter: contrast(1.1);
+  }
+  
+  .legacy-intro-image:hover {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  
+  .legacy-intro-image:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Impacto cultural */
+  .legacy-impact {
+    padding: 10rem 0;
+    background-color: var(--color-dark);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .legacy-impact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 70%, rgba(255, 0, 102, 0.1), transparent 70%);
+    pointer-events: none;
+  }
+  
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 5rem;
+  }
+  
+  .impact-item {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 3.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: all var(--transition-fast);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: var(--blur-effect);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .impact-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient-gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-medium);
+  }
+  
+  .impact-item:hover {
+    transform: translateY(-15px);
+    background-color: rgba(212, 175, 55, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  }
+  
+  .impact-item:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .impact-icon {
+    font-size: 4rem;
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 2rem;
+    transition: all var(--transition-fast);
+  }
+  
+  .impact-item:hover .impact-icon {
+    transform: scale(1.2);
+  }
+  
+  .impact-item h3 {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .impact-item p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+  }
+  
+  /* Artistas influenciados */
+  .legacy-influenced {
+    padding: 10rem 0;
+    background-color: var(--color-darker);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .legacy-influenced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(138, 43, 226, 0.1), transparent 70%);
+    pointer-events: none;
+  }
+  
+  .influenced-slider {
+    position: relative;
+    margin-top: 5rem;
+    overflow: hidden;
+  }
+  
+  .influenced-track {
+    display: flex;
+    gap: 3rem;
+    transition: transform 0.5s ease;
+  }
+  
+  .influenced-item {
+    min-width: calc(33.333% - 2rem);
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all var(--transition-fast);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: var(--blur-effect);
+  }
+  
+  .influenced-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(212, 175, 55, 0.2);
+  }
+  
+  .influenced-image {
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .influenced-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-medium);
+  }
+  
+  .influenced-item:hover .influenced-image img {
+    transform: scale(1.1);
+  }
+  
+  .influenced-info {
+    padding: 2.5rem;
+  }
+  
+  .influenced-info h3 {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .influenced-info p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  
+  /* Testimonios */
+  .legacy-testimonials {
+    padding: 10rem 0;
+    background-color: var(--color-dark);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .legacy-testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 70%, rgba(255, 0, 102, 0.1), transparent 70%);
+    pointer-events: none;
+  }
+  
+  .testimonials-carousel {
+    position: relative;
+    height: 40rem;
+    margin: 5rem 0;
+  }
+  
+  .testimonial-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all var(--transition-medium);
+    visibility: hidden;
+  }
+  
+  .testimonial-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+  }
+  
+  .testimonial-content {
+    text-align: center;
+    max-width: 80%;
+    position: relative;
+  }
+  
+  .testimonial-content::before,
+  .testimonial-content::after {
+    content: '"';
+    font-family: Georgia, serif;
+    font-size: 12rem;
+    position: absolute;
+    opacity: 0.1;
+    color: var(--color-primary);
+  }
+  
+  .testimonial-content::before {
+    top: -6rem;
+    left: -4rem;
+  }
+  
+  .testimonial-content::after {
+    bottom: -8rem;
+    right: -4rem;
+    transform: rotate(180deg);
+  }
+  
+  .testimonial-quote {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .author-image {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--color-primary);
+  }
+  
+  .author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .author-name {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+  }
+  
+  .author-title {
+    font-size: 1.4rem;
+    color: var(--color-gray);
+  }
+  
+  .testimonials-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .testimonials-dots {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .testimonial-dot {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .testimonial-dot.active {
+    background: var(--gradient-gold);
+    transform: scale(1.2);
+  }
+  
+  /* Línea de tiempo del legado */
+  .legacy-timeline {
+    padding: 10rem 0;
+    background-color: var(--color-darker);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .legacy-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(138, 43, 226, 0.1), transparent 70%);
+    pointer-events: none;
+  }
+  
+  .legacy-timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 5rem auto 0;
+  }
+  
+  .legacy-timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--color-primary), var(--color-primary), transparent);
+    z-index: 1;
+  }
+  
+  .legacy-timeline-item {
+    position: relative;
+    margin-bottom: 6rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .legacy-timeline-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .legacy-timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 3rem);
+  }
+  
+  .legacy-timeline-item:nth-child(even) {
+    padding-left: calc(50% + 3rem);
+  }
+  
+  .legacy-timeline-date {
+    position: absolute;
+    top: 0;
+    width: 15rem;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .legacy-timeline-item:nth-child(odd) .legacy-timeline-date {
+    right: calc(50% - 7.5rem);
+  }
+  
+  .legacy-timeline-item:nth-child(even) .legacy-timeline-date {
+    left: calc(50% - 7.5rem);
+  }
+  
+  .legacy-date-year {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 600;
+    display: block;
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .legacy-timeline-content {
+    position: relative;
+    padding: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: var(--blur-effect);
+    z-index: 2;
+  }
+  
+  .legacy-timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--gradient-gold);
+    border-radius: 50%;
+    z-index: 3;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+  }
+  
+  .legacy-timeline-item:nth-child(odd) .legacy-timeline-content::before {
+    right: -3.5rem;
+  }
+  
+  .legacy-timeline-item:nth-child(even) .legacy-timeline-content::before {
+    left: -3.5rem;
+  }
+  
+  .legacy-timeline-content h3 {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .legacy-timeline-content p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+  }
+  
+  /* Fundación Tupac Amaru Shakur */
+  .legacy-foundation {
+    padding: 10rem 0;
+    background-color: var(--color-dark);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .legacy-foundation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 70%, rgba(255, 0, 102, 0.1), transparent 70%);
+    pointer-events: none;
+  }
+  
+  .foundation-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    margin-top: 5rem;
+  }
+  
+  .foundation-text h3 {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .foundation-text p {
+    margin-bottom: 2.5rem;
+    font-size: 1.7rem;
+    line-height: 1.7;
+  }
+  
+  .foundation-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+  
+  .foundation-stat {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .foundation-stat-number {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 600;
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  
+  .foundation-stat-label {
+    font-size: 1.4rem;
+    color: var(--color-gray);
+  }
+  
+  .foundation-cta {
+    display: inline-block;
+    padding: 1.4rem 3.5rem;
+    background: var(--gradient-gold);
+    color: var(--color-dark);
+    font-weight: 600;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all var(--transition-fast);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .foundation-cta:hover {
+    background: var(--color-light);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .foundation-image {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .foundation-image img {
+    width: 100%;
+    height: auto;
+    transition: transform var(--transition-medium);
+  }
+  
+  .foundation-image:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Museo y memoriales */
+  .legacy-memorials {
+    padding: 10rem 0;
+    background-color: var(--color-darker);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .legacy-memorials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(138, 43, 226, 0.1), transparent 70%);
+    pointer-events: none;
+  }
+  
+  .memorials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 5rem;
+  }
+  
+  .memorial-item {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all var(--transition-fast);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: var(--blur-effect);
+  }
+  
+  .memorial-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(212, 175, 55, 0.2);
+  }
+  
+  .memorial-image {
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .memorial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-medium);
+  }
+  
+  .memorial-item:hover .memorial-image img {
+    transform: scale(1.1);
+  }
+  
+  .memorial-info {
+    padding: 2.5rem;
+  }
+  
+  .memorial-info h3 {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .memorial-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--color-gray);
+    margin-bottom: 1.5rem;
+  }
+  
+  .memorial-location i {
+    color: var(--color-primary);
+  }
+  
+  .memorial-info p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  
+  .memorial-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+  }
+  
+  .memorial-link:hover {
+    transform: translateX(5px);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 992px) {
+    .legacy-title {
+      font-size: 6rem;
+    }
+    
+    .legacy-intro-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .influenced-item {
+      min-width: calc(50% - 1.5rem);
+    }
+    
+    .foundation-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .legacy-timeline-container::before {
+      left: 2rem;
+    }
+    
+    .legacy-timeline-item:nth-child(odd),
+    .legacy-timeline-item:nth-child(even) {
+      padding-left: 5rem;
+      padding-right: 0;
+    }
+    
+    .legacy-timeline-date {
+      left: 0 !important;
+      right: auto !important;
+      text-align: left;
+      width: auto;
+    }
+    
+    .legacy-timeline-item:nth-child(odd) .legacy-timeline-content::before,
+    .legacy-timeline-item:nth-child(even) .legacy-timeline-content::before {
+      left: -3.5rem;
+      right: auto;
+    }
+    
+    .influenced-item {
+      min-width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .legacy-title {
+      font-size: 4.5rem;
+    }
+    
+    .legacy-subtitle {
+      font-size: 1.8rem;
+    }
+    
+    .impact-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .testimonial-quote {
+      font-size: 2rem;
+    }
+  }
+  
+  

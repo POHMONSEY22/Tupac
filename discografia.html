@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discografía completa de Tupac Shakur (2Pac) - Álbumes, singles y colaboraciones">
+  <title>Discografía de 2Pac | Álbumes y Canciones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="logo.css">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Cursor personalizado -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <header class="transparent-header">
+    <nav class="menu">
+      <div class="logo-box">
+        <a href="index.html">
+          <img src="img/logo.png" alt="2Pac Logo" class="logo">
+        </a>
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="biografia.html">QUIÉN ES 2PAC</a></li>
+        <li><a href="discografia.html" class="active">DISCOGRAFÍA</a></li>
+        <li><a href="legado.html">LEGADO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section con video de fondo -->
+    <section id="hero" class="hero-v2">
+      <div class="video-container">
+        <video id="bg-video" autoplay muted loop poster="img/disco-hero.jpg">
+          <source src="video/2pac-disco.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+      </div>
+      <div class="hero-social">
+        <a href="https://open.spotify.com/artist/1ZwdS5xdxEREPySFridCfh" class="hero-social-link" target="_blank" aria-label="Spotify">
+          <i class="fab fa-spotify"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCP6Y5xLQ9NSXgC1P1l6KgQw" class="hero-social-link" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/2pac" class="hero-social-link" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title-v2" data-text="DISCOGRAFÍA">DISCOGRAFÍA</h1>
+        <div class="hero-subtitle">El legado musical de <span class="hero-subtitle-highlight">Tupac Shakur</span></div>
+        <div class="hero-quote">"La música es el lenguaje universal que nos une a todos."</div>
+
+        <!-- Estadísticas -->
+        <div class="disco-stats">
+          <div class="disco-stat">
+            <span class="stat-number">11</span>
+            <span class="stat-label">Álbumes de estudio</span>
+          </div>
+          <div class="disco-stat">
+            <span class="stat-number">44</span>
+            <span class="stat-label">Singles</span>
+          </div>
+          <div class="disco-stat">
+            <span class="stat-number">75M+</span>
+            <span class="stat-label">Discos vendidos</span>
+          </div>
+        </div>
+
+        <div class="hero-scroll-indicator">
+          <div class="scroll-text">Explora su música</div>
+          <div class="scroll-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+      </div>
+
+      <div class="hero-years">
+        <div class="year">1991</div>
+        <div class="separator"></div>
+        <div class="year">2006</div>
+      </div>
+    </section>
+
+    <!-- Slider de frases célebres -->
+    <section class="frases-inmersivas">
+      <div class="container">
+        <h2 class="section-title-v2">Frases sobre Música</h2>
+        <div class="frases-carousel">
+          <div class="frase-slide active">
+            <div class="frase-content">
+              <div class="frase-quote">"La música es el lenguaje universal que nos une a todos."</div>
+              <div class="frase-source">2Pac</div>
+            </div>
+          </div>
+          <div class="frase-slide">
+            <div class="frase-content">
+              <div class="frase-quote">"Mi música no es para que la gente vote por un político, sino para que voten por sí mismos."</div>
+              <div class="frase-source">2Pac</div>
+            </div>
+          </div>
+          <div class="frase-slide">
+            <div class="frase-content">
+              <div class="frase-quote">"Quiero tocar a la gente con mi arte. Quiero que digan, 'ese hermano Tupac, él me hizo cambiar mi vida'."</div>
+              <div class="frase-source">2Pac</div>
+            </div>
+          </div>
+        </div>
+        <div class="frases-navigation">
+          <div class="frases-dots">
+            <span class="frase-dot active" data-index="0"></span>
+            <span class="frase-dot" data-index="1"></span>
+            <span class="frase-dot" data-index="2"></span>
+          </div>
+          <div class="frases-arrows">
+            <button class="frase-arrow prev" aria-label="Frase anterior"><i class="fas fa-arrow-left"></i></button>
+            <button class="frase-arrow next" aria-label="Frase siguiente"><i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filtro de álbumes -->
+    <section class="disco-filter">
+      <div class="container">
+        <div class="filter-controls">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="studio">Estudio</button>
+          <button class="filter-btn" data-filter="posthumous">Póstumos</button>
+          <button class="filter-btn" data-filter="compilation">Compilaciones</button>
+        </div>
+        
+        <div class="search-box">
+          <input type="text" id="albumSearch" placeholder="Buscar álbum...">
+          <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Álbumes en vida -->
+    <section class="disco-albums">
+      <div class="container">
+        <h2 class="section-title-v2">Álbumes de Estudio</h2>
+        
+        <div class="albums-grid">
+          <!-- 2Pacalypse Now -->
+          <div class="album-card" data-category="studio" data-year="1991">
+            <div class="album-cover">
+              <img src="img/album-2pacalypse.jpg" alt="2Pacalypse Now" loading="lazy">
+              <div class="album-overlay">
+                <a href="https://open.spotify.com/album/75Y4Rau1UF2qgx2JyZSEQG" class="album-play" target="_blank">
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">2Pacalypse Now</h3>
+              <p class="album-year">1991</p>
+              <div class="album-details">
+                <div class="album-label">Interscope Records</div>
+                <div class="album-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+              <div class="album-tracks">
+                <div class="track-item">
+                  <span class="track-name">Trapped</span>
+                  <span class="track-duration">4:44</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Brenda's Got a Baby</span>
+                  <span class="track-duration">3:53</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">If My Homie Calls</span>
+                  <span class="track-duration">4:18</span>
+                </div>
+              </div>
+              <button class="album-expand">Ver todas las canciones</button>
+            </div>
+          </div>
+          
+          <!-- Strictly 4 My N.I.G.G.A.Z... -->
+          <div class="album-card" data-category="studio" data-year="1993">
+            <div class="album-cover">
+              <img src="img/album-strictly.jpg" alt="Strictly 4 My N.I.G.G.A.Z..." loading="lazy">
+              <div class="album-overlay">
+                <a href="https://open.spotify.com/album/0JFAhIZ9ThwQGmG4rrFGyn" class="album-play" target="_blank">
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">Strictly 4 My N.I.G.G.A.Z...</h3>
+              <p class="album-year">1993</p>
+              <div class="album-details">
+                <div class="album-label">Interscope Records</div>
+                <div class="album-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+              <div class="album-tracks">
+                <div class="track-item">
+                  <span class="track-name">Keep Ya Head Up</span>
+                  <span class="track-duration">4:24</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">I Get Around</span>
+                  <span class="track-duration">4:10</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Holler If Ya Hear Me</span>
+                  <span class="track-duration">4:38</span>
+                </div>
+              </div>
+              <button class="album-expand">Ver todas las canciones</button>
+            </div>
+          </div>
+          
+          <!-- Me Against the World -->
+          <div class="album-card" data-category="studio" data-year="1995">
+            <div class="album-cover">
+              <img src="img/album-me-against.jpg" alt="Me Against the World" loading="lazy">
+              <div class="album-overlay">
+                <a href="https://open.spotify.com/album/6lXOk6IKl8zPPGFIQpDLbZ" class="album-play" target="_blank">
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">Me Against the World</h3>
+              <p class="album-year">1995</p>
+              <div class="album-details">
+                <div class="album-label">Interscope Records</div>
+                <div class="album-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="album-tracks">
+                <div class="track-item">
+                  <span class="track-name">Dear Mama</span>
+                  <span class="track-duration">4:40</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">So Many Tears</span>
+                  <span class="track-duration">3:59</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Temptations</span>
+                  <span class="track-duration">5:00</span>
+                </div>
+              </div>
+              <button class="album-expand">Ver todas las canciones</button>
+            </div>
+          </div>
+          
+          <!-- All Eyez On Me -->
+          <div class="album-card featured" data-category="studio" data-year="1996">
+            <div class="album-cover">
+              <img src="img/album-all-eyez.jpg" alt="All Eyez On Me" loading="lazy">
+              <div class="album-overlay">
+                <a href="https://open.spotify.com/album/1Mhn9VosyjtWn4dMSWJzRl" class="album-play" target="_blank">
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="album-info">
+              <div class="album-badge">Obra Maestra</div>
+              <h3 class="album-title">All Eyez On Me</h3>
+              <p class="album-year">1996</p>
+              <div class="album-details">
+                <div class="album-label">Death Row Records</div>
+                <div class="album-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="album-tracks">
+                <div class="track-item">
+                  <span class="track-name">California Love</span>
+                  <span class="track-duration">4:45</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">2 of Amerikaz Most Wanted</span>
+                  <span class="track-duration">4:07</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Ambitionz Az a Ridah</span>
+                  <span class="track-duration">4:39</span>
+                </div>
+              </div>
+              <button class="album-expand">Ver todas las canciones</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Álbumes póstumos -->
+    <section class="disco-posthumous">
+      <div class="container">
+        <h2 class="section-title-v2">Álbumes Póstumos</h2>
+        
+        <div class="albums-grid">
+          <!-- The Don Killuminati -->
+          <div class="album-card" data-category="posthumous" data-year="1996">
+            <div class="album-cover">
+              <img src="img/album-makaveli.jpg" alt="The Don Killuminati" loading="lazy">
+              <div class="album-overlay">
+                <a href="https://open.spotify.com/album/7aGzSSUD8S6IhPPWC3WFV3" class="album-play" target="_blank">
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">The Don Killuminati: The 7 Day Theory</h3>
+              <p class="album-year">1996</p>
+              <div class="album-details">
+                <div class="album-label">Death Row Records</div>
+                <div class="album-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+              <div class="album-tracks">
+                <div class="track-item">
+                  <span class="track-name">Hail Mary</span>
+                  <span class="track-duration">5:12</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">To Live & Die in L.A.</span>
+                  <span class="track-duration">4:33</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Against All Odds</span>
+                  <span class="track-duration">4:38</span>
+                </div>
+              </div>
+              <button class="album-expand">Ver todas las canciones</button>
+            </div>
+          </div>
+          
+          <!-- R U Still Down? -->
+          <div class="album-card" data-category="posthumous" data-year="1997">
+            <div class="album-cover">
+              <img src="img/album-still-down.jpg" alt="R U Still Down?" loading="lazy">
+              <div class="album-overlay">
+                <a href="https://open.spotify.com/album/1Vy4VlZSoaRJ2YmTYp0o35" class="album-play" target="_blank">
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">R U Still Down? (Remember Me)</h3>
+              <p class="album-year">1997</p>
+              <div class="album-details">
+                <div class="album-label">Jive Records</div>
+                <div class="album-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+              <div class="album-tracks">
+                <div class="track-item">
+                  <span class="track-name">Do For Love</span>
+                  <span class="track-duration">4:39</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">I Wonder If Heaven Got a Ghetto</span>
+                  <span class="track-duration">4:09</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Nothing to Lose</span>
+                  <span class="track-duration">4:20</span>
+                </div>
+              </div>
+              <button class="album-expand">Ver todas las canciones</button>
+            </div>
+          </div>
+          
+          <!-- Until the End of Time -->
+          <div class="album-card" data-category="posthumous" data-year="2001">
+            <div class="album-cover">
+              <img src="img/album-until.jpg" alt="Until the End of Time" loading="lazy">
+              <div class="album-overlay">
+                <a href="https://open.spotify.com/album/6lrYVGQIGdOOWmgYIzNQeO" class="album-play" target="_blank">
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">Until the End of Time</h3>
+              <p class="album-year">2001</p>
+              <div class="album-details">
+                <div class="album-label">Death Row Records</div>
+                <div class="album-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+              <div class="album-tracks">
+                <div class="track-item">
+                  <span class="track-name">Until the End of Time</span>
+                  <span class="track-duration">4:27</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Letter 2 My Unborn</span>
+                  <span class="track-duration">4:00</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Thug N U Thug N Me</span>
+                  <span class="track-duration">4:12</span>
+                </div>
+              </div>
+              <button class="album-expand">Ver todas las canciones</button>
+            </div>
+          </div>
+          
+          <!-- Loyal to the Game -->
+          <div class="album-card" data-category="posthumous" data-year="2004">
+            <div class="album-cover">
+              <img src="img/album-loyal.jpg" alt="Loyal to the Game" loading="lazy">
+              <div class="album-overlay">
+                <a href="https://open.spotify.com/album/1acPLQH3YWbqSRVA3WiGI1" class="album-play" target="_blank">
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">Loyal to the Game</h3>
+              <p class="album-year">2004</p>
+              <div class="album-details">
+                <div class="album-label">Amaru Entertainment</div>
+                <div class="album-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+              <div class="album-tracks">
+                <div class="track-item">
+                  <span class="track-name">Ghetto Gospel</span>
+                  <span class="track-duration">3:58</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Thugs Get Lonely Too</span>
+                  <span class="track-duration">4:47</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Soldier Like Me</span>
+                  <span class="track-duration">3:25</span>
+                </div>
+              </div>
+              <button class="album-expand">Ver todas las canciones</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compilaciones -->
+    <section class="disco-compilations">
+      <div class="container">
+        <h2 class="section-title-v2">Compilaciones</h2>
+        
+        <div class="albums-grid">
+          <!-- Greatest Hits -->
+          <div class="album-card" data-category="compilation" data-year="1998">
+            <div class="album-cover">
+              <img src="img/album-greatest.jpg" alt="Greatest Hits" loading="lazy">
+              <div class="album-overlay">
+                <a href="https://open.spotify.com/album/1rVD3UEJGtsXbHF6KGKfGN" class="album-play" target="_blank">
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">Greatest Hits</h3>
+              <p class="album-year">1998</p>
+              <div class="album-details">
+                <div class="album-label">Death Row Records</div>
+                <div class="album-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="album-tracks">
+                <div class="track-item">
+                  <span class="track-name">Hit 'Em Up</span>
+                  <span class="track-duration">5:12</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Changes</span>
+                  <span class="track-duration">4:29</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">California Love</span>
+                  <span class="track-duration">4:45</span>
+                </div>
+              </div>
+              <button class="album-expand">Ver todas las canciones</button>
+            </div>
+          </div>
+          
+          <!-- Pac's Life -->
+          <div class="album-card" data-category="compilation" data-year="2006">
+            <div class="album-cover">
+              <img src="img/album-pacs-life.jpg" alt="Pac's Life" loading="lazy">
+              <div class="album-overlay">
+                <a href="https://open.spotify.com/album/1TP4licGRK8UiyeQzrJMUZ" class="album-play" target="_blank">
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">Pac's Life</h3>
+              <p class="album-year">2006</p>
+              <div class="album-details">
+                <div class="album-label">Interscope Records</div>
+                <div class="album-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+              <div class="album-tracks">
+                <div class="track-item">
+                  <span class="track-name">Pac's Life</span>
+                  <span class="track-duration">3:48</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Dumpin'</span>
+                  <span class="track-duration">4:52</span>
+                </div>
+                <div class="track-item">
+                  <span class="track-name">Untouchable</span>
+                  <span class="track-duration">3:48</span>
+                </div>
+              </div>
+              <button class="album-expand">Ver todas las canciones</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Canciones destacadas -->
+    <section class="disco-top-songs">
+      <div class="container">
+        <h2 class="section-title-v2">Canciones Más Populares</h2>
+        
+        <div class="top-songs-container">
+          <div class="top-songs-list">
+            <div class="song-item">
+              <div class="song-number">01</div>
+              <div class="song-info">
+                <div class="song-title">California Love</div>
+                <div class="song-album">All Eyez On Me (1996)</div>
+              </div>
+              <div class="song-plays">1.2B</div>
+              <div class="song-duration">4:45</div>
+              <a href="https://open.spotify.com/track/5Jq4Qy1A8PIlWRF9WYESm4" class="song-play" target="_blank">
+                <i class="fas fa-play"></i>
+              </a>
+            </div>
+            
+            <div class="song-item">
+              <div class="song-number">02</div>
+              <div class="song-info">
+                <div class="song-title">Changes</div>
+                <div class="song-album">Greatest Hits (1998)</div>
+              </div>
+              <div class="song-plays">980M</div>
+              <div class="song-duration">4:29</div>
+              <a href="https://open.spotify.com/track/67Hna13dNDkZvBpTXRIaOJ" class="song-play" target="_blank">
+                <i class="fas fa-play"></i>
+              </a>
+            </div>
+            
+            <div class="song-item">
+              <div class="song-number">03</div>
+              <div class="song-info">
+                <div class="song-title">Dear Mama</div>
+                <div class="song-album">Me Against the World (1995)</div>
+              </div>
+              <div class="song-plays">750M</div>
+              <div class="song-duration">4:40</div>
+              <a href="https://open.spotify.com/track/6tDxrq4FxEL2q15y37tXT9" class="song-play" target="_blank">
+                <i class="fas fa-play"></i>
+              </a>
+            </div>
+            
+            <div class="song-item">
+              <div class="song-number">04</div>
+              <div class="song-info">
+                <div class="song-title">Hit 'Em Up</div>
+                <div class="song-album">Greatest Hits (1998)</div>
+              </div>
+              <div class="song-plays">720M</div>
+              <div class="song-duration">5:12</div>
+              <a href="https://open.spotify.com/track/3cXP2VW7QZNruKUZRAAeOx" class="song-play" target="_blank">
+                <i class="fas fa-play"></i>
+              </a>
+            </div>
+            
+            <div class="song-item">
+              <div class="song-number">05</div>
+              <div class="song-info">
+                <div class="song-title">Hail Mary</div>
+                <div class="song-album">The Don Killuminati (1996)</div>
+              </div>
+              <div class="song-plays">680M</div>
+              <div class="song-duration">5:12</div>
+              <a href="https://open.spotify.com/track/6DXFVsLcEvOTSrkG9G1Cb1" class="song-play" target="_blank">
+                <i class="fas fa-play"></i>
+              </a>
+            </div>
+            
+            <div class="song-item">
+              <div class="song-number">06</div>
+              <div class="song-info">
+                <div class="song-title">Ambitionz Az a Ridah</div>
+                <div class="song-album">All Eyez On Me (1996)</div>
+              </div>
+              <div class="song-plays">650M</div>
+              <div class="song-duration">4:39</div>
+              <a href="https://open.spotify.com/track/0PV1TFUMTBrDETzW6KQulB" class="song-play" target="_blank">
+                <i class="fas fa-play"></i>
+              </a>
+            </div>
+            
+            <div class="song-item">
+              <div class="song-number">07</div>
+              <div class="song-info">
+                <div class="song-title">All Eyez On Me</div>
+                <div class="song-album">All Eyez On Me (1996)</div>
+              </div>
+              <div class="song-plays">620M</div>
+              <div class="song-duration">5:08</div>
+              <a href="https://open.spotify.com/track/2mADwE7htRlYjYLcT0ukBk" class="song-play" target="_blank">
+                <i class="fas fa-play"></i>
+              </a>
+            </div>
+            
+            <div class="song-item">
+              <div class="song-number">08</div>
+              <div class="song-info">
+                <div class="song-title">Keep Ya Head Up</div>
+                <div class="song-album">Strictly 4 My N.I.G.G.A.Z... (1993)</div>
+              </div>
+              <div class="song-plays">580M</div>
+              <div class="song-duration">4:24</div>
+              <a href="https://open.spotify.com/track/3zdcQNzZfxPzTYEP3WGzqG" class="song-play" target="_blank">
+                <i class="fas fa-play"></i>
+              </a>
+            </div>
+            
+            <div class="song-item">
+              <div class="song-number">09</div>
+              <div class="song-info">
+                <div class="song-title">2 of Amerikaz Most Wanted</div>
+                <div class="song-album">All Eyez On Me (1996)</div>
+              </div>
+              <div class="song-plays">550M</div>
+              <div class="song-duration">4:07</div>
+              <a href="https://open.spotify.com/track/62vpOSh6dEygc8Vn4dJU2r" class="song-play" target="_blank">
+                <i class="fas fa-play"></i>
+              </a>
+            </div>
+            
+            <div class="song-item">
+              <div class="song-number">10</div>
+              <div class="song-info">
+                <div class="song-title">Life Goes On</div>
+                <div class="song-album">All Eyez On Me (1996)</div>
+              </div>
+              <div class="song-plays">520M</div>
+              <div class="song-duration">5:02</div>
+              <a href="https://open.spotify.com/track/63DTXKZy3UFK5fvCQHWYxj" class="song-play" target="_blank">
+                <i class="fas fa-play"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="top-songs-visual">
+            <div class="visual-header">
+              <h3>Reproducciones por Álbum</h3>
+            </div>
+            <div class="visual-chart">
+              <canvas id="albumsChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Colaboraciones -->
+    <section class="disco-collaborations">
+      <div class="container">
+        <h2 class="section-title-v2">Colaboraciones Legendarias</h2>
+        
+        <div class="collaborations-grid">
+          <div class="collab-item">
+            <div class="collab-artists">
+              <img src="img/collab-snoop.jpg" alt="Snoop Dogg" class="collab-artist-img">
+              <div class="collab-plus">+</div>
+              <img src="img/collab-2pac.jpg" alt="2Pac" class="collab-artist-img">
+            </div>
+            <div class="collab-info">
+              <h3>2 of Amerikaz Most Wanted</h3>
+              <p>Con Snoop Dogg</p>
+              <a href="https://open.spotify.com/track/62vpOSh6dEygc8Vn4dJU2r" class="collab-listen" target="_blank">Escuchar</a>
+            </div>
+          </div>
+          
+          <div class="collab-item">
+            <div class="collab-artists">
+              <img src="img/collab-dre.jpg" alt="Dr. Dre" class="collab-artist-img">
+              <div class="collab-plus">+</div>
+              <img src="img/collab-2pac.jpg" alt="2Pac" class="collab-artist-img">
+            </div>
+            <div class="collab-info">
+              <h3>California Love</h3>
+              <p>Con Dr. Dre</p>
+              <a href="https://open.spotify.com/track/5Jq4Qy1A8PIlWRF9WYESm4" class="collab-listen" target="_blank">Escuchar</a>
+            </div>
+          </div>
+          
+          <div class="collab-item">
+            <div class="collab-artists">
+              <img src="img/collab-outlawz.jpg" alt="Outlawz" class="collab-artist-img">
+              <div class="collab-plus">+</div>
+              <img src="img/collab-2pac.jpg" alt="2Pac" class="collab-artist-img">
+            </div>
+            <div class="collab-info">
+              <h3>Hit 'Em Up</h3>
+              <p>Con Outlawz</p>
+              <a href="https://open.spotify.com/track/3cXP2VW7QZNruKUZRAAeOx" class="collab-listen" target="_blank">Escuchar</a>
+            </div>
+          </div>
+          
+          <div class="collab-item">
+            <div class="collab-artists">
+              <img src="img/collab-method.jpg" alt="Method Man" class="collab-artist-img">
+              <div class="collab-plus">+</div>
+              <img src="img/collab-2pac.jpg" alt="2Pac" class="collab-artist-img">
+            </div>
+            <div class="collab-info">
+              <h3>Got My Mind Made Up</h3>
+              <p>Con Method Man & Redman</p>
+              <a href="https://open.spotify.com/track/5Jq4Qy1A8PIlWRF9WYESm4" class="collab-listen" target="_blank">Escuchar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="call-to-action">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Descubre el Impacto Cultural</h2>
+          <p>Explora cómo la música de Tupac Shakur transformó el hip-hop y la cultura popular</p>
+          <div class="cta-buttons">
+            <a href="legado.html" class="cta-button primary">Explorar Legado</a>
+            <a href="biografia.html" class="cta-button secondary">Conocer su Historia</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-v2">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-logo">
+          <img src="img/logo.png" alt="2Pac Logo" class="logo">
+          <p class="footer-tagline">La leyenda vive</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-nav">
+            <h3>Navegación</h3>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="biografia.html">Biografía</a></li>
+              <li><a href="discografia.html">Discografía</a></li>
+              <li><a href="legado.html">Legado</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>Redes Sociales</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/tupacshakur" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="https://twitter.com/2PAC" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/2pac" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://open.spotify.com/artist/1ZwdS5xdxEREPySFridCfh" class="social-icon" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="footer-copyright">© 2024 - Sitio web dedicado a Tupac Shakur</p>
+        <p class="footer-tribute">En memoria de Tupac Amaru Shakur (1971-1996)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Script específico para la página de discografía
+    document.addEventListener('DOMContentLoaded', () => {
+      // Filtro de álbumes
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const albumCards = document.querySelectorAll('.album-card');
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Desactivar todos los botones
+          filterBtns.forEach(b => b.classList.remove('active'));
+          
+          // Activar el botón clickeado
+          btn.classList.add('active');
+          
+          // Filtrar álbumes
+          const filter = btn.getAttribute('data-filter');
+          
+          albumCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+      
+      // Búsqueda de álbumes
+      const searchInput = document.getElementById('albumSearch');
+      
+      searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        
+        albumCards.forEach(card => {
+          const albumTitle = card.querySelector('.album-title').textContent.toLowerCase();
+          const albumYear = card.querySelector('.album-year').textContent.toLowerCase();
+          
+          if (albumTitle.includes(searchTerm) || albumYear.includes(searchTerm)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+      
+      // Expandir lista de canciones
+      const expandBtns = document.querySelectorAll('.album-expand');
+      
+      expandBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const tracksList = btn.previousElementSibling;
+          
+          if (tracksList.style.maxHeight) {
+            tracksList.style.maxHeight = null;
+            btn.textContent = 'Ver todas las canciones';
+          } else {
+            tracksList.style.maxHeight = tracksList.scrollHeight + 'px';
+            btn.textContent = 'Ocultar canciones';
+          }
+        });
+      });
+      
+      // Gráfico de reproducciones por álbum
+      const ctx = document.getElementById('albumsChart').getContext('2d');
+      
+      const albumsChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['All Eyez On Me', 'Me Against the World', 'The Don Killuminati', 'Greatest Hits', 'R U Still Down?'],
+          datasets: [{
+            label: 'Millones de reproducciones',
+            data: [3200, 2800, 2500, 2200, 1800],
+            backgroundColor: [
+              '#d4af37',
+              '#8a2be2',
+              '#ff0066',
+              '#4a00e0',
+              '#f9d423'
+            ],
+            borderWidth: 0,
+            borderRadius: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
+              titleColor: '#d4af37',
+              bodyColor: '#ffffff',
+              borderColor: '#d4af37',
+              borderWidth: 1,
+              padding: 10,
+              displayColors: false,
+              callbacks: {
+                label: function(context) {
+                  return context.parsed.y + 'M reproducciones';
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: {
+                display: false
+              },
+              ticks: {
+                color: '#ffffff'
+              }
+            },
+            y: {
+              beginAtZero: true,
+              grid: {
+                color: 'rgba(255, 255, 255, 0.1)'
+              },
+              ticks: {
+                color: '#ffffff',
+                callback: function(value) {
+                  return value + 'M';
+                }
+              }
+            }
+          }
+        }
+      });
+      
+      // Animación para elementos al hacer scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      });
+      
+      const elements = document.querySelectorAll('.album-card, .song-item, .collab-item, .section-title-v2');
+      
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+
+</html>
+
