@@ -37,6 +37,7 @@
         <li><a href="biografia.html">QUIÉN ES 2PAC</a></li>
         <li><a href="discografia.html" class="active">DISCOGRAFÍA</a></li>
         <li><a href="legado.html">LEGADO</a></li>
+        <li><a href="poesia.html">POESIA</a></li>
       </ul>
     </nav>
   </header>
@@ -95,43 +96,6 @@
       </div>
     </section>
 
-    <!-- Slider de frases célebres -->
-    <section class="frases-inmersivas">
-      <div class="container">
-        <h2 class="section-title-v2">Frases sobre Música</h2>
-        <div class="frases-carousel">
-          <div class="frase-slide active">
-            <div class="frase-content">
-              <div class="frase-quote">"La música es el lenguaje universal que nos une a todos."</div>
-              <div class="frase-source">2Pac</div>
-            </div>
-          </div>
-          <div class="frase-slide">
-            <div class="frase-content">
-              <div class="frase-quote">"Mi música no es para que la gente vote por un político, sino para que voten por sí mismos."</div>
-              <div class="frase-source">2Pac</div>
-            </div>
-          </div>
-          <div class="frase-slide">
-            <div class="frase-content">
-              <div class="frase-quote">"Quiero tocar a la gente con mi arte. Quiero que digan, 'ese hermano Tupac, él me hizo cambiar mi vida'."</div>
-              <div class="frase-source">2Pac</div>
-            </div>
-          </div>
-        </div>
-        <div class="frases-navigation">
-          <div class="frases-dots">
-            <span class="frase-dot active" data-index="0"></span>
-            <span class="frase-dot" data-index="1"></span>
-            <span class="frase-dot" data-index="2"></span>
-          </div>
-          <div class="frases-arrows">
-            <button class="frase-arrow prev" aria-label="Frase anterior"><i class="fas fa-arrow-left"></i></button>
-            <button class="frase-arrow next" aria-label="Frase siguiente"><i class="fas fa-arrow-right"></i></button>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Filtro de álbumes -->
     <section class="disco-filter">
@@ -799,6 +763,314 @@
       </div>
     </section>
 
+    <!-- Estudio Virtual 2Pac -->
+    <section class="virtual-studio">
+      <div class="studio-bg-particles" id="studio-particles"></div>
+      <div class="container">
+        <h2 class="section-title-v2">Estudio Virtual</h2>
+        <div class="studio-subtitle">Mezcla, experimenta y crea con los sonidos de Tupac</div>
+        
+        <div class="studio-interface">
+          <div class="studio-controls">
+            <div class="studio-header">
+              <div class="studio-logo">
+                <img src="img/logo.png" alt="2Pac Logo" class="logo">
+              </div>
+              <div class="studio-title">Death Row Records</div>
+              <div class="studio-power">
+                <button class="power-btn" id="power-btn">
+                  <i class="fas fa-power-off"></i>
+                </button>
+                <div class="power-indicator"></div>
+              </div>
+            </div>
+            
+            <div class="mixer-container">
+              <div class="mixer-tracks">
+                <div class="mixer-track">
+                  <div class="track-info">
+                    <div class="track-name">Beats</div>
+                    <div class="track-source">All Eyez On Me</div>
+                  </div>
+                  <div class="track-controls">
+                    <div class="track-slider-container">
+                      <input type="range" min="0" max="100" value="70" class="track-slider" id="beat-volume">
+                    </div>
+                    <div class="track-buttons">
+                      <button class="track-btn mute-btn" data-track="beat">
+                        <i class="fas fa-volume-mute"></i>
+                      </button>
+                      <button class="track-btn solo-btn" data-track="beat">
+                        <i class="fas fa-headphones"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="track-selector">
+                    <select id="beat-selector" class="audio-selector">
+                      <option value="ambitionz">Ambitionz Az a Ridah</option>
+                      <option value="california">California Love</option>
+                      <option value="hitmup">Hit 'Em Up</option>
+                      <option value="dear">Dear Mama</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="mixer-track">
+                  <div class="track-info">
+                    <div class="track-name">Voces</div>
+                    <div class="track-source">Acapellas</div>
+                  </div>
+                  <div class="track-controls">
+                    <div class="track-slider-container">
+                      <input type="range" min="0" max="100" value="80" class="track-slider" id="vocal-volume">
+                    </div>
+                    <div class="track-buttons">
+                      <button class="track-btn mute-btn" data-track="vocal">
+                        <i class="fas fa-volume-mute"></i>
+                      </button>
+                      <button class="track-btn solo-btn" data-track="vocal">
+                        <i class="fas fa-headphones"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="track-selector">
+                    <select id="vocal-selector" class="audio-selector">
+                      <option value="ambitionz">Ambitionz Az a Ridah</option>
+                      <option value="california">California Love</option>
+                      <option value="changes">Changes</option>
+                      <option value="dear">Dear Mama</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="mixer-track">
+                  <div class="track-info">
+                    <div class="track-name">Samples</div>
+                    <div class="track-source">Elementos</div>
+                  </div>
+                  <div class="track-controls">
+                    <div class="track-slider-container">
+                      <input type="range" min="0" max="100" value="50" class="track-slider" id="sample-volume">
+                    </div>
+                    <div class="track-buttons">
+                      <button class="track-btn mute-btn" data-track="sample">
+                        <i class="fas fa-volume-mute"></i>
+                      </button>
+                      <button class="track-btn solo-btn" data-track="sample">
+                        <i class="fas fa-headphones"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="track-selector">
+                    <select id="sample-selector" class="audio-selector">
+                      <option value="piano">Piano Melódico</option>
+                      <option value="strings">Cuerdas</option>
+                      <option value="drums">Percusión Adicional</option>
+                      <option value="synth">Sintetizador</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mixer-master">
+                <div class="master-label">Master</div>
+                <div class="master-slider-container">
+                  <input type="range" min="0" max="100" value="75" class="master-slider" id="master-volume" orient="vertical">
+                </div>
+                <div class="master-controls">
+                  <button class="master-btn play-btn" id="play-btn">
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <button class="master-btn stop-btn" id="stop-btn">
+                    <i class="fas fa-stop"></i>
+                  </button>
+                  <button class="master-btn record-btn" id="record-btn">
+                    <i class="fas fa-circle"></i>
+                  </button>
+                </div>
+                <div class="tempo-control">
+                  <div class="tempo-label">Tempo</div>
+                  <div class="tempo-value" id="tempo-value">90 BPM</div>
+                  <input type="range" min="60" max="120" value="90" class="tempo-slider" id="tempo-slider">
+                </div>
+              </div>
+            </div>
+            
+            <div class="effects-rack">
+              <div class="effect-unit">
+                <div class="effect-name">Reverb</div>
+                <div class="effect-knobs">
+                  <div class="effect-knob">
+                    <div class="knob" id="reverb-size-knob"></div>
+                    <div class="knob-label">Size</div>
+                  </div>
+                  <div class="effect-knob">
+                    <div class="knob" id="reverb-decay-knob"></div>
+                    <div class="knob-label">Decay</div>
+                  </div>
+                </div>
+                <div class="effect-switch">
+                  <label class="switch">
+                    <input type="checkbox" id="reverb-switch">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="effect-unit">
+                <div class="effect-name">Delay</div>
+                <div class="effect-knobs">
+                  <div class="effect-knob">
+                    <div class="knob" id="delay-time-knob"></div>
+                    <div class="knob-label">Time</div>
+                  </div>
+                  <div class="effect-knob">
+                    <div class="knob" id="delay-feedback-knob"></div>
+                    <div class="knob-label">Feedback</div>
+                  </div>
+                </div>
+                <div class="effect-switch">
+                  <label class="switch">
+                    <input type="checkbox" id="delay-switch">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="effect-unit">
+                <div class="effect-name">Filter</div>
+                <div class="effect-knobs">
+                  <div class="effect-knob">
+                    <div class="knob" id="filter-freq-knob"></div>
+                    <div class="knob-label">Freq</div>
+                  </div>
+                  <div class="effect-knob">
+                    <div class="knob" id="filter-res-knob"></div>
+                    <div class="knob-label">Res</div>
+                  </div>
+                </div>
+                <div class="effect-switch">
+                  <label class="switch">
+                    <input type="checkbox" id="filter-switch">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="studio-visualizer">
+            <div class="visualizer-container">
+              <canvas id="waveform-canvas"></canvas>
+              <canvas id="spectrum-canvas"></canvas>
+            </div>
+            <div class="visualizer-controls">
+              <button class="viz-btn active" data-viz="waveform">
+                <i class="fas fa-wave-square"></i> Forma de onda
+              </button>
+              <button class="viz-btn" data-viz="spectrum">
+                <i class="fas fa-chart-bar"></i> Espectro
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="studio-presets">
+          <div class="presets-title">Presets</div>
+          <div class="presets-grid">
+            <div class="preset-item" data-preset="classic">
+              <div class="preset-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="preset-name">Clásico West Coast</div>
+            </div>
+            <div class="preset-item" data-preset="emotional">
+              <div class="preset-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="preset-name">Emocional</div>
+            </div>
+            <div class="preset-item" data-preset="aggressive">
+              <div class="preset-icon">
+                <i class="fas fa-fire"></i>
+              </div>
+              <div class="preset-name">Agresivo</div>
+            </div>
+            <div class="preset-item" data-preset="modern">
+              <div class="preset-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <div class="preset-name">Moderno</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="studio-creations">
+          <div class="creations-title">Tus Creaciones</div>
+          <div class="creations-empty" id="creations-empty">
+            <div class="empty-icon">
+              <i class="fas fa-music"></i>
+            </div>
+            <div class="empty-text">Tus mezclas aparecerán aquí</div>
+            <div class="empty-subtext">Presiona el botón de grabación para empezar</div>
+          </div>
+          <div class="creations-list" id="creations-list">
+            <!-- Las creaciones se añadirán dinámicamente aquí -->
+          </div>
+        </div>
+        
+        <div class="studio-info">
+          <div class="info-title">Sobre el Estudio Virtual</div>
+          <div class="info-text">
+            <p>Este estudio virtual te permite experimentar con los elementos musicales de las canciones más icónicas de Tupac Shakur. Mezcla beats, voces y samples, ajusta efectos y crea tus propias versiones.</p>
+            <p>Inspirado en los estudios de grabación donde Tupac creó su música legendaria, esta herramienta te acerca a su proceso creativo y te permite apreciar la complejidad de sus composiciones.</p>
+          </div>
+          <div class="info-disclaimer">
+            <p>Nota: Este estudio virtual utiliza recreaciones y samples inspirados en la música de Tupac con fines educativos y de homenaje. Todas las creaciones son para uso personal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slider de frases célebres -->
+    <section class="frases-inmersivas">
+      <div class="container">
+        <h2 class="section-title-v2">Frases sobre Música</h2>
+        <div class="frases-carousel">
+          <div class="frase-slide active">
+            <div class="frase-content">
+              <div class="frase-quote">"La música es el lenguaje universal que nos une a todos."</div>
+              <div class="frase-source">2Pac</div>
+            </div>
+          </div>
+          <div class="frase-slide">
+            <div class="frase-content">
+              <div class="frase-quote">"Mi música no es para que la gente vote por un político, sino para que voten por sí mismos."</div>
+              <div class="frase-source">2Pac</div>
+            </div>
+          </div>
+          <div class="frase-slide">
+            <div class="frase-content">
+              <div class="frase-quote">"Quiero tocar a la gente con mi arte. Quiero que digan, 'ese hermano Tupac, él me hizo cambiar mi vida'."</div>
+              <div class="frase-source">2Pac</div>
+            </div>
+          </div>
+        </div>
+        <div class="frases-navigation">
+          <div class="frases-dots">
+            <span class="frase-dot active" data-index="0"></span>
+            <span class="frase-dot" data-index="1"></span>
+            <span class="frase-dot" data-index="2"></span>
+          </div>
+          <div class="frases-arrows">
+            <button class="frase-arrow prev" aria-label="Frase anterior"><i class="fas fa-arrow-left"></i></button>
+            <button class="frase-arrow next" aria-label="Frase siguiente"><i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- Call to Action -->
     <section class="call-to-action">
       <div class="container">
@@ -850,7 +1122,7 @@
       </div>
     </div>
   </footer>
-
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
   <script>

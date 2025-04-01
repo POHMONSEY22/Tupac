@@ -530,3 +530,1183 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })
 
+// Script para la sección de Momentos Clave
+document.addEventListener('DOMContentLoaded', function() {
+  const timelineMoments = document.querySelectorAll('.timeline-moment');
+  const timelineYearMarkers = document.querySelectorAll('.timeline-year-marker');
+  const prevBtn = document.querySelector('.timeline-nav.prev');
+  const nextBtn = document.querySelector('.timeline-nav.next');
+  let currentMomentIndex = 0;
+  
+  // Función para mostrar un momento específico
+  function showMoment(index) {
+    // Ocultar todos los momentos
+    timelineMoments.forEach(moment => {
+      moment.classList.remove('active');
+    });
+    
+    // Desactivar todos los marcadores de año
+    timelineYearMarkers.forEach(marker => {
+      marker.classList.remove('active');
+    });
+    
+    // Mostrar el momento actual
+    timelineMoments[index].classList.add('active');
+    timelineYearMarkers[index].classList.add('active');
+    
+    // Actualizar estado de los botones
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === timelineMoments.length - 1;
+    
+    // Actualizar el índice actual
+    currentMomentIndex = index;
+  }
+  
+  // Inicializar la línea de tiempo
+  function initTimeline() {
+    // Mostrar el primer momento
+    showMoment(0);
+    
+    // Configurar eventos para los botones de navegación
+    prevBtn.addEventListener('click', () => {
+      if (currentMomentIndex > 0) {
+        showMoment(currentMomentIndex - 1);
+      }
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      if (currentMomentIndex < timelineMoments.length - 1) {
+        showMoment(currentMomentIndex + 1);
+      }
+    });
+    
+    // Configurar eventos para los marcadores de año
+    timelineYearMarkers.forEach((marker, index) => {
+      marker.addEventListener('click', () => {
+        showMoment(index);
+      });
+    });
+    
+    // Animación al hacer scroll
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        timelineMoments[currentMomentIndex].classList.add('active');
+      }
+    }, { threshold: 0.3 });
+    
+    observer.observe(document.querySelector('.moments-timeline'));
+  }
+  
+  // Si la sección existe en la página, inicializar
+  if (timelineMoments.length > 0 && timelineYearMarkers.length > 0) {
+    initTimeline();
+  }
+});
+// Script para la sección de Experiencia Musical
+document.addEventListener('DOMContentLoaded', function() {
+  // Elementos del reproductor
+  const visualizerBackdrop = document.querySelector('.visualizer-backdrop');
+  const songTitle = document.querySelector('.song-title');
+  const songAlbum = document.querySelector('.song-album');
+  const songYear = document.querySelector('.song-year');
+  const songTheme = document.querySelector('.song-theme');
+  const songQuote = document.querySelector('.song-quote');
+  const playBtn = document.querySelector('.play-btn');
+  const progressFill = document.querySelector('.progress-fill');
+  const progressTime = document.querySelector('.progress-time');
+  const volumeFill = document.querySelector('.volume-fill');
+  const songCards = document.querySelectorAll('.song-card');
+  
+  // Audio
+  let audio = null;
+  let isPlaying = false;
+  let currentSong = null;
+  
+  // Función para formatear el tiempo
+  function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+  }
+  
+  // Función para cargar una canción
+  function loadSong(songId) {
+    // Detener la canción actual si existe
+    if (audio) {
+      audio.pause();
+      audio = null;
+      isPlaying = false;
+      playBtn.innerHTML = '<i class="fas fa-play"></i>';
+      visualizerBackdrop.classList.remove('active');
+    }
+    
+    // Crear nuevo audio
+    audio = new Audio(`audio/${songId}.mp3`);
+    
+    // Configurar eventos del audio
+    audio.addEventListener('timeupdate', () => {
+      const progress = (audio.currentTime / audio.duration) * 100;
+      progressFill.style.width = `${progress}%`;
+      progressTime.textContent = formatTime(audio.currentTime);
+    });
+    
+    audio.addEventListener('ended', () => {
+      isPlaying = false;
+      playBtn.innerHTML = '<i class="fas fa-play"></i>';
+      visualizerBackdrop.classList.remove('active');
+    });
+    
+    // Habilitar el botón de reproducción
+    playBtn.disabled = false;
+    
+    // Actualizar la canción actual
+    currentSong = songId;
+  }
+  
+  // Función para reproducir/pausar
+  function togglePlay() {
+    if (!audio) return;
+    
+    if (isPlaying) {
+      audio.pause();
+      playBtn.innerHTML = '<i class="fas fa-play"></i>';
+      visualizerBackdrop.classList.remove('active');
+    } else {
+      audio.play();
+      playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+      visualizerBackdrop.classList.add('active');
+    }
+    
+    isPlaying = !isPlaying;
+  }
+  
+  // Configurar eventos para las tarjetas de canciones
+  songCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const songId = card.getAttribute('data-song');
+      const songThemeText = card.getAttribute('data-theme');
+      const songYearText = card.getAttribute('data-year');
+      const songAlbumText = card.getAttribute('data-album');
+      const songQuoteText = card.getAttribute('data-quote');
+      const songTitleText = card.querySelector('.song-card-title').textContent;
+      
+      // Actualizar la información de la canción
+      songTitle.textContent = songTitleText;
+      songAlbum.textContent = songAlbumText;
+      songYear.textContent = songYearText;
+      songTheme.textContent = songThemeText;
+      songQuote.textContent = songQuoteText;
+      
+      // Cambiar la imagen de fondo
+      const songImage = card.querySelector('img').getAttribute('src');
+      document.querySelector('.backdrop-image').style.backgroundImage = `url('${songImage}')`;
+      
+      // Cargar la canción
+      loadSong(songId);
+      
+      // Reproducir automáticamente
+      setTimeout(() => {
+        togglePlay();
+      }, 100);
+    });
+  });
+  
+  // Configurar evento para el botón de reproducción/pausa
+  playBtn.addEventListener('click', togglePlay);
+  
+  // Configurar evento para la barra de progreso
+  document.querySelector('.progress-bar').addEventListener('click', (e) => {
+    if (!audio) return;
+    
+    const progressBar = e.currentTarget;
+    const clickPosition = e.offsetX;
+    const progressBarWidth = progressBar.clientWidth;
+    const clickPercentage = (clickPosition / progressBarWidth);
+    const newTime = clickPercentage * audio.duration;
+    
+    audio.currentTime = newTime;
+  });
+  
+  // Configurar evento para el control de volumen
+  document.querySelector('.volume-slider').addEventListener('click', (e) => {
+    if (!audio) return;
+    
+    const volumeBar = e.currentTarget;
+    const clickPosition = e.offsetX;
+    const volumeBarWidth = volumeBar.clientWidth;
+    const newVolume = clickPosition / volumeBarWidth;
+    
+    audio.volume = newVolume;
+    volumeFill.style.width = `${newVolume * 100}%`;
+  });
+  
+  // Silenciar/activar sonido
+  document.querySelector('.player-volume i').addEventListener('click', () => {
+    if (!audio) return;
+    
+    if (audio.volume > 0) {
+      audio.volume = 0;
+      volumeFill.style.width = '0%';
+      document.querySelector('.player-volume i').className = 'fas fa-volume-mute';
+    } else {
+      audio.volume = 0.8;
+      volumeFill.style.width = '80%';
+      document.querySelector('.player-volume i').className = 'fas fa-volume-up';
+    }
+  });
+});
+// Script para la sección de Capítulos de Vida
+document.addEventListener('DOMContentLoaded', function() {
+  const chapterNavItems = document.querySelectorAll('.chapter-nav-item');
+  const chapterContents = document.querySelectorAll('.chapter-content');
+  
+  // Función para mostrar un capítulo específico
+  function showChapter(chapterId) {
+    // Ocultar todos los capítulos
+    chapterContents.forEach(content => {
+      content.classList.remove('active');
+    });
+    
+    // Desactivar todos los items de navegación
+    chapterNavItems.forEach(item => {
+      item.classList.remove('active');
+    });
+    
+    // Mostrar el capítulo seleccionado
+    document.getElementById(chapterId).classList.add('active');
+    
+    // Activar el item de navegación correspondiente
+    document.querySelector(`.chapter-nav-item[data-chapter="${chapterId}"]`).classList.add('active');
+  }
+  
+  // Configurar eventos para los items de navegación
+  chapterNavItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const chapterId = item.getAttribute('data-chapter');
+      showChapter(chapterId);
+    });
+  });
+  
+  // Inicializar con el primer capítulo
+  if (chapterNavItems.length > 0 && chapterContents.length > 0) {
+    const firstChapterId = chapterNavItems[0].getAttribute('data-chapter');
+    showChapter(firstChapterId);
+  }
+  
+  // Animación al hacer scroll
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      entries[0].target.classList.add('in-view');
+    }
+  }, { threshold: 0.3 });
+  
+  if (document.querySelector('.life-chapters')) {
+    observer.observe(document.querySelector('.life-chapters'));
+  }
+});
+// Script para la sección El Alma Poética
+document.addEventListener('DOMContentLoaded', function() {
+  // Inicializar particles.js si existe
+  if (document.getElementById('particles-js')) {
+    particlesJS('particles-js', {
+      particles: {
+        number: {
+          value: 80,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: "#d4af37"
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000"
+          }
+        },
+        opacity: {
+          value: 0.3,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 2,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#d4af37",
+          opacity: 0.2,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "grab"
+          },
+          onclick: {
+            enable: true,
+            mode: "push"
+          },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 140,
+            line_linked: {
+              opacity: 0.5
+            }
+          },
+          push: {
+            particles_nb: 4
+          }
+        }
+      },
+      retina_detect: true
+    });
+  }
+  
+  // Elementos de la sección de poesía
+  const poetryBook = document.querySelector('.poetry-book');
+  const bookCover = document.querySelector('.book-cover');
+  const poemNavItems = document.querySelectorAll('.poem-nav-item');
+  const bookPages = document.querySelectorAll('.book-page');
+  const analysisItems = document.querySelectorAll('.analysis-item');
+  
+  // Abrir/cerrar el libro
+  if (bookCover) {
+    bookCover.addEventListener('click', () => {
+      poetryBook.classList.toggle('open');
+    });
+  }
+  
+  // Función para mostrar un poema específico
+  function showPoem(poemId) {
+    // Ocultar todas las páginas
+    bookPages.forEach(page => {
+      page.classList.remove('active');
+    });
+    
+    // Ocultar todos los análisis
+    analysisItems.forEach(item => {
+      item.classList.remove('active');
+    });
+    
+    // Desactivar todos los items de navegación
+    poemNavItems.forEach(item => {
+      item.classList.remove('active');
+    });
+    
+    // Mostrar la página seleccionada
+    document.querySelector(`.book-page[data-poem="${poemId}"]`).classList.add('active');
+    
+    // Mostrar el análisis correspondiente
+    document.querySelector(`.analysis-item[data-poem="${poemId}"]`).classList.add('active');
+    
+    // Activar el item de navegación correspondiente
+    document.querySelector(`.poem-nav-item[data-poem="${poemId}"]`).classList.add('active');
+  }
+  
+  // Configurar eventos para los items de navegación
+  poemNavItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const poemId = item.getAttribute('data-poem');
+      
+      // Asegurarse de que el libro esté abierto
+      if (!poetryBook.classList.contains('open')) {
+        poetryBook.classList.add('open');
+        
+        // Pequeño retraso para que la animación de apertura termine
+        setTimeout(() => {
+          showPoem(poemId);
+        }, 500);
+      } else {
+        showPoem(poemId);
+      }
+    });
+  });
+  
+  // Inicializar con el primer poema
+  if (poemNavItems.length > 0 && bookPages.length > 0) {
+    // Asegurarse de que el primer poema esté activo
+    const firstPoemId = poemNavItems[0].getAttribute('data-poem');
+    showPoem(firstPoemId);
+  }
+  
+  // Animación al hacer scroll
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      entries[0].target.classList.add('in-view');
+    }
+  }, { threshold: 0.3 });
+  
+  if (document.querySelector('.poetic-soul')) {
+    observer.observe(document.querySelector('.poetic-soul'));
+  }
+});
+// Script para el Estudio Virtual 2Pac
+document.addEventListener('DOMContentLoaded', function() {
+  // Comprobar si estamos en la página de discografía
+  if (!document.querySelector('.virtual-studio')) return;
+  
+  // Inicializar particles.js si existe
+  if (document.getElementById('studio-particles')) {
+    particlesJS('studio-particles', {
+      particles: {
+        number: {
+          value: 50,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: "#d4af37"
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000"
+          }
+        },
+        opacity: {
+          value: 0.2,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 2,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#d4af37",
+          opacity: 0.2,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 0.5,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "bubble"
+          },
+          onclick: {
+            enable: true,
+            mode: "push"
+          },
+          resize: true
+        },
+        modes: {
+          bubble: {
+            distance: 100,
+            size: 5,
+            duration: 2,
+            opacity: 0.8,
+            speed: 3
+          },
+          push: {
+            particles_nb: 4
+          }
+        }
+      },
+      retina_detect: true
+    });
+  }
+  
+  // Variables para el estudio virtual
+  const powerBtn = document.getElementById('power-btn');
+  const powerIndicator = document.querySelector('.power-indicator');
+  const playBtn = document.getElementById('play-btn');
+  const stopBtn = document.getElementById('stop-btn');
+  const recordBtn = document.getElementById('record-btn');
+  const tempoSlider = document.getElementById('tempo-slider');
+  const tempoValue = document.getElementById('tempo-value');
+  const beatVolume = document.getElementById('beat-volume');
+  const vocalVolume = document.getElementById('vocal-volume');
+  const sampleVolume = document.getElementById('sample-volume');
+  const masterVolume = document.getElementById('master-volume');
+  const beatSelector = document.getElementById('beat-selector');
+  const vocalSelector = document.getElementById('vocal-selector');
+  const sampleSelector = document.getElementById('sample-selector');
+  const muteBtns = document.querySelectorAll('.mute-btn');
+  const soloBtns = document.querySelectorAll('.solo-btn');
+  const effectSwitches = document.querySelectorAll('.effect-switch input');
+  const vizBtns = document.querySelectorAll('.viz-btn');
+  const waveformCanvas = document.getElementById('waveform-canvas');
+  const spectrumCanvas = document.getElementById('spectrum-canvas');
+  const presetItems = document.querySelectorAll('.preset-item');
+  const creationsEmpty = document.getElementById('creations-empty');
+  const creationsList = document.getElementById('creations-list');
+  
+  // Estado del estudio
+  let studioOn = true;
+  let isPlaying = false;
+  let isRecording = false;
+  let currentTempo = 90;
+  let currentCreations = [];
+  
+  // Inicializar knobs
+  const knobs = document.querySelectorAll('.knob');
+  knobs.forEach(knob => {
+    const randomRotation = Math.floor(Math.random() * 270);
+    knob.style.setProperty('--rotation', `${randomRotation}deg`);
+    knob.querySelector('::after').style.transform = `translate(-50%, -50%) rotate(${randomRotation}deg)`;
+    
+    // Evento para girar el knob
+    knob.addEventListener('mousedown', startKnobDrag);
+  });
+  
+  function startKnobDrag(e) {
+    const knob = e.target;
+    const startY = e.clientY;
+    const startRotation = parseInt(knob.style.getPropertyValue('--rotation') || '0');
+    
+    function moveKnob(e) {
+      const deltaY = startY - e.clientY;
+      let newRotation = startRotation + deltaY;
+      
+      // Limitar rotación entre 0 y 270 grados
+      newRotation = Math.max(0, Math.min(270, newRotation));
+      
+      knob.style.setProperty('--rotation', `${newRotation}deg`);
+      knob.querySelector('::after').style.transform = `translate(-50%, -50%) rotate(${newRotation}deg)`;
+      
+      // Actualizar efectos según el knob
+      updateEffects();
+    }
+    
+    function stopKnobDrag() {
+      document.removeEventListener('mousemove', moveKnob);
+      document.removeEventListener('mouseup', stopKnobDrag);
+    }
+    
+    document.addEventListener('mousemove', moveKnob);
+    document.addEventListener('mouseup', stopKnobDrag);
+  }
+  
+  // Función para actualizar efectos
+  function updateEffects() {
+    // Simulación de actualización de efectos
+    console.log('Efectos actualizados');
+  }
+  
+  // Botón de encendido
+  powerBtn.addEventListener('click', () => {
+    studioOn = !studioOn;
+    
+    if (studioOn) {
+      powerIndicator.style.background = '#2ecc71';
+      powerIndicator.style.boxShadow = '0 0 10px rgba(46, 204, 113, 0.5)';
+      
+      // Activar todos los controles
+      document.querySelectorAll('.studio-controls button, .studio-controls input, .studio-controls select').forEach(el => {
+        el.disabled = false;
+      });
+    } else {
+      powerIndicator.style.background = '#e74c3c';
+      powerIndicator.style.boxShadow = '0 0 10px rgba(231, 76, 60, 0.5)';
+      
+      // Detener reproducción si está activa
+      if (isPlaying) {
+        stopPlayback();
+      }
+      
+      // Desactivar todos los controles
+      document.querySelectorAll('.studio-controls button, .studio-controls input, .studio-controls select').forEach(el => {
+        el.disabled = true;
+      });
+      
+      powerBtn.disabled = false;
+    }
+  });
+  
+  // Controles de reproducción
+  playBtn.addEventListener('click', () => {
+    if (!studioOn) return;
+    
+    isPlaying = !isPlaying;
+    
+    if (isPlaying) {
+      startPlayback();
+      playBtn.classList.add('active');
+      playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+    } else {
+      pausePlayback();
+      playBtn.classList.remove('active');
+      playBtn.innerHTML = '<i class="fas fa-play"></i>';
+    }
+  });
+  
+  stopBtn.addEventListener('click', () => {
+    if (!studioOn || !isPlaying) return;
+    
+    stopPlayback();
+  });
+  
+  recordBtn.addEventListener('click', () => {
+    if (!studioOn) return;
+    
+    isRecording = !isRecording;
+    
+    if (isRecording) {
+      startRecording();
+      recordBtn.classList.add('active');
+    } else {
+      stopRecording();
+      recordBtn.classList.remove('active');
+    }
+  });
+  
+  // Funciones de audio
+  function startPlayback() {
+    console.log('Iniciando reproducción');
+    
+    // Simulación de inicio de reproducción
+    animateVisualizer();
+    
+    // Activar botón de stop
+    stopBtn.classList.add('active');
+  }
+  
+  function pausePlayback() {
+    console.log('Pausando reproducción');
+    
+    // Simulación de pausa
+    cancelAnimationFrame(animationFrame);
+    
+    // Desactivar botón de stop
+    stopBtn.classList.remove('active');
+  }
+  
+  function stopPlayback() {
+    console.log('Deteniendo reproducción');
+    
+    // Detener reproducción
+    isPlaying = false;
+    pausePlayback();
+    
+    // Resetear controles
+    playBtn.classList.remove('active');
+    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+  }
+  
+  function startRecording() {
+    console.log('Iniciando grabación');
+    
+    // Si no está reproduciendo, iniciar reproducción
+    if (!isPlaying) {
+      playBtn.click();
+    }
+  }
+  
+  function stopRecording() {
+    console.log('Deteniendo grabación');
+    
+    // Simular creación de una nueva mezcla
+    createNewMix();
+  }
+  
+  // Control de tempo
+  tempoSlider.addEventListener('input', () => {
+    currentTempo = tempoSlider.value;
+    tempoValue.textContent = `${currentTempo} BPM`;
+    
+    // Actualizar tempo si está reproduciendo
+    if (isPlaying) {
+      updateTempo();
+    }
+  });
+  
+  function updateTempo() {
+    console.log(`Tempo actualizado a ${currentTempo} BPM`);
+  }
+  
+  // Controles de volumen
+  [beatVolume, vocalVolume, sampleVolume, masterVolume].forEach(slider => {
+    slider.addEventListener('input', updateVolumes);
+  });
+  
+  function updateVolumes() {
+    console.log('Volúmenes actualizados');
+    
+    // Actualizar visualizador si está reproduciendo
+    if (isPlaying) {
+      updateVisualizer();
+    }
+  }
+  
+  // Selectores de audio
+  [beatSelector, vocalSelector, sampleSelector].forEach(selector => {
+    selector.addEventListener('change', updateTracks);
+  });
+  
+  function updateTracks() {
+    console.log('Pistas actualizadas');
+    
+    // Actualizar visualizador si está reproduciendo
+    if (isPlaying) {
+      updateVisualizer();
+    }
+  }
+  
+  // Botones de mute y solo
+  muteBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const track = btn.getAttribute('data-track');
+      console.log(`${btn.classList.contains('active') ? 'Silenciando' : 'Activando'} pista ${track}`);
+      
+      // Actualizar visualizador
+      updateVisualizer();
+    });
+  });
+  
+  soloBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Desactivar todos los botones solo
+      soloBtns.forEach(b => b.classList.remove('active'));
+      
+      // Activar solo el actual si no estaba activo
+      if (!btn.classList.contains('active')) {
+        btn.classList.add('active');
+        const track = btn.getAttribute('data-track');
+        console.log(`Solo pista ${track}`);
+      }
+      
+      // Actualizar visualizador
+      updateVisualizer();
+    });
+  });
+  
+  // Switches de efectos
+  effectSwitches.forEach(switchEl => {
+    switchEl.addEventListener('change', () => {
+      const effectId = switchEl.id.split('-')[0];
+      console.log(`Efecto ${effectId} ${switchEl.checked ? 'activado' : 'desactivado'}`);
+      
+      // Actualizar efectos
+      updateEffects();
+    });
+  });
+  
+  // Botones de visualizador
+  vizBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Desactivar todos los botones
+      vizBtns.forEach(b => b.classList.remove('active'));
+      
+      // Activar el actual
+      btn.classList.add('active');
+      
+      const vizType = btn.getAttribute('data-viz');
+      
+      // Mostrar el visualizador correspondiente
+      if (vizType === 'waveform') {
+        waveformCanvas.style.opacity = '1';
+        spectrumCanvas.style.opacity = '0';
+      } else {
+        waveformCanvas.style.opacity = '0';
+        spectrumCanvas.style.opacity = '1';
+      }
+    });
+  });
+  
+  // Animación del visualizador
+  let animationFrame;
+  
+  function animateVisualizer() {
+    // Obtener contextos de canvas
+    const waveCtx = waveformCanvas.getContext('2d');
+    const spectrumCtx = spectrumCanvas.getContext('2d');
+    
+    // Limpiar canvas
+    waveCtx.clearRect(0, 0, waveformCanvas.width, waveformCanvas.height);
+    spectrumCtx.clearRect(0, 0, spectrumCanvas.width, spectrumCanvas.height);
+    
+    // Dibujar forma de onda simulada
+    waveCtx.strokeStyle = '#d4af37';
+    waveCtx.lineWidth = 2;
+    waveCtx.beginPath();
+    
+    const waveWidth = waveformCanvas.width;
+    const waveHeight = waveformCanvas.height;
+    const waveCenter = waveHeight / 2;
+    
+    for (let x = 0; x < waveWidth; x++) {
+      const t = Date.now() / 500;
+      const y = waveCenter + Math.sin(x * 0.01 + t) * 30 + Math.sin(x * 0.02 + t * 1.5) * 20;
+      
+      if (x === 0) {
+        waveCtx.moveTo(x, y);
+      } else {
+        waveCtx.lineTo(x, y);
+      }
+    }
+    
+    waveCtx.stroke();
+    
+    // Dibujar espectro simulado
+    const barCount = 64;
+    const barWidth = spectrumCanvas.width / barCount;
+    const spectrumHeight = spectrumCanvas.height;
+    
+    for (let i = 0; i < barCount; i++) {
+      const t = Date.now() / 500;
+      const barHeight = (Math.sin(i * 0.1 + t) * 0.5 + 0.5) * spectrumHeight * 0.8;
+      
+      const gradient = spectrumCtx.createLinearGradient(0, spectrumHeight, 0, spectrumHeight - barHeight);
+      gradient.addColorStop(0, '#d4af37');
+      gradient.addColorStop(1, '#8a2be2');
+      
+      spectrumCtx.fillStyle = gradient;
+      spectrumCtx.fillRect(i * barWidth, spectrumHeight - barHeight, barWidth - 1, barHeight);
+    }
+    
+    // Continuar animación
+    animationFrame = requestAnimationFrame(animateVisualizer);
+  }
+  
+  function updateVisualizer() {
+    // Actualizar visualizador con los nuevos valores
+    console.log('Visualizador actualizado');
+  }
+  
+  // Presets
+  presetItems.forEach(preset => {
+    preset.addEventListener('click', () => {
+      const presetType = preset.getAttribute('data-preset');
+      console.log(`Aplicando preset ${presetType}`);
+      
+      // Aplicar configuración según el preset
+      applyPreset(presetType);
+    });
+  });
+  
+  function applyPreset(presetType) {
+    // Configuraciones predefinidas
+    const presets = {
+      classic: {
+        beat: 'california',
+        vocal: 'california',
+        sample: 'strings',
+        beatVol: 80,
+        vocalVol: 75,
+        sampleVol: 40,
+        tempo: 95,
+        reverb: true,
+        delay: false,
+        filter: false
+      },
+      emotional: {
+        beat: 'dear',
+        vocal: 'dear',
+        sample: 'piano',
+        beatVol: 65,
+        vocalVol: 85,
+        sampleVol: 60,
+        tempo: 80,
+        reverb: true,
+        delay: true,
+        filter: false
+      },
+      aggressive: {
+        beat: 'hitmup',
+        vocal: 'hitmup',
+        sample: 'drums',
+        beatVol: 90,
+        vocalVol: 85,
+        sampleVol: 70,
+        tempo: 100,
+        reverb: false,
+        delay: false,
+        filter: true
+      },
+      modern: {
+        beat: 'ambitionz',
+        vocal: 'changes',
+        sample: 'synth',
+        beatVol: 75,
+        vocalVol: 80,
+        sampleVol: 65,
+        tempo: 90,
+        reverb: true,
+        delay: true,
+        filter: true
+      }
+    };
+    
+    const preset = presets[presetType];
+    
+    // Aplicar configuración
+    beatSelector.value = preset.beat;
+    vocalSelector.value = preset.vocal;
+    sampleSelector.value = preset.sample;
+    
+    beatVolume.value = preset.beatVol;
+    vocalVolume.value = preset.vocalVol;
+    sampleVolume.value = preset.sampleVol;
+    
+    tempoSlider.value = preset.tempo;
+    tempoValue.textContent = `${preset.tempo} BPM`;
+    currentTempo = preset.tempo;
+    
+    document.getElementById('reverb-switch').checked = preset.reverb;
+    document.getElementById('delay-switch').checked = preset.delay;
+    document.getElementById('filter-switch').checked = preset.filter;
+    
+    // Actualizar efectos y visualizador
+    updateEffects();
+    updateVisualizer();
+  }
+  
+  // Creación de mezclas
+  function createNewMix() {
+    // Generar un ID único
+    const mixId = Date.now();
+    
+    // Crear objeto de mezcla
+    const newMix = {
+      id: mixId,
+      title: `Mix #${currentCreations.length + 1}`,
+      date: new Date().toLocaleDateString(),
+      beat: beatSelector.value,
+      vocal: vocalSelector.value,
+      sample: sampleSelector.value,
+      tempo: currentTempo
+    };
+    
+    // Añadir a la lista de creaciones
+    currentCreations.push(newMix);
+    
+    // Actualizar UI
+    updateCreationsList();
+  }
+  
+  function updateCreationsList() {
+    // Mostrar lista si hay creaciones
+    if (currentCreations.length > 0) {
+      creationsEmpty.style.display = 'none';
+      creationsList.style.display = 'grid';
+      
+      // Limpiar lista
+      creationsList.innerHTML = '';
+      
+      // Añadir cada creación
+      currentCreations.forEach(mix => {
+        const mixElement = document.createElement('div');
+        mixElement.className = 'creation-item';
+        mixElement.innerHTML = `
+          <div class="creation-header">
+            <div class="creation-title">${mix.title}</div>
+            <div class="creation-date">${mix.date}</div>
+          </div>
+          <div class="creation-waveform">
+            <canvas id="mix-canvas-${mix.id}"></canvas>
+          </div>
+          <div class="creation-controls">
+            <button class="creation-play-btn" data-mix="${mix.id}">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="creation-actions">
+              <button class="creation-action-btn creation-download-btn" data-mix="${mix.id}">
+                <i class="fas fa-download"></i>
+              </button>
+              <button class="creation-action-btn creation-delete-btn" data-mix="${mix.id}">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        `;
+        
+        creationsList.appendChild(mixElement);
+        
+        // Dibujar forma de onda simulada
+        const canvas = document.getElementById(`mix-canvas-${mix.id}`);
+        const ctx = canvas.getContext('2d');
+        
+        // Ajustar tamaño del canvas
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+        
+        // Dibujar forma de onda
+        ctx.strokeStyle = '#d4af37';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        
+        const width = canvas.width;
+        const height = canvas.height;
+        const center = height / 2;
+        
+        for (let x = 0; x < width; x++) {
+          // Usar el ID como semilla para generar formas de onda diferentes
+          const seed = mix.id % 1000 / 1000;
+          const y = center + Math.sin(x * 0.05 + seed * 10) * 15 + Math.sin(x * 0.1 + seed * 20) * 10;
+          
+          if (x === 0) {
+            ctx.moveTo(x, y);
+          } else {
+            ctx.lineTo(x, y);
+          }
+        }
+        
+        ctx.stroke();
+      });
+      
+      // Añadir eventos a los botones
+      document.querySelectorAll('.creation-play-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const mixId = btn.getAttribute('data-mix');
+          playMix(mixId);
+          
+          // Cambiar icono
+          if (btn.innerHTML.includes('fa-play')) {
+            document.querySelectorAll('.creation-play-btn').forEach(b => {
+              b.innerHTML = '<i class="fas fa-play"></i>';
+            });
+            btn.innerHTML = '<i class="fas fa-pause"></i>';
+          } else {
+            btn.innerHTML = '<i class="fas fa-play"></i>';
+          }
+        });
+      });
+      
+      document.querySelectorAll('.creation-download-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const mixId = btn.getAttribute('data-mix');
+          downloadMix(mixId);
+        });
+      });
+      
+      document.querySelectorAll('.creation-delete-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const mixId = btn.getAttribute('data-mix');
+          deleteMix(mixId);
+        });
+      });
+    } else {
+      creationsEmpty.style.display = 'block';
+      creationsList.style.display = 'none';
+    }
+  }
+  
+  function playMix(mixId) {
+    console.log(`Reproduciendo mezcla ${mixId}`);
+    
+    // Encontrar la mezcla
+    const mix = currentCreations.find(m => m.id == mixId);
+    
+    if (mix) {
+      // Aplicar configuración de la mezcla
+      beatSelector.value = mix.beat;
+      vocalSelector.value = mix.vocal;
+      sampleSelector.value = mix.sample;
+      
+      tempoSlider.value = mix.tempo;
+      tempoValue.textContent = `${mix.tempo} BPM`;
+      currentTempo = mix.tempo;
+      
+      // Iniciar reproducción
+      if (!isPlaying) {
+        playBtn.click();
+      }
+    }
+  }
+  
+  function downloadMix(mixId) {
+    console.log(`Descargando mezcla ${mixId}`);
+    
+    // Simulación de descarga
+    alert('Descarga iniciada. Tu mezcla estará disponible en breve.');
+  }
+  
+  function deleteMix(mixId) {
+    console.log(`Eliminando mezcla ${mixId}`);
+    
+    // Confirmar eliminación
+    if (confirm('¿Estás seguro de que quieres eliminar esta mezcla?')) {
+      // Filtrar la mezcla eliminada
+      currentCreations = currentCreations.filter(mix => mix.id != mixId);
+      
+      // Actualizar UI
+      updateCreationsList();
+    }
+  }
+  
+  // Inicializar visualizador
+  function initVisualizer() {
+    // Ajustar tamaño de los canvas
+    waveformCanvas.width = waveformCanvas.offsetWidth;
+    waveformCanvas.height = waveformCanvas.offsetHeight;
+    
+    spectrumCanvas.width = spectrumCanvas.offsetWidth;
+    spectrumCanvas.height = spectrumCanvas.offsetHeight;
+  }
+  
+  // Inicializar estudio
+  function initStudio() {
+    // Inicializar visualizador
+    initVisualizer();
+    
+    // Ajustar tamaño al redimensionar
+    window.addEventListener('resize', () => {
+      initVisualizer();
+      
+      // Actualizar canvas de mezclas
+      updateCreationsList();
+    });
+  }
+  
+  // Iniciar estudio
+  initStudio();
+});
