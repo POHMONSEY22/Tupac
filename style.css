@@ -28,6 +28,7 @@
 
 /* Importar estilos para el logo actualizado */
 @import url('logo.css');
+@import url('menu.css');
 
 * {
     margin: 0;
@@ -101,117 +102,6 @@ img {
     height: 40px;
     border: 1px solid var(--color-primary);
     transition: all 0.2s ease-out;
-}
-
-/* Header y navegación modernizada */
-.transparent-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    transition: all var(--transition-fast);
-}
-
-.transparent-header.scrolled {
-    background-color: rgba(5, 5, 5, 0.95);
-    backdrop-filter: var(--blur-effect);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Menú más compacto y elegante */
-.menu {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    padding: 1.5rem 5%;
-}
-
-.logo-box {
-    grid-column: 2;
-    text-align: center;
-}
-
-.scrolled .logo {
-    height: 4.5rem;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Centrado para que esté más junto */
-    grid-column: 1 / span 3;
-    grid-row: 1;
-}
-
-/* Elementos del menú más juntos */
-.nav-links li:nth-child(1),
-.nav-links li:nth-child(2) {
-    margin-right: 2rem;
-    /* Reducido el espacio */
-    padding-right: 0;
-}
-
-.nav-links li:nth-child(3),
-.nav-links li:nth-child(4) {
-    margin-left: 2rem;
-    /* Reducido el espacio */
-    padding-left: 0;
-}
-
-.nav-links a {
-    font-family: var(--font-display);
-    font-size: 1.6rem;
-    /* Más pequeño para estar más junto */
-    font-weight: 500;
-    letter-spacing: 1px;
-    padding: 0.5rem 1rem;
-    position: relative;
-    transition: all var(--transition-fast);
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    /* Cambiado para un efecto más moderno */
-    width: 0;
-    height: 2px;
-    background: var(--gradient-gold);
-    /* Gradiente para más elegancia */
-    transition: all var(--transition-fast);
-    transform: none;
-    /* Eliminado para un efecto más moderno */
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-    width: 100%;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--color-primary);
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 101;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 2px;
-    /* Más delgado para un look moderno */
-    margin: 5px auto;
-    background-color: var(--color-light);
-    transition: all var(--transition-fast);
 }
 
 /* Hero section modernizado */
@@ -1686,50 +1576,6 @@ img {
 @media (max-width: 768px) {
     html {
         font-size: 54%;
-    }
-
-    .menu {
-        grid-template-columns: auto auto auto;
-        padding: 1.5rem 2%;
-    }
-
-    .logo-box {
-        grid-column: 2;
-        z-index: 102;
-    }
-
-    .menu-toggle {
-        display: block;
-        grid-column: 3;
-        justify-self: end;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(5, 5, 5, 0.95);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-        transition: left var(--transition-fast);
-        backdrop-filter: var(--blur-effect);
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
-
-    .nav-links li {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .nav-links a {
-        font-size: 2.4rem;
     }
 
     .hero-title-v2 {

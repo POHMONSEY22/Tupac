@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="logo.css">
+  <link rel="stylesheet" href="biografia.css">
+  <link rel="stylesheet" href="menu.css">
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
 
@@ -20,25 +22,32 @@
   <div class="cursor-dot"></div>
   <div class="cursor-outline"></div>
 
+  <!-- Estructura HTML para el menú con logo en el centro -->
   <header class="transparent-header">
     <nav class="menu">
-      <div class="logo-box">
+      <ul class="nav-links left-links">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="biografia.html" class="active">QUIÉN ES 2PAC</a></li>
+        <li><a href="perfil.html">PERFIL</a></li>
+      </ul>
+      
+      <div class="logo-container">
         <a href="index.html">
           <img src="img/logo.png" alt="2Pac Logo" class="logo">
         </a>
       </div>
+      
+      <ul class="nav-links right-links">
+        <li><a href="discografia.html">DISCOGRAFÍA</a></li>
+        <li><a href="legado.html">LEGADO</a></li>
+        <li><a href="poesia.html">POESÍA</a></li>
+      </ul>
+      
       <button class="menu-toggle" aria-label="Abrir menú">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
-      <ul class="nav-links">
-        <li><a href="index.html">INICIO</a></li>
-        <li><a href="biografia.html" class="active">QUIÉN ES 2PAC</a></li>
-        <li><a href="discografia.html">DISCOGRAFÍA</a></li>
-        <li><a href="legado.html">LEGADO</a></li>
-        <li><a href="poesia.html">POESIA</a></li>
-      </ul>
     </nav>
   </header>
 
@@ -449,7 +458,7 @@
           <div class="chapters-content">
             <div class="chapter-content active" id="origins">
               <div class="chapter-media">
-                <img src="img/chapter-origins.jpg" alt="Tupac en su juventud" class="chapter-image">
+                <img src="img/joven.jpg" alt="Tupac en su juventud" class="chapter-image">
                 <div class="chapter-quote">
                   <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                   <div class="quote-text">Vengo de donde no se supone que sobrevivas, así que es fácil para mí conectar con la realidad.</div>
@@ -472,7 +481,7 @@
             
             <div class="chapter-content" id="rise">
               <div class="chapter-media">
-                <img src="img/chapter-rise.jpg" alt="Tupac con Digital Underground" class="chapter-image">
+                <img src="img/Underground.jpg" alt="Tupac con Digital Underground" class="chapter-image">
                 <div class="chapter-quote">
                   <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                   <div class="quote-text">No estoy diciendo que voy a cambiar el mundo, pero garantizo que encenderé la mente que lo hará.</div>
@@ -495,7 +504,7 @@
             
             <div class="chapter-content" id="controversy">
               <div class="chapter-media">
-                <img src="img/chapter-controversy.jpg" alt="Tupac en la corte" class="chapter-image">
+                <img src="img/corte.jpg" alt="Tupac en la corte" class="chapter-image">
                 <div class="chapter-quote">
                   <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                   <div class="quote-text">La única cosa que viene a un hombre dormido son sueños.</div>
@@ -518,7 +527,7 @@
             
             <div class="chapter-content" id="death-row">
               <div class="chapter-media">
-                <img src="img/chapter-death-row.jpg" alt="Tupac con Suge Knight" class="chapter-image">
+                <img src="img/Suge-Knight.jpg" alt="Tupac con Suge Knight" class="chapter-image">
                 <div class="chapter-quote">
                   <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                   <div class="quote-text">Mi mayor miedo es volver a ser pobre. Eso es más fuerte que el miedo a morir.</div>
@@ -541,7 +550,7 @@
             
             <div class="chapter-content" id="legacy">
               <div class="chapter-media">
-                <img src="img/chapter-legacy.jpg" alt="Mural de Tupac" class="chapter-image">
+                <img src="img/mural.jpg" alt="Mural de Tupac" class="chapter-image">
                 <div class="chapter-quote">
                   <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                   <div class="quote-text">La muerte no es la mayor pérdida en la vida. La mayor pérdida es lo que muere dentro de nosotros mientras vivimos.</div>
@@ -572,8 +581,6 @@
         </div>
       </div>
     </section>
-
-
 
     <!-- Galería de imágenes -->
     <section id="galeria" class="bio-gallery">
@@ -616,6 +623,375 @@
           </div>
           <div class="gallery-item">
             <img src="img/tupac-tyson.jpg" alt="Tupac con Tyson" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- El Proceso Creativo -->
+    <section class="bio-creative-process">
+      <div class="container">
+        <h2 class="section-title-v2">El Proceso Creativo</h2>
+        <div class="creative-subtitle">Cómo Tupac transformaba sus experiencias en arte</div>
+        
+        <div class="creative-intro">
+          <p>Pocos artistas han sido tan prolíficos como Tupac Shakur. Su ética de trabajo legendaria y su capacidad para crear música a un ritmo vertiginoso han sido documentadas por numerosos productores, ingenieros y colaboradores. Esta sección explora los métodos, rituales y técnicas que utilizaba para transformar sus pensamientos y experiencias en arte perdurable.</p>
+        </div>
+        
+        <div class="creative-grid">
+          <!-- Escritura -->
+          <div class="creative-card">
+            <div class="creative-icon">
+              <i class="fas fa-pen-fancy"></i>
+            </div>
+            <div class="creative-content">
+              <h3>El Arte de Escribir</h3>
+              <p>Tupac comenzaba a escribir desde muy joven, llenando cuadernos con poemas, pensamientos y observaciones sobre su entorno. Según sus colaboradores cercanos, siempre llevaba un cuaderno consigo, capturando ideas en cualquier momento de inspiración.</p>
+              <div class="creative-quote">
+                <blockquote>"Escribo tan rápido como las lágrimas caen. Simplemente fluye a través de mí. No es algo que tenga que forzar."</blockquote>
+                <cite>— Tupac Shakur</cite>
+              </div>
+              <div class="creative-details">
+                <h4>Su Método:</h4>
+                <ul>
+                  <li>Escribía constantemente, incluso durante sus estancias en prisión</li>
+                  <li>Raramente hacía borradores; muchas de sus canciones eran escritas de una sola vez</li>
+                  <li>Utilizaba experiencias personales y observaciones sociales como materia prima</li>
+                  <li>Alternaba entre poesía escrita y freestyle para desarrollar sus ideas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- En el Estudio -->
+          <div class="creative-card">
+            <div class="creative-icon">
+              <i class="fas fa-microphone-alt"></i>
+            </div>
+            <div class="creative-content">
+              <h3>En el Estudio</h3>
+              <p>La ética de trabajo de Tupac en el estudio era legendaria. Durante su tiempo en Death Row Records, se dice que grabó suficiente material para varios álbumes en solo unas semanas. Su enfoque era intenso y eficiente, a menudo completando canciones en una sola toma.</p>
+              <div class="creative-quote">
+                <blockquote>"Pac podía entrar al estudio, escuchar un beat por primera vez, y en 15-20 minutos tener una canción completa. Era como si tuviera un archivo en su cabeza."</blockquote>
+                <cite>— Johnny "J", Productor</cite>
+              </div>
+              <div class="creative-details">
+                <h4>Su Rutina:</h4>
+                <ul>
+                  <li>Prefería grabar tarde en la noche, a menudo hasta el amanecer</li>
+                  <li>Grababa múltiples canciones en una sola sesión</li>
+                  <li>Rara vez utilizaba papel en el estudio; memorizaba sus letras</li>
+                  <li>Fumaba, bebía Hennessy y mantenía un ambiente específico en el estudio</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Colaboraciones -->
+          <div class="creative-card">
+            <div class="creative-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="creative-content">
+              <h3>El Arte de Colaborar</h3>
+              <p>A pesar de su fuerte personalidad, Tupac era conocido por ser un colaborador generoso que elevaba a quienes trabajaban con él. Desde Dr. Dre hasta Snoop Dogg, sus colaboraciones resultaban en química musical única.</p>
+              <div class="creative-quote">
+                <blockquote>"Cuando colaborabas con Pac, te desafiaba a dar lo mejor de ti. Te empujaba a un nivel que ni sabías que tenías."</blockquote>
+                <cite>— Snoop Dogg</cite>
+              </div>
+              <div class="creative-details">
+                <h4>Su Enfoque:</h4>
+                <ul>
+                  <li>Buscaba la autenticidad en sus colaboradores</li>
+                  <li>Adaptaba su estilo para complementar a sus compañeros de pista</li>
+                  <li>Prefería grabar en la misma sala que sus colaboradores</li>
+                  <li>Improvisaba frecuentemente, creando momentos espontáneos en el estudio</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Evolución Artística -->
+        <div class="creative-evolution">
+          <h3 class="evolution-title">Evolución Artística</h3>
+          <div class="evolution-subtitle">Cómo su sonido y temáticas evolucionaron a lo largo de su carrera</div>
+          
+          <div class="evolution-timeline">
+            <div class="timeline-phase">
+              <div class="phase-year">1991-1992</div>
+              <div class="phase-content">
+                <h4 class="phase-title">Fase Activista</h4>
+                <div class="phase-album">2Pacalypse Now</div>
+                <p class="phase-desc">Sus primeros trabajos reflejaban fuertemente su educación política y su conciencia social. Las letras se centraban en la brutalidad policial, la pobreza y la desigualdad racial.</p>
+                <div class="phase-style">
+                  <span class="style-label">Estilo:</span>
+                  <span class="style-value">Crudo, directo, político</span>
+                </div>
+                <div class="phase-production">
+                  <span class="production-label">Producción:</span>
+                  <span class="production-value">Minimalista, influenciada por el East Coast</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="timeline-phase">
+              <div class="phase-year">1993-1994</div>
+              <div class="phase-content">
+                <h4 class="phase-title">Fase de Transición</h4>
+                <div class="phase-album">Strictly 4 My N.I.G.G.A.Z...</div>
+                <p class="phase-desc">Comenzó a equilibrar mensajes sociales con temas más comerciales. Desarrolló su personalidad "Thug Life" mientras mantenía su conciencia social en canciones como "Keep Ya Head Up".</p>
+                <div class="phase-style">
+                  <span class="style-label">Estilo:</span>
+                  <span class="style-value">Más melódico, versatilidad temática</span>
+                </div>
+                <div class="phase-production">
+                  <span class="production-label">Producción:</span>
+                  <span class="production-value">Más pulida, elementos G-funk</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="timeline-phase">
+              <div class="phase-year">1995</div>
+              <div class="phase-content">
+                <h4 class="phase-title">Fase Introspectiva</h4>
+                <div class="phase-album">Me Against the World</div>
+                <p class="phase-desc">Grabado parcialmente en prisión, este álbum mostró un lado más vulnerable y reflexivo. Exploró temas como la mortalidad, el arrepentimiento y el legado.</p>
+                <div class="phase-style">
+                  <span class="style-label">Estilo:</span>
+                  <span class="style-value">Introspectivo, poético, emotivo</span>
+                </div>
+                <div class="phase-production">
+                  <span class="production-label">Producción:</span>
+                  <span class="production-value">Atmosférica, uso de samples soul</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="timeline-phase">
+              <div class="phase-year">1996</div>
+              <div class="phase-content">
+                <h4 class="phase-title">Fase Death Row</h4>
+                <div class="phase-album">All Eyez On Me</div>
+                <p class="phase-desc">Su etapa más prolífica y comercialmente exitosa. Abrazó completamente la estética West Coast y el sonido G-funk, creando himnos de celebración junto con reflexiones sobre la vida "thug".</p>
+                <div class="phase-style">
+                  <span class="style-label">Estilo:</span>
+                  <span class="style-value">Confiado, enérgico, celebratorio</span>
+                </div>
+                <div class="phase-production">
+                  <span class="production-label">Producción:</span>
+                  <span class="production-value">G-funk pulido, orientado a clubes</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="timeline-phase">
+              <div class="phase-year">1996 (Póstuma)</div>
+              <div class="phase-content">
+                <h4 class="phase-title">Fase Makaveli</h4>
+                <div class="phase-album">The Don Killuminati: The 7 Day Theory</div>
+                <p class="phase-desc">Grabado en solo siete días, este álbum mostró un lado más oscuro y paranoico. Las letras se volvieron más agresivas y apocalípticas, con referencias religiosas y reflexiones sobre la muerte.</p>
+                <div class="phase-style">
+                  <span class="style-label">Estilo:</span>
+                  <span class="style-value">Intenso, confrontacional, profético</span>
+                </div>
+                <div class="phase-production">
+                  <span class="production-label">Producción:</span>
+                  <span class="production-value">Minimalista, atmosférica, sombría</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Técnicas y Métodos -->
+        <div class="creative-techniques">
+          <h3 class="techniques-title">Técnicas y Métodos</h3>
+          
+          <div class="techniques-grid">
+            <div class="technique-item">
+              <div class="technique-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h4>Velocidad de Creación</h4>
+              <p>Tupac era conocido por su capacidad para crear canciones completas en minutos. Durante la grabación de "All Eyez On Me", se dice que completó el álbum doble en solo dos semanas.</p>
+            </div>
+            
+            <div class="technique-item">
+              <div class="technique-icon">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <h4>Capas de Significado</h4>
+              <p>Sus letras operaban en múltiples niveles, combinando referencias callejeras con alusiones literarias y filosóficas, haciéndolas accesibles a diferentes audiencias.</p>
+            </div>
+            
+            <div class="technique-item">
+              <div class="technique-icon">
+                <i class="fas fa-theater-masks"></i>
+              </div>
+              <h4>Personajes y Narrativas</h4>
+              <p>Utilizaba personajes y narrativas para explorar diferentes perspectivas, a menudo contando historias desde múltiples puntos de vista en una sola canción.</p>
+            </div>
+            
+            <div class="technique-item">
+              <div class="technique-icon">
+                <i class="fas fa-sync-alt"></i>
+              </div>
+              <h4>Improvisación</h4>
+              <p>Aunque meticuloso con sus letras escritas, Tupac también era conocido por su habilidad para improvisar en el estudio, creando versos enteros de manera espontánea.</p>
+            </div>
+            
+            <div class="technique-item">
+              <div class="technique-icon">
+                <i class="fas fa-volume-up"></i>
+              </div>
+              <h4>Control Vocal</h4>
+              <p>Su formación actoral le dio un control excepcional sobre su voz, permitiéndole transmitir una amplia gama de emociones a través de cambios en tono, ritmo y énfasis.</p>
+            </div>
+            
+            <div class="technique-item">
+              <div class="technique-icon">
+                <i class="fas fa-book-open"></i>
+              </div>
+              <h4>Referencias Literarias</h4>
+              <p>Incorporaba influencias de Shakespeare, Maquiavelo y Nietzsche en sus letras, elevando el hip-hop a una forma de expresión literaria y filosófica.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonios del Estudio -->
+        <div class="creative-testimonials">
+          <h3 class="testimonials-title">Testimonios del Estudio</h3>
+          
+          <div class="testimonials-slider">
+            <div class="testimonials-track">
+              <div class="testimonial-slide">
+                <div class="testimonial-content">
+                  <p>"Nunca vi a nadie trabajar como Pac. Podía escribir tres canciones mientras yo configuraba los micrófonos. Su mente trabajaba a una velocidad diferente a la de cualquier otro artista con el que he trabajado."</p>
+                  <div class="testimonial-author">
+                    <img src="img/producer-1.jpg" alt="Dave Aron" class="author-img">
+                    <div class="author-info">
+                      <div class="author-name">Dave Aron</div>
+                      <div class="author-role">Ingeniero de Sonido, Death Row Records</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="testimonial-slide">
+                <div class="testimonial-content">
+                  <p>"Tupac no solo grababa, creaba momentos. Entraba al estudio con una energía que transformaba el ambiente. Podía sentir exactamente lo que necesitaba una canción y lo entregaba en una o dos tomas."</p>
+                  <div class="testimonial-author">
+                    <img src="img/producer-2.jpg" alt="QDIII" class="author-img">
+                    <div class="author-info">
+                      <div class="author-name">QDIII</div>
+                      <div class="author-role">Productor</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="testimonial-slide">
+                <div class="testimonial-content">
+                  <p>"Lo que hacía especial a Tupac era su capacidad para conectar emocionalmente con cada palabra que decía. No estaba simplemente rapeando letras; estaba viviendo cada línea, y eso es lo que hacía que su música fuera tan poderosa."</p>
+                  <div class="testimonial-author">
+                    <img src="img/producer-3.jpg" alt="Johnny J" class="author-img">
+                    <div class="author-info">
+                      <div class="author-name">Johnny "J"</div>
+                      <div class="author-role">Productor y Colaborador Frecuente</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonials-navigation">
+              <button class="testimonial-nav prev" aria-label="Testimonio anterior"><i class="fas fa-chevron-left"></i></button>
+              <div class="testimonials-dots">
+                <span class="testimonial-dot active" data-index="0"></span>
+                <span class="testimonial-dot" data-index="1"></span>
+                <span class="testimonial-dot" data-index="2"></span>
+              </div>
+              <button class="testimonial-nav next" aria-label="Testimonio siguiente"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Estudio Interactivo -->
+        <div class="creative-studio">
+          <h3 class="studio-title">El Estudio de Tupac</h3>
+          <div class="studio-subtitle">Explora los elementos que formaban parte de su proceso creativo</div>
+          
+          <div class="studio-interactive">
+            <div class="studio-image">
+              <img src="img/tupac-studio.jpg" alt="Estudio de grabación de Tupac" class="studio-bg">
+              
+              <!-- Puntos interactivos -->
+              <div class="studio-hotspot" data-item="notebook" style="top: 45%; left: 25%;">
+                <div class="hotspot-dot"></div>
+                <div class="hotspot-tooltip">
+                  <h4>Cuaderno</h4>
+                  <p>Tupac siempre tenía un cuaderno cerca para capturar ideas y escribir letras. Sus cuadernos estaban llenos de poemas, letras y reflexiones personales.</p>
+                </div>
+              </div>
+              
+              <div class="studio-hotspot" data-item="microphone" style="top: 30%; left: 50%;">
+                <div class="hotspot-dot"></div>
+                <div class="hotspot-tooltip">
+                  <h4>Micrófono</h4>
+                  <p>Prefería grabar con un micrófono Neumann U87, conocido por su claridad y calidez. Tupac solía grabar sus voces en una sola toma.</p>
+                </div>
+              </div>
+              
+              <div class="studio-hotspot" data-item="headphones" style="top: 35%; left: 70%;">
+                <div class="hotspot-dot"></div>
+                <div class="hotspot-tooltip">
+                  <h4>Auriculares</h4>
+                  <p>Utilizaba auriculares Sony MDR-V600 durante sus sesiones de grabación. Le gustaba escuchar el beat a un volumen alto mientras grababa.</p>
+                </div>
+              </div>
+              
+              <div class="studio-hotspot" data-item="drink" style="top: 60%; left: 40%;">
+                <div class="hotspot-dot"></div>
+                <div class="hotspot-tooltip">
+                  <h4>Hennessy</h4>
+                  <p>Su bebida preferida en el estudio. Tupac a menudo mencionaba que le ayudaba a relajarse y entrar en un estado mental creativo.</p>
+                </div>
+              </div>
+              
+              <div class="studio-hotspot" data-item="ashtray" style="top: 65%; left: 60%;">
+                <div class="hotspot-dot"></div>
+                <div class="hotspot-tooltip">
+                  <h4>Cenicero</h4>
+                  <p>Fumaba regularmente durante las sesiones de grabación. Los productores recuerdan que el estudio siempre estaba lleno de humo cuando Tupac trabajaba.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="studio-info">
+              <div class="info-header">
+                <h4>Selecciona un elemento para aprender más</h4>
+                <p>Descubre los elementos que formaban parte del proceso creativo de Tupac en el estudio</p>
+              </div>
+              
+              <div class="info-content" id="studio-info-content">
+                <div class="info-placeholder">
+                  <i class="fas fa-hand-pointer"></i>
+                  <p>Haz clic en un punto de la imagen para obtener más información</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Legado Creativo -->
+        <div class="creative-legacy">
+          <h3 class="legacy-title">Legado Creativo</h3>
+          
+          <div class="legacy-content">
+            <p>El proceso creativo de Tupac ha influido en generaciones de artistas, no solo en el hip-hop sino en múltiples géneros. Su ética de trabajo, honestidad emocional y capacidad para combinar entretenimiento con mensajes profundos establecieron un nuevo estándar para los artistas.</p>
+            <p>Quizás el aspecto más notable de su proceso creativo fue su capacidad para ser prolífico sin sacrificar calidad. La cantidad de material que dejó tras su muerte —suficiente para siete álbumes póstumos— es testimonio de su incansable impulso creativo.</p>
+            <p>Como dijo el productor DJ Quik: <em>"Lo que hizo Tupac fue mostrar que podías ser un artista completo: un poeta, un narrador, un activista y un entertainer, todo en uno. No tenías que elegir."</em></p>
           </div>
         </div>
       </div>
@@ -673,6 +1049,7 @@
     </div>
   </footer>
 
+  <script src="menu.js"></script>
   <script src="script.js"></script>
   <script>
     // Script específico para la página de biografía

@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="legado.css">
   <link rel="stylesheet" href="logo.css">
+  <link rel="stylesheet" href="menu.css">
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
 
@@ -21,25 +22,32 @@
   <div class="cursor-dot"></div>
   <div class="cursor-outline"></div>
 
+  <!-- Estructura HTML para el menú con logo en el centro -->
   <header class="transparent-header">
     <nav class="menu">
-      <div class="logo-box">
+      <ul class="nav-links left-links">
+        <li><a href="index.html" class="active">INICIO</a></li>
+        <li><a href="biografia.html">QUIÉN ES 2PAC</a></li>
+        <li><a href="perfil.html">PERFIL</a></li>
+      </ul>
+      
+      <div class="logo-container">
         <a href="index.html">
           <img src="img/logo.png" alt="2Pac Logo" class="logo">
         </a>
       </div>
+      
+      <ul class="nav-links right-links">
+        <li><a href="discografia.html">DISCOGRAFÍA</a></li>
+        <li><a href="legado.html" class="active">LEGADO</a></li>
+        <li><a href="poesia.html">POESÍA</a></li>
+      </ul>
+      
       <button class="menu-toggle" aria-label="Abrir menú">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
-      <ul class="nav-links">
-        <li><a href="index.html">INICIO</a></li>
-        <li><a href="biografia.html">QUIÉN ES 2PAC</a></li>
-        <li><a href="discografia.html">DISCOGRAFÍA</a></li>
-        <li><a href="legado.html" class="active">LEGADO</a></li>
-        <li><a href="poesia.html">POESIA</a></li>
-      </ul>
     </nav>
   </header>
 
@@ -355,10 +363,6 @@
       </div>
     </section>
 
-
-
-
-
     <!-- Testimonios -->
     <section class="legacy-testimonials">
       <div class="container">
@@ -458,6 +462,234 @@
         </div>
       </div>
     </section>
+    <!-- Teorías y Misterios -->
+    <section class="legacy-theories">
+      <div class="container">
+        <h2 class="section-title-v2">Teorías y Misterios</h2>
+        <div class="theories-subtitle">Explorando las preguntas sin respuesta que mantienen viva la leyenda</div>
+        
+        <div class="theories-container">
+          <div class="theories-intro">
+            <p>Pocas figuras en la historia de la música han generado tantas teorías, especulaciones y misterios como Tupac Shakur. Las circunstancias de su muerte, las profecías en sus letras y las apariciones póstumas han alimentado un rico tapiz de narrativas alternativas que, independientemente de su veracidad, forman parte integral de su legado cultural.</p>
+            <p>Esta sección explora algunas de las teorías más prominentes, no para validarlas o refutarlas, sino para entender cómo han contribuido a la mitología que rodea a Tupac y cómo reflejan el impacto profundo que tuvo en la cultura popular.</p>
+          </div>
+          
+          <div class="theories-carousel">
+            <div class="theories-track">
+              <!-- Teoría 1 -->
+              <div class="theory-card">
+                <div class="theory-header">
+                  <div class="theory-icon"><i class="fas fa-mask"></i></div>
+                  <h3 class="theory-title">La Teoría de Makaveli</h3>
+                </div>
+                <div class="theory-content">
+                  <p>Basada en el álter ego "Makaveli" de Tupac, inspirado en el filósofo Nicolás Maquiavelo, quien supuestamente fingió su propia muerte para eludir a sus enemigos. Los teóricos señalan que el álbum "The Don Killuminati: The 7 Day Theory" fue lanzado bajo este seudónimo y contiene supuestas pistas sobre su plan.</p>
+                  <div class="theory-evidence">
+                    <h4>Elementos citados por los teóricos:</h4>
+                    <ul>
+                      <li>La portada del álbum muestra a Tupac crucificado, simbolizando muerte y resurrección</li>
+                      <li>El álbum fue completado en solo 7 días, número con significado bíblico de finalización</li>
+                      <li>La frase "Exit Tupac, Enter Makaveli" aparece en notas del álbum</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="theory-footer">
+                  <div class="theory-meter">
+                    <div class="meter-label">Popularidad:</div>
+                    <div class="meter-bar">
+                      <div class="meter-fill" style="width: 90%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Teoría 2 -->
+              <div class="theory-card">
+                <div class="theory-header">
+                  <div class="theory-icon"><i class="fas fa-hourglass-half"></i></div>
+                  <h3 class="theory-title">Las Profecías en sus Letras</h3>
+                </div>
+                <div class="theory-content">
+                  <p>Muchos fans han identificado lo que consideran predicciones de su propia muerte en las letras y videos de Tupac. Estas supuestas profecías han contribuido a la idea de que Tupac anticipó su destino o incluso planeó su desaparición.</p>
+                  <div class="theory-evidence">
+                    <h4>Elementos citados por los teóricos:</h4>
+                    <ul>
+                      <li>En "Life Goes On" (1996), rapea sobre su propio funeral</li>
+                      <li>En "I Ain't Mad at Cha", el video musical muestra a Tupac siendo asesinado y ascendiendo al cielo</li>
+                      <li>El álbum "The Don Killuminati" incluye la canción "Blasphemy" donde habla de resurrección</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="theory-footer">
+                  <div class="theory-meter">
+                    <div class="meter-label">Popularidad:</div>
+                    <div class="meter-bar">
+                      <div class="meter-fill" style="width: 85%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Teoría 3 -->
+              <div class="theory-card">
+                <div class="theory-header">
+                  <div class="theory-icon"><i class="fas fa-globe-americas"></i></div>
+                  <h3 class="theory-title">Avistamientos Globales</h3>
+                </div>
+                <div class="theory-content">
+                  <p>Desde 1996, han surgido numerosos informes de avistamientos de Tupac en diferentes partes del mundo. Desde Cuba hasta Nueva Zelanda, estos supuestos encuentros han alimentado la teoría de que Tupac está vivo y ha estado viviendo en el anonimato.</p>
+                  <div class="theory-evidence">
+                    <h4>Elementos citados por los teóricos:</h4>
+                    <ul>
+                      <li>Fotos y videos de personas con supuesto parecido a un Tupac envejecido</li>
+                      <li>Testimonios de personas que afirman haberlo visto en Cuba</li>
+                      <li>Lanzamientos musicales póstumos que algunos consideran demasiado pulidos para ser grabaciones de archivo</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="theory-footer">
+                  <div class="theory-meter">
+                    <div class="meter-label">Popularidad:</div>
+                    <div class="meter-bar">
+                      <div class="meter-fill" style="width: 70%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Teoría 4 -->
+              <div class="theory-card">
+                <div class="theory-header">
+                  <div class="theory-icon"><i class="fas fa-user-secret"></i></div>
+                  <h3 class="theory-title">Teoría de la Conspiración</h3>
+                </div>
+                <div class="theory-content">
+                  <p>Algunas teorías sugieren que Tupac fue silenciado por fuerzas poderosas debido a su creciente influencia política y su capacidad para movilizar a las comunidades marginadas. Estas teorías ven su muerte como parte de una conspiración más amplia.</p>
+                  <div class="theory-evidence">
+                    <h4>Elementos citados por los teóricos:</h4>
+                    <ul>
+                      <li>Conexiones familiares con los Panteras Negras y activistas políticos</li>
+                      <li>Creciente mensaje político en sus últimas entrevistas y canciones</li>
+                      <li>Planes declarados de iniciar organizaciones comunitarias y movimientos políticos</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="theory-footer">
+                  <div class="theory-meter">
+                    <div class="meter-label">Popularidad:</div>
+                    <div class="meter-bar">
+                      <div class="meter-fill" style="width: 65%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="theories-navigation">
+              <button class="theory-nav prev" aria-label="Teoría anterior"><i class="fas fa-chevron-left"></i></button>
+              <button class="theory-nav next" aria-label="Teoría siguiente"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+          
+          <div class="theories-interactive">
+            <h3 class="interactive-title">Mapa de Misterios</h3>
+            <div class="interactive-subtitle">Explora los lugares clave en la mitología de Tupac</div>
+            
+            <div class="mystery-map-container">
+              <div class="mystery-map" id="mystery-map">
+                <!-- El mapa se cargará con JavaScript -->
+              </div>
+              
+              <div class="map-locations">
+                <div class="map-location-item" data-location="vegas">
+                  <div class="location-name">Las Vegas, NV</div>
+                  <div class="location-desc">Lugar del tiroteo fatal el 7 de septiembre de 1996</div>
+                </div>
+                
+                <div class="map-location-item" data-location="cuba">
+                  <div class="location-name">La Habana, Cuba</div>
+                  <div class="location-desc">Destino rumoreado donde Tupac podría estar viviendo</div>
+                </div>
+                
+                <div class="map-location-item" data-location="la">
+                  <div class="location-name">Los Ángeles, CA</div>
+                  <div class="location-desc">Donde se grabó el álbum "Makaveli" y centro de Death Row Records</div>
+                </div>
+                
+                <div class="map-location-item" data-location="ny">
+                  <div class="location-name">Nueva York, NY</div>
+                  <div class="location-desc">Lugar del tiroteo de Quad Studios en 1994, punto de inflexión en su vida</div>
+                </div>
+                
+                <div class="map-location-item" data-location="atlanta">
+                  <div class="location-name">Atlanta, GA</div>
+                  <div class="location-desc">Sede de la Fundación Tupac Amaru Shakur y lugar de varios "avistamientos"</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="theories-perspective">
+            <h3 class="perspective-title">Perspectiva Cultural</h3>
+            <div class="perspective-content">
+              <p>Independientemente de la veracidad de estas teorías, su persistencia durante más de 25 años refleja el profundo impacto cultural de Tupac. Estas narrativas han trascendido el ámbito de simples teorías de conspiración para convertirse en una forma de folklore moderno.</p>
+              <p>El mito de Tupac, alimentado por estas teorías, ha contribuido a su inmortalidad cultural. La ambigüedad y el misterio que rodean su muerte han permitido que su legado evolucione y se adapte a nuevos contextos sociales y políticos, manteniendo su relevancia para nuevas generaciones.</p>
+              <p>Como observó el crítico cultural Michael Eric Dyson: <em>"La muerte de Tupac, con todas sus preguntas sin respuesta, ha creado un espacio para que su mensaje continúe resonando y evolucionando. En cierto sentido, estas teorías mantienen viva no solo su memoria, sino también las causas por las que luchó."</em></p>
+            </div>
+          </div>
+          
+          <div class="theories-poll">
+            <h3 class="poll-title">¿Qué piensas tú?</h3>
+            <div class="poll-container">
+              <div class="poll-question">¿Cuál de estas teorías te parece más plausible?</div>
+              <div class="poll-options">
+                <div class="poll-option" data-theory="makaveli">
+                  <div class="option-label">La Teoría de Makaveli</div>
+                  <div class="option-bar">
+                    <div class="option-fill" style="width: 42%;"></div>
+                    <div class="option-percentage">42%</div>
+                  </div>
+                </div>
+                
+                <div class="poll-option" data-theory="prophecies">
+                  <div class="option-label">Las Profecías en sus Letras</div>
+                  <div class="option-bar">
+                    <div class="option-fill" style="width: 28%;"></div>
+                    <div class="option-percentage">28%</div>
+                  </div>
+                </div>
+                
+                <div class="poll-option" data-theory="sightings">
+                  <div class="option-label">Avistamientos Globales</div>
+                  <div class="option-bar">
+                    <div class="option-fill" style="width: 15%;"></div>
+                    <div class="option-percentage">15%</div>
+                  </div>
+                </div>
+                
+                <div class="poll-option" data-theory="conspiracy">
+                  <div class="option-label">Teoría de la Conspiración</div>
+                  <div class="option-bar">
+                    <div class="option-fill" style="width: 10%;"></div>
+                    <div class="option-percentage">10%</div>
+                  </div>
+                </div>
+                
+                <div class="poll-option" data-theory="none">
+                  <div class="option-label">Ninguna, creo en la versión oficial</div>
+                  <div class="option-bar">
+                    <div class="option-fill" style="width: 5%;"></div>
+                    <div class="option-percentage">5%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="poll-votes">Basado en 15,782 votos</div>
+              <button class="poll-button" id="vote-button">Votar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Call to Action -->
     <section class="call-to-action">
@@ -511,6 +743,7 @@
     </div>
   </footer>
 
+  <script src="menu.js"></script>
   <script src="script.js"></script>
   <script>
     // Script específico para la página de legado

@@ -4,42 +4,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="El alma poética de Tupac Shakur - Explora sus poemas y escritos más profundos">
-  <title>El Alma Poética | Tupac Shakur</title>
+  <meta name="description" content="La poesía de Tupac Shakur - Explora los poemas y el legado poético del legendario artista">
+  <title>Poesía de 2Pac | La Rosa que Creció del Concreto</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Teko:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="poesia.css">
   <link rel="stylesheet" href="logo.css">
+  <link rel="stylesheet" href="poesia.css">
+  <link rel="stylesheet" href="menu.css">
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
 
-<body class="poetry-page">
+<body>
   <!-- Cursor personalizado -->
   <div class="cursor-dot"></div>
   <div class="cursor-outline"></div>
 
-  <header class="transparent-header scrolled">
+  <!-- Estructura HTML para el menú con logo en el centro -->
+  <header class="transparent-header">
     <nav class="menu">
-      <div class="logo-box">
+      <ul class="nav-links left-links">
+        <li><a href="index.html" class="active">INICIO</a></li>
+        <li><a href="biografia.html">QUIÉN ES 2PAC</a></li>
+        <li><a href="perfil.html">PERFIL</a></li>
+      </ul>
+      
+      <div class="logo-container">
         <a href="index.html">
           <img src="img/logo.png" alt="2Pac Logo" class="logo">
         </a>
       </div>
+      
+      <ul class="nav-links right-links">
+        <li><a href="discografia.html">DISCOGRAFÍA</a></li>
+        <li><a href="legado.html">LEGADO</a></li>
+        <li><a href="poesia.html" class="active">POESÍA</a></li>
+      </ul>
+      
       <button class="menu-toggle" aria-label="Abrir menú">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
-      <ul class="nav-links">
-        <li><a href="index.html">INICIO</a></li>
-        <li><a href="biografia.html">QUIÉN ES 2PAC</a></li>
-        <li><a href="discografia.html">DISCOGRAFÍA</a></li>
-        <li><a href="legado.html">LEGADO</a></li>
-        <li><a href="poesia.html" class="active">POESÍA</a></li>
-      </ul>
     </nav>
   </header>
 
@@ -53,386 +61,637 @@
         <div class="parallax-layer layer-4" data-speed="0.8"></div>
       </div>
       <div class="poetry-hero-content">
-        <h1 class="poetry-title">El Alma Poética</h1>
-        <div class="poetry-subtitle">La voz escrita de <span>Tupac Shakur</span></div>
-        <div class="poetry-quote">"¿Acaso no ves que soy un poeta? ¿Un profeta? Mi rima es más profunda que cualquier océano."</div>
-        <div class="poetry-scroll-indicator">
-          <div class="scroll-text">Explora sus poemas</div>
-          <div class="scroll-icon"><i class="fas fa-chevron-down"></i></div>
+        <h1 class="poetry-title">La Rosa que Creció del Concreto</h1>
+        <div class="poetry-subtitle">El legado poético de Tupac Shakur</div>
+        <div class="poetry-quote">
+          <span class="quote-line">"¿Acaso no oíste que</span>
+          <span class="quote-line">quería ser un poeta como Langston Hughes?</span>
+          <span class="quote-line">¿O acaso no sabías</span>
+          <span class="quote-line">que Shakespeare era mi musa?"</span>
         </div>
+        <div class="poetry-signature">
+          <img src="img/tupac-signature.png" alt="Firma de Tupac" class="signature-img">
+        </div>
+      </div>
+      <div class="hero-scroll-indicator">
+        <div class="scroll-text">Explora su poesía</div>
+        <div class="scroll-icon"><i class="fas fa-chevron-down"></i></div>
       </div>
     </section>
 
-    <!-- Introducción a la poesía de Tupac -->
+    <!-- Introducción a la poesía -->
     <section class="poetry-intro">
       <div class="container">
-        <div class="poetry-intro-content">
-          <div class="poetry-intro-text">
-            <h2 class="section-title-poetry">La Rosa que Creció del Concreto</h2>
-            <p>Más allá de su legado musical, Tupac Shakur fue un poeta prolífico cuyas palabras escritas revelan una profundidad emocional y una sensibilidad artística que complementan su identidad como rapero. Sus poemas, muchos de los cuales fueron publicados póstumamente en la colección "The Rose That Grew From Concrete", ofrecen una ventana íntima a sus pensamientos, sueños y luchas.</p>
-            <p>Escritos entre 1989 y 1991, antes de su ascenso a la fama mundial, estos poemas muestran a un joven artista explorando temas de amor, pérdida, esperanza y resistencia con una vulnerabilidad que contrasta con su posterior imagen pública.</p>
+        <div class="intro-content">
+          <div class="intro-text">
+            <h2 class="section-title-v2">El Poeta Detrás del Rapero</h2>
+            <p>Antes de convertirse en uno de los raperos más influyentes de todos los tiempos, Tupac Shakur era un poeta. Desde su adolescencia, plasmaba sus pensamientos, emociones y observaciones en cuadernos que llevaba consigo a todas partes.</p>
+            <p>En 1999, tres años después de su muerte, su madre Afeni Shakur publicó una colección de poemas que Tupac escribió entre 1989 y 1991, titulada "The Rose That Grew From Concrete" (La Rosa que Creció del Concreto). Esta colección reveló una faceta más íntima y vulnerable del artista, mostrando la profundidad de su sensibilidad y su talento literario.</p>
             <blockquote class="poetry-blockquote">
-              "En la profundidad de mi alma hay un guerrero sin descanso."
-              <cite>- Tupac Shakur</cite>
+              "La poesía de Tupac revela un alma sensible que observaba el mundo con ojos críticos pero esperanzados, encontrando belleza en medio del caos y la adversidad."
+              <cite>— Dr. Michael Eric Dyson, autor de "Holler If You Hear Me"</cite>
             </blockquote>
           </div>
-          <div class="poetry-intro-image">
-            <img src="img/poetry-book.jpg" alt="Libro de poesía de Tupac" loading="lazy">
-            <div class="poetry-image-caption">Primera edición de "The Rose That Grew From Concrete", 1999</div>
+          <div class="intro-image">
+            <img src="img/tupac-writing.jpg" alt="Tupac escribiendo" loading="lazy">
+            <div class="image-caption">Tupac escribiendo en uno de sus cuadernos, 1992</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Libro 3D interactivo -->
-    <section class="poetry-book-3d">
+    <!-- Poema destacado con animación -->
+    <section class="featured-poem">
       <div class="container">
-        <h2 class="section-title-poetry">Explora sus Poemas</h2>
-        <div class="book-subtitle">Haz clic para abrir el libro</div>
-        
-        <div class="book-container">
-          <div class="book" id="poetry-book">
-            <div class="book-cover">
-              <div class="book-spine"></div>
-              <div class="book-front">
-                <h3>The Rose That Grew From Concrete</h3>
-                <div class="book-author">Tupac Shakur</div>
-                <div class="book-decoration"></div>
-              </div>
-              <div class="book-back"></div>
-            </div>
-            <div class="book-pages">
-              <!-- Página 1 -->
-              <div class="book-page" id="page-1">
-                <div class="page-content">
-                  <h3 class="poem-title">La Rosa que Creció del Concreto</h3>
-                  <div class="poem-text">
-                    <p>¿Escuchaste de la rosa que creció</p>
-                    <p>desde una grieta en el concreto?</p>
-                    <p>Probando que la ley de la naturaleza está equivocada</p>
-                    <p>aprendió a caminar sin tener pies</p>
-                    <p>Divertido parece, pero al recordar que respiró aire fresco</p>
-                    <p>cuando nadie más se preocupaba por ella</p>
-                    <p>creció a pesar de que no le prestaban atención</p>
-                    <p>porque la rosa que creció del concreto</p>
-                    <p>cuando nadie más le importaba demostrar que</p>
-                    <p>se pueden crear rosas desde el concreto.</p>
-                  </div>
-                  <div class="poem-date">1989</div>
-                </div>
-                <div class="page-number">1</div>
-              </div>
-              
-              <!-- Página 2 -->
-              <div class="book-page" id="page-2">
-                <div class="page-content">
-                  <h3 class="poem-title">A veces</h3>
-                  <div class="poem-text">
-                    <p>A veces me pregunto si un cambio vendrá</p>
-                    <p>Estoy tan cansado de estar tan solo</p>
-                    <p>A veces me pregunto qué me depara el futuro</p>
-                    <p>A veces me pregunto por qué mi vida es tan dura</p>
-                    <p>A veces me pregunto si alguna vez encontraré mi camino</p>
-                    <p>A veces me pregunto si alguna vez veré otro día</p>
-                    <p>A veces me pregunto dónde mi vida irá a parar</p>
-                    <p>A veces me pregunto si alguna vez sabré</p>
-                  </div>
-                  <div class="poem-date">1991</div>
-                </div>
-                <div class="page-number">2</div>
-              </div>
-              
-              <!-- Página 3 -->
-              <div class="book-page" id="page-3">
-                <div class="page-content">
-                  <h3 class="poem-title">Libertad</h3>
-                  <div class="poem-text">
-                    <p>¿Cómo puedo decir que soy negro y orgulloso?</p>
-                    <p>¿Cómo puedo hablar en absoluto?</p>
-                    <p>Cuando mi gente está muriendo</p>
-                    <p>Y yo estoy escondido detrás de estos muros</p>
-                    <p>Muros que me mantienen cautivo</p>
-                    <p>Pero no a mi mente</p>
-                    <p>Porque en mi mente soy libre</p>
-                    <p>Y siempre lo seré</p>
-                  </div>
-                  <div class="poem-date">1990</div>
-                </div>
-                <div class="page-number">3</div>
-              </div>
-              
-              <!-- Página 4 -->
-              <div class="book-page" id="page-4">
-                <div class="page-content">
-                  <h3 class="poem-title">En la Profundidad de mi Alma</h3>
-                  <div class="poem-text">
-                    <p>En la profundidad de mi alma hay</p>
-                    <p>Un guerrero sin descanso</p>
-                    <p>En la profundidad de mi alma hay</p>
-                    <p>Amor que sangra</p>
-                    <p>En la profundidad de mi alma hay</p>
-                    <p>Un grito tan fuerte que ensordece mis oídos</p>
-                    <p>En la profundidad de mi alma hay</p>
-                    <p>Un silencio tan tranquilo que me asusta</p>
-                  </div>
-                  <div class="poem-date">1989</div>
-                </div>
-                <div class="page-number">4</div>
-              </div>
-              
-              <!-- Página 5 -->
-              <div class="book-page" id="page-5">
-                <div class="page-content">
-                  <h3 class="poem-title">Y Mañana</h3>
-                  <div class="poem-text">
-                    <p>Hoy es la sombra de mañana</p>
-                    <p>Hoy es el sueño de ayer</p>
-                    <p>Hoy es la esperanza de mañana</p>
-                    <p>Hoy es la vida de ayer</p>
-                    <p>Y mañana bien podría ser nada</p>
-                    <p>Nada más que un sueño</p>
-                    <p>Así que vive hoy y vive bien</p>
-                    <p>Haz de hoy un sueño para mañana</p>
-                    <p>Y de ayer un sueño de felicidad</p>
-                  </div>
-                  <div class="poem-date">1991</div>
-                </div>
-                <div class="page-number">5</div>
+        <h2 class="section-title-v2">La Rosa que Creció del Concreto</h2>
+        <div class="poem-animation">
+          <div class="concrete-background">
+            <div class="rose-container">
+              <div class="rose">
+                <div class="petal petal-1"></div>
+                <div class="petal petal-2"></div>
+                <div class="petal petal-3"></div>
+                <div class="petal petal-4"></div>
+                <div class="petal petal-5"></div>
+                <div class="stem"></div>
+                <div class="leaf leaf-1"></div>
+                <div class="leaf leaf-2"></div>
               </div>
             </div>
           </div>
-          
-          <div class="book-controls">
-            <button class="book-btn prev-btn" disabled><i class="fas fa-chevron-left"></i></button>
-            <button class="book-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+          <div class="poem-text">
+            <div class="poem-stanza">
+              <div class="poem-line">¿Acaso no viste la rosa</div>
+              <div class="poem-line">que creció desde una grieta en el concreto?</div>
+            </div>
+            <div class="poem-stanza">
+              <div class="poem-line">Probando que las leyes de la naturaleza estaban equivocadas</div>
+              <div class="poem-line">aprendió a caminar sin tener pies.</div>
+            </div>
+            <div class="poem-stanza">
+              <div class="poem-line">Divertido, parece, pero al recordar que creció desde el concreto</div>
+              <div class="poem-line">sin tener nadie que la cuidara, sin sol, sin agua,</div>
+            </div>
+            <div class="poem-stanza">
+              <div class="poem-line">y aún así, la rosa encontró motivo para vivir.</div>
+            </div>
+            <div class="poem-stanza">
+              <div class="poem-line">Larga vida a la rosa que creció del concreto</div>
+              <div class="poem-line">cuando nadie más le importaba.</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Visualizaciones poéticas -->
-    <section class="poetry-visualizations">
+    <!-- Colección de poemas interactiva -->
+    <section class="poetry-collection">
       <div class="container">
-        <h2 class="section-title-poetry">Visualizaciones Poéticas</h2>
-        <div class="visualizations-subtitle">Explora interpretaciones visuales de sus poemas más emblemáticos</div>
-        
-        <div class="visualizations-grid">
-          <!-- Visualización 1 -->
-          <div class="visualization-item" data-poem="rose">
-            <div class="visualization-preview">
-              <img src="img/viz-rose.jpg" alt="La Rosa que Creció del Concreto" loading="lazy">
-              <div class="visualization-overlay">
-                <div class="overlay-text">La Rosa que Creció del Concreto</div>
-                <button class="overlay-btn">Explorar</button>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Visualización 2 -->
-          <div class="visualization-item" data-poem="liberty">
-            <div class="visualization-preview">
-              <img src="img/viz-liberty.jpg" alt="Libertad" loading="lazy">
-              <div class="visualization-overlay">
-                <div class="overlay-text">Libertad</div>
-                <button class="overlay-btn">Explorar</button>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Visualización 3 -->
-          <div class="visualization-item" data-poem="soul">
-            <div class="visualization-preview">
-              <img src="img/viz-soul.jpg" alt="En la Profundidad de mi Alma" loading="lazy">
-              <div class="visualization-overlay">
-                <div class="overlay-text">En la Profundidad de mi Alma</div>
-                <button class="overlay-btn">Explorar</button>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Visualización 4 -->
-          <div class="visualization-item" data-poem="tomorrow">
-            <div class="visualization-preview">
-              <img src="img/viz-tomorrow.jpg" alt="Y Mañana" loading="lazy">
-              <div class="visualization-overlay">
-                <div class="overlay-text">Y Mañana</div>
-                <button class="overlay-btn">Explorar</button>
-              </div>
-            </div>
-          </div>
+        <h2 class="section-title-v2">Colección de Poemas</h2>
+        <div class="collection-intro">
+          <p>Explora algunos de los poemas más impactantes de Tupac Shakur. Cada poema revela diferentes facetas de su personalidad, desde su vulnerabilidad y amor hasta su rabia y esperanza. Haz clic en cada tarjeta para leer el poema completo.</p>
         </div>
-      </div>
-      
-      <!-- Modal para visualizaciones -->
-      <div class="visualization-modal" id="visualization-modal">
-        <div class="modal-content">
-          <button class="modal-close"><i class="fas fa-times"></i></button>
-          <div class="modal-canvas-container">
-            <canvas id="visualization-canvas"></canvas>
+        
+        <div class="poems-grid">
+          <!-- Poema 1 -->
+          <div class="poem-card" data-poem="poem1">
+            <div class="card-front">
+              <h3>En la Profundidad de mi Alma</h3>
+              <div class="poem-preview">
+                <p>En la profundidad de mi alma hay</p>
+                <p>Un amor sin límites que solo tú...</p>
+              </div>
+              <div class="card-icon">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="back-content">
+                <h3>En la Profundidad de mi Alma</h3>
+                <div class="poem-full">
+                  <p>En la profundidad de mi alma hay</p>
+                  <p>Un amor sin límites que solo tú</p>
+                  <p>Puedes despertar</p>
+                  <p>En la profundidad de mi mente hay</p>
+                  <p>Pensamientos tan profundos</p>
+                  <p>Que solo tú puedes comprender</p>
+                  <p>En la profundidad de mi corazón hay</p>
+                  <p>Un latido tan fuerte</p>
+                  <p>Que solo tú puedes sentir</p>
+                  <p>En la profundidad de mi ser hay</p>
+                  <p>Un fuego tan intenso</p>
+                  <p>Que solo tú puedes encender</p>
+                </div>
+                <div class="poem-year">1989</div>
+              </div>
+              <button class="back-btn"><i class="fas fa-arrow-left"></i> Volver</button>
+            </div>
           </div>
-          <div class="modal-poem-container">
-            <h3 class="modal-poem-title" id="modal-poem-title"></h3>
-            <div class="modal-poem-text" id="modal-poem-text"></div>
+          
+          <!-- Poema 2 -->
+          <div class="poem-card" data-poem="poem2">
+            <div class="card-front">
+              <h3>A Veces</h3>
+              <div class="poem-preview">
+                <p>A veces me pregunto</p>
+                <p>Si alguna vez llegaré a...</p>
+              </div>
+              <div class="card-icon">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="back-content">
+                <h3>A Veces</h3>
+                <div class="poem-full">
+                  <p>A veces me pregunto</p>
+                  <p>Si alguna vez llegaré a convertirme</p>
+                  <p>En el hombre que quiero ser</p>
+                  <p>A veces me pregunto</p>
+                  <p>Si mi mensaje llegará</p>
+                  <p>A aquellos que necesitan escucharlo</p>
+                  <p>A veces me pregunto</p>
+                  <p>Si mis palabras tendrán el poder</p>
+                  <p>De cambiar aunque sea una vida</p>
+                  <p>A veces me pregunto</p>
+                  <p>Si viviré lo suficiente</p>
+                  <p>Para ver florecer mis sueños</p>
+                </div>
+                <div class="poem-year">1990</div>
+              </div>
+              <button class="back-btn"><i class="fas fa-arrow-left"></i> Volver</button>
+            </div>
+          </div>
+          
+          <!-- Poema 3 -->
+          <div class="poem-card" data-poem="poem3">
+            <div class="card-front">
+              <h3>Libertad</h3>
+              <div class="poem-preview">
+                <p>Libertad, ¿qué es la libertad?</p>
+                <p>¿Acaso es poder caminar...</p>
+              </div>
+              <div class="card-icon">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="back-content">
+                <h3>Libertad</h3>
+                <div class="poem-full">
+                  <p>Libertad, ¿qué es la libertad?</p>
+                  <p>¿Acaso es poder caminar por la calle sin miedo?</p>
+                  <p>¿O es el derecho a hablar sin ser silenciado?</p>
+                  <p>Libertad, ¿dónde está la libertad?</p>
+                  <p>¿En las mentes de aquellos que se atreven a soñar?</p>
+                  <p>¿O en los corazones de quienes luchan por la justicia?</p>
+                  <p>Libertad, ¿cuándo llegará la libertad?</p>
+                  <p>¿Cuando dejemos de juzgarnos por el color de nuestra piel?</p>
+                  <p>¿O cuando aprendamos a amarnos como hermanos?</p>
+                  <p>Libertad, mi búsqueda de libertad</p>
+                  <p>Continúa incluso cuando el mundo</p>
+                  <p>Intenta encadenar mi espíritu</p>
+                </div>
+                <div class="poem-year">1991</div>
+              </div>
+              <button class="back-btn"><i class="fas fa-arrow-left"></i> Volver</button>
+            </div>
+          </div>
+          
+          <!-- Poema 4 -->
+          <div class="poem-card" data-poem="poem4">
+            <div class="card-front">
+              <h3>Madre</h3>
+              <div class="poem-preview">
+                <p>Eres la reina de mi corazón</p>
+                <p>La fuerza que me guía...</p>
+              </div>
+              <div class="card-icon">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="back-content">
+                <h3>Madre</h3>
+                <div class="poem-full">
+                  <p>Eres la reina de mi corazón</p>
+                  <p>La fuerza que me guía</p>
+                  <p>A través de la oscuridad</p>
+                  <p>Eres el faro de esperanza</p>
+                  <p>Que ilumina mi camino</p>
+                  <p>Cuando todo parece perdido</p>
+                  <p>Eres la voz de la razón</p>
+                  <p>Que susurra sabiduría</p>
+                  <p>En mis momentos de duda</p>
+                  <p>Eres el amor incondicional</p>
+                  <p>Que me sostiene</p>
+                  <p>Cuando el mundo me da la espalda</p>
+                  <p>Madre, mi eterna gratitud</p>
+                  <p>Por darme no solo la vida</p>
+                  <p>Sino también las herramientas para vivirla</p>
+                </div>
+                <div class="poem-year">1990</div>
+              </div>
+              <button class="back-btn"><i class="fas fa-arrow-left"></i> Volver</button>
+            </div>
+          </div>
+          
+          <!-- Poema 5 -->
+          <div class="poem-card" data-poem="poem5">
+            <div class="card-front">
+              <h3>Estrellas</h3>
+              <div class="poem-preview">
+                <p>Miro al cielo nocturno</p>
+                <p>Y veo estrellas que brillan...</p>
+              </div>
+              <div class="card-icon">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="back-content">
+                <h3>Estrellas</h3>
+                <div class="poem-full">
+                  <p>Miro al cielo nocturno</p>
+                  <p>Y veo estrellas que brillan</p>
+                  <p>Como sueños esperando ser alcanzados</p>
+                  <p>Miro a mi alrededor</p>
+                  <p>Y veo estrellas que caminan</p>
+                  <p>Entre nosotros sin ser reconocidas</p>
+                  <p>Miro en mi interior</p>
+                  <p>Y veo una estrella que lucha</p>
+                  <p>Por brillar a pesar de la oscuridad</p>
+                  <p>Somos todos estrellas</p>
+                  <p>Algunos brillan ahora</p>
+                  <p>Otros brillarán después</p>
+                  <p>Pero todos tenemos luz</p>
+                  <p>Esperando ser liberada</p>
+                </div>
+                <div class="poem-year">1991</div>
+              </div>
+              <button class="back-btn"><i class="fas fa-arrow-left"></i> Volver</button>
+            </div>
+          </div>
+          
+          <!-- Poema 6 -->
+          <div class="poem-card" data-poem="poem6">
+            <div class="card-front">
+              <h3>Legado</h3>
+              <div class="poem-preview">
+                <p>Cuando me haya ido</p>
+                <p>¿Qué quedará de mí?...</p>
+              </div>
+              <div class="card-icon">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="back-content">
+                <h3>Legado</h3>
+                <div class="poem-full">
+                  <p>Cuando me haya ido</p>
+                  <p>¿Qué quedará de mí?</p>
+                  <p>¿Mis palabras resonarán</p>
+                  <p>En los corazones de quienes las escucharon?</p>
+                  <p>¿Mis acciones inspirarán</p>
+                  <p>A otros a luchar por lo que creen?</p>
+                  <p>¿Mi vida habrá significado algo</p>
+                  <p>Más allá de mi propio tiempo?</p>
+                  <p>No busco la inmortalidad</p>
+                  <p>Solo busco dejar una marca</p>
+                  <p>Una huella que diga</p>
+                  <p>"Estuve aquí y di lo mejor de mí"</p>
+                  <p>Ese es el único legado</p>
+                  <p>Que realmente importa</p>
+                </div>
+                <div class="poem-year">1991</div>
+              </div>
+              <button class="back-btn"><i class="fas fa-arrow-left"></i> Volver</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Análisis literario -->
+    <!-- Experiencia de audio inmersiva -->
+    <section class="poetry-audio">
+      <div class="container">
+        <h2 class="section-title-v2">Escucha a Tupac</h2>
+        <div class="audio-intro">
+          <p>Experimenta la poesía de Tupac en su forma más pura: a través de su propia voz. Estas grabaciones raras capturan a Tupac recitando sus poemas, revelando la emoción y la intención detrás de sus palabras.</p>
+        </div>
+        
+        <div class="audio-player-container">
+          <div class="audio-player">
+            <div class="player-artwork">
+              <img src="img/poetry-album.jpg" alt="Tupac Poetry Album" id="current-artwork">
+              <div class="player-overlay">
+                <button id="play-btn" class="player-control">
+                  <i class="fas fa-play"></i>
+                </button>
+              </div>
+            </div>
+            <div class="player-info">
+              <div class="track-info">
+                <h3 id="track-title">La Rosa que Creció del Concreto</h3>
+                <p id="track-author">Tupac Shakur</p>
+              </div>
+              <div class="player-progress">
+                <div class="time-info">
+                  <span id="current-time">0:00</span>
+                  <span id="total-time">0:00</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-current"></div>
+                </div>
+              </div>
+              <div class="player-controls">
+                <button id="prev-btn" class="control-btn"><i class="fas fa-step-backward"></i></button>
+                <button id="play-pause-btn" class="control-btn control-main"><i class="fas fa-play"></i></button>
+                <button id="next-btn" class="control-btn"><i class="fas fa-step-forward"></i></button>
+                <div class="volume-control">
+                  <button id="volume-btn" class="control-btn"><i class="fas fa-volume-up"></i></button>
+                  <div class="volume-slider">
+                    <div class="volume-bar">
+                      <div class="volume-current"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="playlist">
+            <div class="playlist-header">
+              <h3>Lista de Reproducción</h3>
+            </div>
+            <div class="playlist-tracks">
+              <div class="playlist-track active" data-index="0">
+                <div class="track-number">01</div>
+                <div class="track-info">
+                  <div class="track-title">La Rosa que Creció del Concreto</div>
+                  <div class="track-duration">1:45</div>
+                </div>
+              </div>
+              <div class="playlist-track" data-index="1">
+                <div class="track-number">02</div>
+                <div class="track-info">
+                  <div class="track-title">En la Profundidad de mi Alma</div>
+                  <div class="track-duration">2:12</div>
+                </div>
+              </div>
+              <div class="playlist-track" data-index="2">
+                <div class="track-number">03</div>
+                <div class="track-info">
+                  <div class="track-title">Libertad</div>
+                  <div class="track-duration">1:58</div>
+                </div>
+              </div>
+              <div class="playlist-track" data-index="3">
+                <div class="track-number">04</div>
+                <div class="track-info">
+                  <div class="track-title">Madre</div>
+                  <div class="track-duration">2:24</div>
+                </div>
+              </div>
+              <div class="playlist-track" data-index="4">
+                <div class="track-number">05</div>
+                <div class="track-info">
+                  <div class="track-title">Legado</div>
+                  <div class="track-duration">2:05</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Análisis poético -->
     <section class="poetry-analysis">
       <div class="container">
-        <h2 class="section-title-poetry">Análisis Literario</h2>
-        <div class="analysis-subtitle">Explorando las capas de significado en la poesía de Tupac</div>
+        <h2 class="section-title-v2">Análisis Poético</h2>
+        <div class="analysis-intro">
+          <p>La poesía de Tupac Shakur se caracteriza por su honestidad emocional, su uso de imágenes vívidas y su capacidad para transmitir experiencias complejas con un lenguaje accesible. A continuación, exploramos algunos de los temas y técnicas recurrentes en su obra poética.</p>
+        </div>
         
         <div class="analysis-tabs">
           <div class="tabs-nav">
             <button class="tab-btn active" data-tab="themes">Temas</button>
             <button class="tab-btn" data-tab="style">Estilo</button>
-            <button class="tab-btn" data-tab="context">Contexto</button>
+            <button class="tab-btn" data-tab="influences">Influencias</button>
             <button class="tab-btn" data-tab="legacy">Impacto</button>
           </div>
           
           <div class="tabs-content">
-            <!-- Pestaña de Temas -->
+            <!-- Temas -->
             <div class="tab-panel active" id="themes">
-              <div class="tab-grid">
-                <div class="tab-item">
-                  <div class="tab-icon"><i class="fas fa-fist-raised"></i></div>
-                  <h3 class="tab-title">Resistencia</h3>
-                  <p class="tab-text">La metáfora de la rosa que crece a través del concreto simboliza la capacidad de superar obstáculos aparentemente insuperables. Tupac explora constantemente la resistencia frente a la adversidad, reflejando su propia experiencia y la de su comunidad.</p>
+              <div class="themes-grid">
+                <div class="theme-item">
+                  <div class="theme-icon">
+                    <i class="fas fa-fist-raised"></i>
+                  </div>
+                  <h3>Resistencia</h3>
+                  <p>Uno de los temas más recurrentes en la poesía de Tupac es la capacidad de resistir y prosperar a pesar de las circunstancias adversas. "La Rosa que Creció del Concreto" es quizás el ejemplo más emblemático, utilizando la metáfora de una flor que crece en un entorno hostil para simbolizar la resiliencia humana.</p>
                 </div>
                 
-                <div class="tab-item">
-                  <div class="tab-icon"><i class="fas fa-heart"></i></div>
-                  <h3 class="tab-title">Amor</h3>
-                  <p class="tab-text">A pesar de su imagen pública, muchos de los poemas de Tupac abordan el amor en sus diversas formas: romántico, maternal, fraternal y el amor por su comunidad. Estos poemas revelan una vulnerabilidad y ternura que contrastan con su persona más dura.</p>
+                <div class="theme-item">
+                  <div class="theme-icon">
+                    <i class="fas fa-balance-scale"></i>
+                  </div>
+                  <h3>Justicia Social</h3>
+                  <p>Tupac aborda frecuentemente las desigualdades sociales, la discriminación racial y la brutalidad policial en sus poemas. Su trabajo refleja una profunda conciencia de las injusticias sistémicas y un deseo de inspirar cambios a través de sus palabras.</p>
                 </div>
                 
-                <div class="tab-item">
-                  <div class="tab-icon"><i class="fas fa-balance-scale"></i></div>
-                  <h3 class="tab-title">Justicia Social</h3>
-                  <p class="tab-text">La poesía de Tupac está impregnada de comentarios sobre la injusticia racial, la desigualdad económica y la brutalidad policial. Sus versos sirven como testimonio de las realidades sociales que enfrentaba la comunidad afroamericana en los años 90.</p>
+                <div class="theme-item">
+                  <div class="theme-icon">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <h3>Amor y Vulnerabilidad</h3>
+                  <p>Contrario a su imagen pública a veces confrontacional, muchos de los poemas de Tupac exploran temas de amor, vulnerabilidad y conexión humana. Estos trabajos revelan un lado más sensible del artista, mostrando su capacidad para expresar emociones íntimas.</p>
                 </div>
                 
-                <div class="tab-item">
-                  <div class="tab-icon"><i class="fas fa-search"></i></div>
-                  <h3 class="tab-title">Identidad</h3>
-                  <p class="tab-text">La búsqueda de identidad es un tema recurrente, explorando las tensiones entre las expectativas sociales, la herencia cultural y las aspiraciones personales. Tupac cuestiona constantemente quién es y quién podría llegar a ser.</p>
+                <div class="theme-item">
+                  <div class="theme-icon">
+                    <i class="fas fa-hourglass-half"></i>
+                  </div>
+                  <h3>Mortalidad</h3>
+                  <p>La conciencia de la propia mortalidad aparece como un tema recurrente en la poesía de Tupac. Muchos de sus poemas reflexionan sobre la brevedad de la vida, el legado que dejamos y cómo seremos recordados después de la muerte.</p>
+                </div>
+                
+                <div class="theme-item">
+                  <div class="theme-icon">
+                    <i class="fas fa-dove"></i>
+                  </div>
+                  <h3>Esperanza</h3>
+                  <p>A pesar de abordar temas difíciles, la poesía de Tupac está impregnada de un sentido de esperanza y posibilidad. Sus versos a menudo sugieren que, incluso en las circunstancias más oscuras, existe la posibilidad de un futuro mejor.</p>
+                </div>
+                
+                <div class="theme-item">
+                  <div class="theme-icon">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <h3>Identidad</h3>
+                  <p>La búsqueda y afirmación de la identidad personal es otro tema central en la obra poética de Tupac. Sus poemas exploran las complejidades de ser un joven afroamericano en Estados Unidos y la lucha por definirse a sí mismo en un mundo que a menudo impone etiquetas limitantes.</p>
                 </div>
               </div>
             </div>
             
-            <!-- Pestaña de Estilo -->
+            <!-- Estilo -->
             <div class="tab-panel" id="style">
               <div class="style-content">
+                <div class="style-image">
+                  <img src="img/tupac-manuscript.jpg" alt="Manuscrito de Tupac" loading="lazy">
+                </div>
                 <div class="style-text">
                   <h3>Características Estilísticas</h3>
-                  <p>La poesía de Tupac se caracteriza por su accesibilidad y honestidad emocional. Utiliza un lenguaje directo y evita artificios literarios complejos, prefiriendo la claridad y el impacto inmediato. Sin embargo, esto no significa que su obra carezca de sofisticación.</p>
-                  <p>Sus poemas emplean frecuentemente:</p>
                   <ul class="style-list">
-                    <li><span>Metáforas potentes</span> que transforman lo concreto en simbólico</li>
-                    <li><span>Repetición rítmica</span> que refleja la influencia del hip-hop</li>
-                    <li><span>Yuxtaposición</span> de imágenes contrastantes</li>
-                    <li><span>Preguntas retóricas</span> que invitan a la reflexión</li>
-                    <li><span>Estructura libre</span> que prioriza el flujo emocional sobre las formas tradicionales</li>
+                    <li>
+                      <span class="style-feature">Lenguaje Directo:</span>
+                      <p>Tupac utiliza un lenguaje claro y accesible, evitando oscuridades innecesarias. Esta elección estilística refleja su deseo de comunicarse con una amplia audiencia y hacer que su mensaje sea comprensible para todos.</p>
+                    </li>
+                    <li>
+                      <span class="style-feature">Imágenes Vívidas:</span>
+                      <p>Sus poemas están llenos de imágenes concretas y evocadoras que transmiten experiencias complejas de manera tangible. Tupac tenía un talento especial para crear metáforas memorables que resonaban con sus lectores, como la rosa creciendo a través del concreto.</p>
+                    </li>
+                    <li>
+                      <span class="style-feature">Ritmo y Musicalidad:</span>
+                      <p>Incluso en su poesía escrita, se puede percibir la influencia de su formación como rapero. Sus poemas tienen un ritmo interno y una musicalidad que los hace ideales para ser recitados en voz alta.</p>
+                    </li>
+                    <li>
+                      <span class="style-feature">Estructura Libre:</span>
+                      <p>Tupac no se adhiere a formas poéticas tradicionales, prefiriendo una estructura libre que le permite expresar sus ideas sin restricciones formales. Esta libertad estructural refleja su espíritu rebelde y su deseo de romper con las convenciones.</p>
+                    </li>
+                    <li>
+                      <span class="style-feature">Yuxtaposición:</span>
+                      <p>A menudo yuxtapone imágenes contrastantes para crear tensión y profundidad en sus poemas. La belleza junto a la brutalidad, la esperanza junto a la desesperación, creando una visión compleja de la realidad.</p>
+                    </li>
+                    <li>
+                      <span class="style-feature">Autenticidad Emocional:</span>
+                      <p>Quizás lo más distintivo de su estilo es la honestidad emocional cruda que impregna cada verso. Tupac no teme mostrar vulnerabilidad, rabia, amor o miedo, creando una conexión profunda con el lector.</p>
+                    </li>
                   </ul>
-                  <p>Su estilo poético muestra la influencia de la tradición oral afroamericana, la poesía de protesta de los años 60 y 70, y las técnicas narrativas del hip-hop, creando una voz única que resuena tanto en la página como cuando se lee en voz alta.</p>
                 </div>
-                <div class="style-example">
-                  <div class="example-container">
-                    <h4>Ejemplo de Análisis Estilístico</h4>
-                    <div class="example-poem">
-                      <p>"¿Escuchaste de la rosa que creció</p>
-                      <p>desde una grieta en el concreto?"</p>
+              </div>
+            </div>
+            
+            <!-- Influencias -->
+            <div class="tab-panel" id="influences">
+              <div class="influences-content">
+                <h3>Influencias Literarias</h3>
+                <p class="influences-intro">La poesía de Tupac Shakur muestra la influencia de diversos poetas, escritores y tradiciones literarias. Aunque era autodidacta en muchos aspectos, su madre Afeni Shakur, activista y miembro de los Panteras Negras, le inculcó desde temprana edad el amor por la literatura y el pensamiento crítico.</p>
+                
+                <div class="influences-grid">
+                  <div class="influence-item">
+                    <div class="influence-image">
+                      <img src="img/influence-hughes.jpg" alt="Langston Hughes" loading="lazy">
                     </div>
-                    <div class="example-analysis">
-                      <p>Estos versos iniciales utilizan una pregunta retórica para involucrar inmediatamente al lector, estableciendo un tono conversacional. La metáfora central de la rosa y el concreto se presenta como una imagen visual poderosa que cualquiera puede visualizar, haciendo que el mensaje sea accesible sin sacrificar la profundidad.</p>
+                    <div class="influence-info">
+                      <h4>Langston Hughes</h4>
+                      <p>Tupac mencionó en varias entrevistas su admiración por Langston Hughes, figura central del Renacimiento de Harlem. La forma en que Hughes abordaba temas de identidad racial, sueños diferidos y la experiencia afroamericana resuena claramente en la obra de Tupac.</p>
+                      <div class="influence-quote">
+                        "¿Acaso no oíste que quería ser un poeta como Langston Hughes?"
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="influence-item">
+                    <div class="influence-image">
+                      <img src="img/influence-shakespeare.jpg" alt="William Shakespeare" loading="lazy">
+                    </div>
+                    <div class="influence-info">
+                      <h4>William Shakespeare</h4>
+                      <p>Sorprendentemente, Tupac era un ávido lector de Shakespeare y estudió sus obras durante su formación en la Escuela de Artes de Baltimore. La profundidad emocional, los conflictos internos y la exploración de temas universales en la obra de Shakespeare influyeron en su enfoque poético.</p>
+                      <div class="influence-quote">
+                        "¿O acaso no sabías que Shakespeare era mi musa?"
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="influence-item">
+                    <div class="influence-image">
+                      <img src="img/influence-angelou.jpg" alt="Maya Angelou" loading="lazy">
+                    </div>
+                    <div class="influence-info">
+                      <h4>Maya Angelou</h4>
+                      <p>La poesía de Maya Angelou, con su mezcla de resistencia, dignidad y celebración de la identidad afroamericana, tiene paralelos evidentes con la obra de Tupac. Su capacidad para transformar el dolor personal en arte universal es una cualidad que ambos comparten.</p>
+                      <div class="influence-quote">
+                        "Aún así, me levanto" - Un tema que resuena tanto en Angelou como en Shakur
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="influence-item">
+                    <div class="influence-image">
+                      <img src="img/influence-machiavelli.jpg" alt="Nicolás Maquiavelo" loading="lazy">
+                    </div>
+                    <div class="influence-info">
+                      <h4>Nicolás Maquiavelo</h4>
+                      <p>Durante su estancia en prisión, Tupac leyó intensamente "El Príncipe" de Maquiavelo, lo que influyó en su pensamiento sobre el poder, la estrategia y la supervivencia. Esta influencia se refleja en su alter ego "Makaveli" y en algunos de sus poemas más estratégicos y políticos.</p>
+                      <div class="influence-quote">
+                        "Es mejor ser temido que amado, si no se puede ser ambos" - Una filosofía que Tupac exploró en su obra
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             
-            <!-- Pestaña de Contexto -->
-            <div class="tab-panel" id="context">
-              <div class="context-timeline">
-                <div class="timeline-item">
-                  <div class="timeline-date">1989-1991</div>
-                  <div class="timeline-content">
-                    <h3>Período de Escritura</h3>
-                    <p>La mayoría de los poemas de "The Rose That Grew From Concrete" fueron escritos durante este período, cuando Tupac tenía entre 18 y 20 años. En este momento, estaba comenzando su carrera con Digital Underground pero aún no había lanzado su álbum debut en solitario.</p>
-                  </div>
-                </div>
-                
-                <div class="timeline-item">
-                  <div class="timeline-date">1995</div>
-                  <div class="timeline-content">
-                    <h3>Encarcelamiento</h3>
-                    <p>Durante su tiempo en prisión, Tupac continuó escribiendo poesía como una forma de expresión y escape. Este período intensificó muchos de los temas ya presentes en su obra temprana, particularmente aquellos relacionados con la libertad, la injusticia y la resistencia.</p>
-                  </div>
-                </div>
-                
-                <div class="timeline-item">
-                  <div class="timeline-date">1999</div>
-                  <div class="timeline-content">
-                    <h3>Publicación Póstuma</h3>
-                    <p>Tres años después de su muerte, la colección "The Rose That Grew From Concrete" fue publicada por Pocket Books, editada por su madre Afeni Shakur. El libro incluye facsímiles de los manuscritos originales junto con las versiones tipografiadas.</p>
-                  </div>
-                </div>
-                
-                <div class="timeline-item">
-                  <div class="timeline-date">2000</div>
-                  <div class="timeline-content">
-                    <h3>Álbum de Poesía</h3>
-                    <p>Un álbum titulado "The Rose That Grew From Concrete" fue lanzado, presentando a varios artistas interpretando los poemas de Tupac con acompañamiento musical, ampliando el alcance de su poesía a nuevas audiencias.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Pestaña de Impacto -->
+            <!-- Impacto -->
             <div class="tab-panel" id="legacy">
               <div class="legacy-content">
-                <div class="legacy-quotes">
-                  <div class="legacy-quote-item">
-                    <div class="quote-text">"La poesía de Tupac trasciende el hip-hop; es literatura americana que captura la experiencia urbana con una honestidad y vulnerabilidad que sigue resonando décadas después."</div>
-                    <div class="quote-author">Dr. Michael Eric Dyson</div>
-                    <div class="quote-title">Autor y Profesor</div>
-                  </div>
+                <div class="legacy-text">
+                  <h3>El Impacto Duradero de su Poesía</h3>
+                  <p>La poesía de Tupac Shakur ha tenido un impacto profundo y duradero que trasciende el mundo del hip-hop y la música. Su obra poética ha influido en generaciones de escritores, artistas y activistas, y continúa siendo estudiada y celebrada en diversos contextos.</p>
                   
-                  <div class="legacy-quote-item">
-                    <div class="quote-text">"Sus poemas me mostraron que podía ser vulnerable y fuerte al mismo tiempo. Que podía hablar sobre mi dolor y mis sueños sin comprometer mi autenticidad."</div>
-                    <div class="quote-author">Kendrick Lamar</div>
-                    <div class="quote-title">Artista y Ganador del Premio Pulitzer</div>
+                  <div class="legacy-points">
+                    <div class="legacy-point">
+                      <div class="point-icon"><i class="fas fa-graduation-cap"></i></div>
+                      <div class="point-text">
+                        <h4>Educación</h4>
+                        <p>Los poemas de Tupac se estudian en escuelas secundarias y universidades de todo el mundo. Su accesibilidad y relevancia los convierten en herramientas valiosas para introducir a los jóvenes en la poesía y abordar temas sociales complejos.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="legacy-point">
+                      <div class="point-icon"><i class="fas fa-pen-nib"></i></div>
+                      <div class="point-text">
+                        <h4>Literatura</h4>
+                        <p>Tupac ayudó a legitimar el rap como una forma poética seria y a tender puentes entre la poesía académica tradicional y las expresiones poéticas de la cultura hip-hop. Su trabajo ha inspirado a numerosos poetas contemporáneos que combinan influencias literarias clásicas con sensibilidades urbanas modernas.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="legacy-point">
+                      <div class="point-icon"><i class="fas fa-theater-masks"></i></div>
+                      <div class="point-text">
+                        <h4>Artes Escénicas</h4>
+                        <p>Sus poemas han sido adaptados para obras de teatro, danza contemporánea y performances poéticas. La intensidad emocional y la musicalidad de sus versos los hacen ideales para interpretaciones en vivo.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="legacy-point">
+                      <div class="point-icon"><i class="fas fa-fist-raised"></i></div>
+                      <div class="point-text">
+                        <h4>Activismo</h4>
+                        <p>Activistas de movimientos como Black Lives Matter han encontrado inspiración en la poesía de Tupac, citando sus versos en manifestaciones y utilizando su lenguaje poético para articular demandas de justicia social.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="legacy-point">
+                      <div class="point-icon"><i class="fas fa-globe-americas"></i></div>
+                      <div class="point-text">
+                        <h4>Alcance Global</h4>
+                        <p>La poesía de Tupac ha sido traducida a docenas de idiomas y resuena con lectores de diversos orígenes culturales. Sus temas universales de lucha, esperanza y resistencia trascienden barreras geográficas y culturales.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
-                <div class="legacy-stats">
-                  <div class="legacy-stat">
-                    <div class="stat-number">72</div>
-                    <div class="stat-label">Poemas publicados</div>
+                <div class="legacy-quote-box">
+                  <div class="quote-content">
+                    <p>"La poesía de Tupac Shakur representa una de las voces más auténticas y poderosas de su generación. Su capacidad para combinar la crudeza de la experiencia vivida con una sensibilidad poética refinada creó un cuerpo de trabajo que sigue resonando con lectores de todas las edades y orígenes."</p>
+                    <cite>— Nikki Giovanni, poeta y profesora universitaria</cite>
                   </div>
-                  
-                  <div class="legacy-stat">
-                    <div class="stat-number">500,000+</div>
-                    <div class="stat-label">Copias vendidas</div>
-                  </div>
-                  
-                  <div class="legacy-stat">
-                    <div class="stat-number">12</div>
-                    <div class="stat-label">Idiomas traducidos</div>
-                  </div>
-                  
-                  <div class="legacy-stat">
-                    <div class="stat-number">25+</div>
-                    <div class="stat-label">Universidades que estudian su obra</div>
-                  </div>
-                </div>
-                
-                <div class="legacy-influence">
-                  <h3>Influencia Cultural</h3>
-                  <p>La poesía de Tupac ha influido en generaciones de escritores, músicos y artistas. Sus versos han sido citados en discursos políticos, incorporados en planes de estudio académicos y han inspirado innumerables obras de arte. Su capacidad para combinar la accesibilidad con la profundidad ha ayudado a democratizar la poesía, llevándola a audiencias que tradicionalmente no se acercarían a este género literario.</p>
-                  <p>Más allá del mundo literario, sus poemas han servido como catalizadores para conversaciones sobre raza, clase y justicia social, demostrando el poder duradero de las palabras para inspirar cambios y fomentar la comprensión.</p>
                 </div>
               </div>
             </div>
@@ -441,86 +700,149 @@
       </div>
     </section>
 
-    <!-- Sección interactiva de escritura -->
-    <section class="poetry-interactive">
+    <!-- Taller de poesía interactivo -->
+    <section class="poetry-workshop">
       <div class="container">
-        <h2 class="section-title-poetry">Inspiración Poética</h2>
-        <div class="interactive-subtitle">Crea tu propio poema inspirado en el estilo de Tupac</div>
+        <h2 class="section-title-v2">Taller de Poesía</h2>
+        <div class="workshop-intro">
+          <p>Inspirado por el estilo y los temas de Tupac Shakur, este taller interactivo te invita a crear tu propia poesía. Utiliza las herramientas y prompts proporcionados para explorar tu voz poética y expresar tus pensamientos de manera creativa.</p>
+        </div>
         
-        <div class="interactive-container">
-          <div class="interactive-prompts">
-            <div class="prompt-title">Elige un tema para comenzar</div>
-            <div class="prompt-grid">
-              <button class="prompt-btn" data-theme="resilience">Resiliencia</button>
-              <button class="prompt-btn" data-theme="love">Amor</button>
-              <button class="prompt-btn" data-theme="justice">Justicia</button>
-              <button class="prompt-btn" data-theme="hope">Esperanza</button>
-              <button class="prompt-btn" data-theme="identity">Identidad</button>
-              <button class="prompt-btn" data-theme="freedom">Libertad</button>
-            </div>
-          </div>
-          
-          <div class="interactive-workspace">
-            <div class="workspace-paper">
-              <div class="paper-lines"></div>
-              <textarea id="poem-textarea" placeholder="Escribe tu poema aquí..."></textarea>
+        <div class="workshop-container">
+          <div class="workshop-tools">
+            <div class="tools-header">
+              <h3>Herramientas Creativas</h3>
             </div>
             
-            <div class="workspace-tools">
-              <button class="tool-btn" id="save-poem-btn">
-                <i class="fas fa-save"></i> Guardar
-              </button>
-              <button class="tool-btn" id="share-poem-btn">
-                <i class="fas fa-share-alt"></i> Compartir
-              </button>
-              <button class="tool-btn" id="print-poem-btn">
-                <i class="fas fa-print"></i> Imprimir
-              </button>
-              <button class="tool-btn" id="clear-poem-btn">
-                <i class="fas fa-trash"></i> Borrar
-              </button>
+            <div class="tools-content">
+              <div class="tool-section">
+                <h4>Prompts de Inspiración</h4>
+                <div class="prompt-list">
+                  <div class="prompt-item" data-prompt="Una rosa que crece en un lugar inesperado">
+                    <div class="prompt-icon"><i class="fas fa-seedling"></i></div>
+                    <div class="prompt-text">Una rosa que crece en un lugar inesperado</div>
+                  </div>
+                  <div class="prompt-item" data-prompt="Un mensaje para alguien que ya no está">
+                    <div class="prompt-icon"><i class="fas fa-feather"></i></div>
+                    <div class="prompt-text">Un mensaje para alguien que ya no está</div>
+                  </div>
+                  <div class="prompt-item" data-prompt="La libertad significa para mí...">
+                    <div class="prompt-icon"><i class="fas fa-dove"></i></div>
+                    <div class="prompt-text">La libertad significa para mí...</div>
+                  </div>
+                  <div class="prompt-item" data-prompt="Mi legado será...">
+                    <div class="prompt-icon"><i class="fas fa-monument"></i></div>
+                    <div class="prompt-text">Mi legado será...</div>
+                  </div>
+                  <div class="prompt-item" data-prompt="A pesar de todo, me levanto porque...">
+                    <div class="prompt-icon"><i class="fas fa-fist-raised"></i></div>
+                    <div class="prompt-text">A pesar de todo, me levanto porque...</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="tool-section">
+                <h4>Técnicas Poéticas</h4>
+                <div class="technique-list">
+                  <div class="technique-item">
+                    <div class="technique-name">Metáfora</div>
+                    <div class="technique-desc">Compara dos cosas sin usar "como" o "parece"</div>
+                    <div class="technique-example">Ejemplo de Tupac: "Soy la rosa que creció del concreto"</div>
+                  </div>
+                  <div class="technique-item">
+                    <div class="technique-name">Repetición</div>
+                    <div class="technique-desc">Repite palabras o frases para enfatizar</div>
+                    <div class="technique-example">Ejemplo de Tupac: "A veces me pregunto... A veces me pregunto..."</div>
+                  </div>
+                  <div class="technique-item">
+                    <div class="technique-name">Imágenes Vívidas</div>
+                    <div class="technique-desc">Usa detalles sensoriales concretos</div>
+                    <div class="technique-example">Ejemplo de Tupac: "Pétalos rojos que se abren hacia el sol"</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           
-          <div class="interactive-inspiration">
-            <div class="inspiration-title">Inspiración</div>
-            <div class="inspiration-content" id="inspiration-content">
-              <p>Selecciona un tema para recibir inspiración en el estilo de Tupac...</p>
+          <div class="workshop-editor">
+            <div class="editor-header">
+              <h3>Tu Poema</h3>
+              <div class="editor-controls">
+                <button id="clear-btn" class="editor-btn"><i class="fas fa-trash-alt"></i> Limpiar</button>
+                <button id="save-btn" class="editor-btn"><i class="fas fa-save"></i> Guardar</button>
+              </div>
+            </div>
+            <div class="editor-container">
+              <div class="editor-prompt" id="current-prompt">Selecciona un prompt o comienza a escribir...</div>
+              <textarea id="poem-editor" placeholder="Escribe tu poema aquí..."></textarea>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Galería de manuscritos -->
+    <section class="manuscripts-gallery">
+      <div class="container">
+        <h2 class="section-title-v2">Manuscritos Originales</h2>
+        <div class="gallery-intro">
+          <p>Explora los manuscritos originales de Tupac Shakur, escritos a mano en sus cuadernos personales. Estos documentos raros ofrecen una visión íntima de su proceso creativo y la evolución de sus ideas poéticas.</p>
+        </div>
         
-        <div class="community-poems">
-          <h3 class="community-title">Poemas de la Comunidad</h3>
-          <div class="community-grid">
-            <div class="community-poem">
-              <div class="community-poem-text">
-                <p>En las calles donde crecí</p>
-                <p>Aprendí a sobrevivir</p>
-                <p>Entre sombras y luces</p>
-                <p>Mi alma encontró su verdad</p>
+        <div class="gallery-container">
+          <div class="gallery-grid">
+            <div class="gallery-item" data-manuscript="manuscript1">
+              <img src="img/manuscript-1.jpg" alt="Manuscrito de La Rosa que Creció del Concreto" loading="lazy">
+              <div class="item-overlay">
+                <div class="item-title">La Rosa que Creció del Concreto</div>
+                <div class="item-year">1989</div>
               </div>
-              <div class="community-poem-author">María G.</div>
             </div>
             
-            <div class="community-poem">
-              <div class="community-poem-text">
-                <p>Somos rosas del concreto</p>
-                <p>Creciendo contra todo pronóstico</p>
-                <p>Nuestras raíces son profundas</p>
-                <p>Nuestros pétalos, indestructibles</p>
+            <div class="gallery-item" data-manuscript="manuscript2">
+              <img src="img/manuscript-2.jpg" alt="Manuscrito de Libertad" loading="lazy">
+              <div class="item-overlay">
+                <div class="item-title">Libertad</div>
+                <div class="item-year">1991</div>
               </div>
-              <div class="community-poem-author">Carlos R.</div>
             </div>
             
-            <div class="community-poem">
-              <div class="community-poem-text">
-                <p>La libertad no es un regalo</p>
-                <p>Es un derecho que se gana</p>
-                <p>Con cada paso, con cada palabra</p>
-                <p>Con cada sueño que se hace realidad</p>
+            <div class="gallery-item" data-manuscript="manuscript3">
+              <img src="img/manuscript-3.jpg" alt="Manuscrito de Madre" loading="lazy">
+              <div class="item-overlay">
+                <div class="item-title">Madre</div>
+                <div class="item-year">1990</div>
               </div>
-              <div class="community-poem-author">Javier M.</div>
+            </div>
+            
+            <div class="gallery-item" data-manuscript="manuscript4">
+              <img src="img/manuscript-4.jpg" alt="Manuscrito de Legado" loading="lazy">
+              <div class="item-overlay">
+                <div class="item-title">Legado</div>
+                <div class="item-year">1991</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="manuscript-viewer">
+            <div class="viewer-header">
+              <h3 id="viewer-title">La Rosa que Creció del Concreto</h3>
+              <button class="close-viewer"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="viewer-content">
+              <div class="manuscript-image">
+                <img id="viewer-image" src="img/manuscript-1-large.jpg" alt="Manuscrito ampliado">
+              </div>
+              <div class="manuscript-info">
+                <div class="info-section">
+                  <h4>Contexto</h4>
+                  <p id="viewer-context">Este poema fue escrito por Tupac en 1989, cuando tenía 18 años. El manuscrito original muestra varias revisiones y anotaciones, revelando su proceso meticuloso de refinamiento poético.</p>
+                </div>
+                <div class="info-section">
+                  <h4>Notas</h4>
+                  <p id="viewer-notes">Observa las anotaciones en el margen donde Tupac exploró diferentes metáforas antes de decidirse por la rosa y el concreto. También hay marcas que sugieren que recitó este poema en voz alta mientras lo escribía, ajustando el ritmo y la cadencia.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -528,14 +850,14 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="call-to-action poetry-cta">
+    <section class="call-to-action">
       <div class="container">
         <div class="cta-content">
-          <h2>Descubre el Legado Musical</h2>
-          <p>Explora cómo la poesía de Tupac influyó en su música y en la cultura del hip-hop</p>
+          <h2>Descubre Más Sobre Tupac</h2>
+          <p>Explora otras facetas de la vida y legado de Tupac Shakur</p>
           <div class="cta-buttons">
-            <a href="discografia.html" class="cta-button primary">Ver Discografía</a>
-            <a href="legado.html" class="cta-button secondary">Explorar Legado</a>
+            <a href="biografia.html" class="cta-button primary">Conocer su Historia</a>
+            <a href="discografia.html" class="cta-button secondary">Explorar su Música</a>
           </div>
         </div>
       </div>
@@ -580,11 +902,12 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="menu.js"></script>
   <script src="script.js"></script>
   <script src="poesia.js"></script>
 </body>
 
 </html>
+
+
+

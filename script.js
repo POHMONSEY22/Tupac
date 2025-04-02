@@ -53,44 +53,6 @@ document.addEventListener("mouseup", () => {
   cursorOutline.style.transform = "translate(-50%, -50%) scale(1)"
 })
 
-// Menú móvil con animación mejorada
-const menuToggle = document.querySelector(".menu-toggle")
-const navLinks = document.querySelector(".nav-links")
-
-menuToggle.addEventListener("click", () => {
-  menuToggle.classList.toggle("active")
-  navLinks.classList.toggle("active")
-
-  // Animar las barras del menú
-  const bars = document.querySelectorAll(".bar")
-
-  // Cambiar las barras para formar una X con animación más suave
-  if (menuToggle.classList.contains("active")) {
-    bars[0].style.transform = "rotate(45deg) translate(5px, 6px)"
-    bars[1].style.opacity = "0"
-    bars[2].style.transform = "rotate(-45deg) translate(5px, -6px)"
-  } else {
-    bars[0].style.transform = "rotate(0) translate(0)"
-    bars[1].style.opacity = "1"
-    bars[2].style.transform = "rotate(0) translate(0)"
-  }
-})
-
-// Cerrar menú al hacer clic en un enlace
-const navItems = document.querySelectorAll(".nav-links a")
-navItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    menuToggle.classList.remove("active")
-    navLinks.classList.remove("active")
-
-    // Restaurar barras del menú
-    const bars = document.querySelectorAll(".bar")
-    bars[0].style.transform = "rotate(0) translate(0)"
-    bars[1].style.opacity = "1"
-    bars[2].style.transform = "rotate(0) translate(0)"
-  })
-})
-
 // Header transparente que cambia al hacer scroll con efecto parallax
 const header = document.querySelector(".transparent-header")
 const heroContent = document.querySelector(".hero-content")
@@ -1709,4 +1671,184 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Iniciar estudio
   initStudio();
+});
+
+// Script para la sección de Teorías y Misterios
+document.addEventListener('DOMContentLoaded', function() {
+  // Carrusel de teorías
+  const theoriesTrack = document.querySelector('.theories-track');
+  const prevBtn = document.querySelector('.theory-nav.prev');
+  const nextBtn = document.querySelector('.theory-nav.next');
+  
+  if (theoriesTrack && prevBtn && nextBtn) {
+    let position = 0;
+    const cards = document.querySelectorAll('.theory-card');
+    const cardWidth = cards[0].offsetWidth + 30; // Ancho + gap
+    const maxPosition = (cards.length - getVisibleCards()) * cardWidth;
+    
+    function getVisibleCards() {
+      if (window.innerWidth >= 1200) return 3;
+      if (window.innerWidth >= 768) return 2;
+      return 1;
+    }
+    
+    function updateCarousel() {
+      theoriesTrack.style.transform = `translateX(${-position}px)`;
+      
+      // Actualizar estado de los botones
+      prevBtn.disabled = position === 0;
+      nextBtn.disabled = position >= maxPosition;
+      
+      // Aplicar estilos visuales
+      prevBtn.style.opacity = position === 0 ? '0.5' : '1';
+      nextBtn.style.opacity = position >= maxPosition ? '0.5' : '1';
+    }
+    
+    prevBtn.addEventListener('click', () => {
+      position = Math.max(position - cardWidth, 0);
+      updateCarousel();
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      position = Math.min(position + cardWidth, maxPosition);
+      updateCarousel();
+    });
+    
+    // Actualizar en cambio de tamaño de ventana
+    window.addEventListener('resize', () => {
+      const newMaxPosition = (cards.length - getVisibleCards()) * cardWidth;
+      position = Math.min(position, newMaxPosition);
+      updateCarousel();
+    });
+    
+    // Inicializar
+    updateCarousel();
+  }
+  
+  // Mapa interactivo
+  const mysteryMap = document.getElementById('mystery-map');
+  
+  if (mysteryMap) {
+    // Coordenadas de los lugares (porcentajes relativos al mapa)
+    const locations = {
+      vegas: { x: 18, y: 42 },
+      cuba: { x: 28, y: 48 },
+      la: { x: 15, y: 42 },
+      ny: { x: 25, y: 38 },
+      atlanta: { x: 24, y: 42 }
+    };
+    
+    // Crear marcadores en el mapa
+    for (const [id, coords] of Object.entries(locations)) {
+      const marker = document.createElement('div');
+      marker.className = 'map-location';
+      marker.setAttribute('data-location', id);
+      marker.style.left = `${coords.x}%`;
+      marker.style.top = `${coords.y}%`;
+      
+      // Tooltip
+      const tooltip = document.createElement('div');
+      tooltip.className = 'map-location-tooltip';
+      
+      // Obtener nombre del lugar
+      const locationItem = document.querySelector(`.map-location-item[data-location="${id}"]`);
+      if (locationItem) {
+        const name = locationItem.querySelector('.location-name').textContent;
+        tooltip.textContent = name;
+      }
+      
+      marker.appendChild(tooltip);
+      mysteryMap.appendChild(marker);
+      
+      // Evento de clic
+      marker.addEventListener('click', () => {
+        activateLocation(id);
+      });
+    }
+    
+    // Activar ubicación al hacer clic en la lista
+    const locationItems = document.querySelectorAll('.map-location-item');
+    
+    locationItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const locationId = item.getAttribute('data-location');
+        activateLocation(locationId);
+      });
+    });
+    
+    function activateLocation(id) {
+      // Desactivar todos
+      document.querySelectorAll('.map-location').forEach(loc => {
+        loc.classList.remove('active');
+      });
+      
+      document.querySelectorAll('.map-location-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      // Activar el seleccionado
+      const marker = document.querySelector(`.map-location[data-location="${id}"]`);
+      const item = document.querySelector(`.map-location-item[data-location="${id}"]`);
+      
+      if (marker) marker.classList.add('active');
+      if (item) item.classList.add('active');
+    }
+    
+    // Activar el primer lugar por defecto
+    activateLocation('vegas');
+  }
+  
+  // Encuesta interactiva
+  const pollOptions = document.querySelectorAll('.poll-option');
+  const voteButton = document.getElementById('vote-button');
+  
+  if (pollOptions.length > 0 && voteButton) {
+    let selectedOption = null;
+    
+    pollOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        // Desactivar todas las opciones
+        pollOptions.forEach(opt => {
+          opt.classList.remove('selected');
+        });
+        
+        // Activar la opción seleccionada
+        option.classList.add('selected');
+        selectedOption = option.getAttribute('data-theory');
+        
+        // Habilitar botón de votar
+        voteButton.disabled = false;
+      });
+    });
+    
+    voteButton.addEventListener('click', () => {
+      if (!selectedOption) return;
+      
+      // Simular envío de voto
+      voteButton.textContent = 'Procesando...';
+      voteButton.disabled = true;
+      
+      setTimeout(() => {
+        voteButton.textContent = '¡Gracias por votar!';
+        
+        // Actualizar porcentajes (simulación)
+        const selectedElement = document.querySelector(`.poll-option[data-theory="${selectedOption}"]`);
+        if (selectedElement) {
+          const fill = selectedElement.querySelector('.option-fill');
+          const percentage = selectedElement.querySelector('.option-percentage');
+          
+          // Incrementar ligeramente el porcentaje
+          const currentWidth = parseFloat(fill.style.width);
+          const newWidth = Math.min(currentWidth + 2, 100);
+          fill.style.width = `${newWidth}%`;
+          percentage.textContent = `${Math.round(newWidth)}%`;
+        }
+        
+        // Deshabilitar interacción después de votar
+        pollOptions.forEach(opt => {
+          opt.style.pointerEvents = 'none';
+        });
+      }, 1500);
+    });
+  }
 });

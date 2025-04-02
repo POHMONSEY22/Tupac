@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="logo.css">
+  <link rel="stylesheet" href="menu.css">
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
 
@@ -22,28 +23,37 @@
   <div class="cursor-dot"></div>
   <div class="cursor-outline"></div>
 
+  <!-- Estructura HTML para el menú con logo en el centro -->
   <header class="transparent-header">
     <nav class="menu">
-      <div class="logo-box">
+      <ul class="nav-links left-links">
+        <li><a href="index.html" class="active">INICIO</a></li>
+        <li><a href="biografia.html">QUIÉN ES 2PAC</a></li>
+        <li><a href="perfil.html">PERFIL</a></li>
+      </ul>
+      
+      <div class="logo-container">
         <a href="index.html">
           <img src="img/logo.png" alt="2Pac Logo" class="logo">
         </a>
       </div>
+      
+      <ul class="nav-links right-links">
+        <li><a href="discografia.html">DISCOGRAFÍA</a></li>
+        <li><a href="legado.html">LEGADO</a></li>
+        <li><a href="poesia.html">POESÍA</a></li>
+      </ul>
+      
       <button class="menu-toggle" aria-label="Abrir menú">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">INICIO</a></li>
-        <li><a href="biografia.html">QUIÉN ES 2PAC</a></li>
-        <li><a href="discografia.html">DISCOGRAFÍA</a></li>
-        <li><a href="legado.html">LEGADO</a></li>
-        <li><a href="poesia.html">POESIA</a></li>
-      </ul>
     </nav>
   </header>
 
+
+  
   <main>
     <!-- Hero section con video de fondo -->
     <section id="hero" class="hero-v2">
@@ -147,7 +157,7 @@
           <div class="moment-dot"></div>
           <div class="moment-content">
             <div class="moment-image">
-              <img src="img/moment-birth.jpg" alt="Nacimiento de Tupac" loading="lazy">
+              <img src="img/tupac-bebe.jpg" alt="Nacimiento de Tupac" loading="lazy">
             </div>
             <div class="moment-info">
               <h3>Nacimiento</h3>
@@ -161,7 +171,7 @@
           <div class="moment-dot"></div>
           <div class="moment-content">
             <div class="moment-image">
-              <img src="img/moment-debut.jpg" alt="Debut musical" loading="lazy">
+              <img src="img/2PacalypseNow.jpg" alt="Debut musical" loading="lazy">
             </div>
             <div class="moment-info">
               <h3>Debut Musical</h3>
@@ -175,7 +185,7 @@
           <div class="moment-dot"></div>
           <div class="moment-content">
             <div class="moment-image">
-              <img src="img/moment-acting.jpg" alt="Carrera actoral" loading="lazy">
+              <img src="img/actuando.jpg" alt="Carrera actoral" loading="lazy">
             </div>
             <div class="moment-info">
               <h3>Carrera Actoral</h3>
@@ -189,7 +199,7 @@
           <div class="moment-dot"></div>
           <div class="moment-content">
             <div class="moment-image">
-              <img src="img/moment-against.jpg" alt="Me Against the World" loading="lazy">
+              <img src="img/me-against-the-world.jpg" alt="Me Against the World" loading="lazy">
             </div>
             <div class="moment-info">
               <h3>Me Against the World</h3>
@@ -204,7 +214,7 @@
           <div class="moment-dot"></div>
           <div class="moment-content">
             <div class="moment-image">
-              <img src="img/moment-eyez.jpg" alt="All Eyez On Me" loading="lazy">
+              <img src="img/all-eyez-on-me.jpg" alt="All Eyez On Me" loading="lazy">
             </div>
             <div class="moment-info">
               <h3>All Eyez On Me</h3>
@@ -218,7 +228,7 @@
           <div class="moment-dot"></div>
           <div class="moment-content">
             <div class="moment-image">
-              <img src="img/moment-legacy.jpg" alt="Legado" loading="lazy">
+              <img src="img/img11.jpg" alt="Legado" loading="lazy">
             </div>
             <div class="moment-info">
               <h3>Legado Eterno</h3>
@@ -262,7 +272,7 @@
         
         <div class="music-visualizer">
           <div class="visualizer-backdrop">
-            <div class="backdrop-image" style="background-image: url('img/visualizer-bg.jpg')"></div>
+            <div class="backdrop-image" style="background-image: url('img/footer.jpg')"></div>
             <div class="backdrop-overlay"></div>
             <div class="audio-waves">
               <div class="wave-group">
@@ -309,7 +319,7 @@
             <div class="song-grid">
               <div class="song-card" data-song="california-love" data-theme="Celebración" data-year="1996" data-album="All Eyez On Me" data-quote="California love, California knows how to party">
                 <div class="song-card-image">
-                  <img src="img/song-california.jpg" alt="California Love" loading="lazy">
+                  <img src="img/california.jpg" alt="California Love" loading="lazy">
                   <div class="song-card-overlay">
                     <div class="song-card-play">
                       <i class="fas fa-play"></i>
@@ -324,7 +334,7 @@
               
               <div class="song-card" data-song="dear-mama" data-theme="Familia" data-year="1995" data-album="Me Against the World" data-quote="Ain't a woman alive that could take my mama's place">
                 <div class="song-card-image">
-                  <img src="img/song-dear-mama.jpg" alt="Dear Mama" loading="lazy">
+                  <img src="img/dearmama.jpg" alt="Dear Mama" loading="lazy">
                   <div class="song-card-overlay">
                     <div class="song-card-play">
                       <i class="fas fa-play"></i>
@@ -339,7 +349,7 @@
               
               <div class="song-card" data-song="changes" data-theme="Justicia Social" data-year="1998" data-album="Greatest Hits" data-quote="That's just the way it is, things will never be the same">
                 <div class="song-card-image">
-                  <img src="img/song-changes.jpg" alt="Changes" loading="lazy">
+                  <img src="img/changes.jpg" alt="Changes" loading="lazy">
                   <div class="song-card-overlay">
                     <div class="song-card-play">
                       <i class="fas fa-play"></i>
@@ -354,7 +364,7 @@
               
               <div class="song-card" data-song="hit-em-up" data-theme="Rivalidad" data-year="1996" data-album="Single" data-quote="First off, I'm the realest deal, so that's that">
                 <div class="song-card-image">
-                  <img src="img/song-hit-em-up.jpg" alt="Hit 'Em Up" loading="lazy">
+                  <img src="img/hit-em-up.jpg" alt="Hit 'Em Up" loading="lazy">
                   <div class="song-card-overlay">
                     <div class="song-card-play">
                       <i class="fas fa-play"></i>
@@ -369,7 +379,7 @@
               
               <div class="song-card" data-song="keep-ya-head-up" data-theme="Empoderamiento" data-year="1993" data-album="Strictly 4 My N.I.G.G.A.Z..." data-quote="Keep ya head up, ooh child things are gonna get easier">
                 <div class="song-card-image">
-                  <img src="img/song-keep-ya-head.jpg" alt="Keep Ya Head Up" loading="lazy">
+                  <img src="img/Greatest-Hits.jpg" alt="Keep Ya Head Up" loading="lazy">
                   <div class="song-card-overlay">
                     <div class="song-card-play">
                       <i class="fas fa-play"></i>
@@ -384,7 +394,7 @@
               
               <div class="song-card" data-song="ambitionz" data-theme="Determinación" data-year="1996" data-album="All Eyez On Me" data-quote="I won't deny it, I'm a straight ridah, you don't wanna mess with me">
                 <div class="song-card-image">
-                  <img src="img/song-ambitionz.jpg" alt="Ambitionz Az a Ridah" loading="lazy">
+                  <img src="img/all-eyez-on-me.jpg" alt="Ambitionz Az a Ridah" loading="lazy">
                   <div class="song-card-overlay">
                     <div class="song-card-play">
                       <i class="fas fa-play"></i>
@@ -423,7 +433,7 @@
                 <h3>The Rose That Grew From Concrete</h3>
                 <div class="book-author">Tupac Shakur</div>
                 <div class="book-image">
-                  <img src="img/rose-book.jpg" alt="The Rose That Grew From Concrete" loading="lazy">
+                  <img src="img/dualidad.jpg" alt="The Rose That Grew From Concrete" loading="lazy">
                 </div>
               </div>
             </div>
@@ -1000,6 +1010,7 @@
     </div>
   </footer>
 
+  <script src="menu.js"></script>
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </body>

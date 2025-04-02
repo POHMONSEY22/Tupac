@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="logo.css">
+  <link rel="stylesheet" href="menu.css">
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
 
@@ -20,25 +21,32 @@
   <div class="cursor-dot"></div>
   <div class="cursor-outline"></div>
 
+  <!-- Estructura HTML para el menú con logo en el centro -->
   <header class="transparent-header">
     <nav class="menu">
-      <div class="logo-box">
+      <ul class="nav-links left-links">
+        <li><a href="index.html" class="active">INICIO</a></li>
+        <li><a href="biografia.html">QUIÉN ES 2PAC</a></li>
+        <li><a href="perfil.html">PERFIL</a></li>
+      </ul>
+      
+      <div class="logo-container">
         <a href="index.html">
           <img src="img/logo.png" alt="2Pac Logo" class="logo">
         </a>
       </div>
+      
+      <ul class="nav-links right-links">
+        <li><a href="discografia.html" class="active">DISCOGRAFÍA</a></li>
+        <li><a href="legado.html">LEGADO</a></li>
+        <li><a href="poesia.html">POESÍA</a></li>
+      </ul>
+      
       <button class="menu-toggle" aria-label="Abrir menú">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
-      <ul class="nav-links">
-        <li><a href="index.html">INICIO</a></li>
-        <li><a href="biografia.html">QUIÉN ES 2PAC</a></li>
-        <li><a href="discografia.html" class="active">DISCOGRAFÍA</a></li>
-        <li><a href="legado.html">LEGADO</a></li>
-        <li><a href="poesia.html">POESIA</a></li>
-      </ul>
     </nav>
   </header>
 
@@ -1122,6 +1130,7 @@
       </div>
     </div>
   </footer>
+  <script src="menu.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
