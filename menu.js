@@ -1,34 +1,38 @@
 // JavaScript para la funcionalidad del menú
 
-// Menú móvil
-const menuToggle = document.querySelector(".menu-toggle")
-const navLinks = document.querySelectorAll(".nav-links")
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle")
+  const leftLinks = document.querySelector(".left-links")
+  const rightLinks = document.querySelector(".right-links")
 
-menuToggle.addEventListener("click", () => {
-  menuToggle.classList.toggle("active")
-  navLinks.forEach((nav) => {
-    nav.classList.toggle("active")
-  })
-})
-
-// Cerrar menú al hacer clic en un enlace
-const links = document.querySelectorAll(".nav-links a")
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    menuToggle.classList.remove("active")
-    navLinks.forEach((nav) => {
-      nav.classList.remove("active")
+  if (menuToggle && leftLinks && rightLinks) {
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active")
+      leftLinks.classList.toggle("active")
+      rightLinks.classList.toggle("active")
     })
-  })
-})
 
-// Cambiar estilo del header al hacer scroll
-window.addEventListener("scroll", () => {
+    // Cerrar menú al hacer clic en un enlace
+    const navLinks = document.querySelectorAll(".nav-links a")
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        menuToggle.classList.remove("active")
+        leftLinks.classList.remove("active")
+        rightLinks.classList.remove("active")
+      })
+    })
+  }
+
+  // Cambiar estilo del header al hacer scroll
   const header = document.querySelector(".transparent-header")
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled")
-  } else {
-    header.classList.remove("scrolled")
+  if (header) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled")
+      } else {
+        header.classList.remove("scrolled")
+      }
+    })
   }
 })
 

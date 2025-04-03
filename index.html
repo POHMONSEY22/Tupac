@@ -32,7 +32,7 @@
         <li><a href="perfil.html">PERFIL</a></li>
       </ul>
       
-      <div class="logo-container">
+      <div class="logo-box">
         <a href="index.html">
           <img src="img/logo.png" alt="2Pac Logo" class="logo">
         </a>
@@ -52,8 +52,6 @@
     </nav>
   </header>
 
-
-  
   <main>
     <!-- Hero section con video de fondo -->
     <section id="hero" class="hero-v2">
@@ -142,128 +140,134 @@
         </div>
       </div>
     </section>
-    <!-- Sección: Momentos Clave -->
-    <section class="key-moments">
-    <div class="container">
-    <h2 class="section-title-v2">Momentos Clave</h2>
-    <div class="moments-subtitle">Explora el viaje de una leyenda</div>
 
-    <div class="moments-timeline">
-      <div class="timeline-track">
-        <div class="timeline-line"></div>
+    <!-- Sección: Momentos Clave - Versión Moderna -->
+    <section class="key-moments">
+      <div class="container">
+        <h2 class="section-title-v2">Momentos Clave</h2>
+        <div class="moments-subtitle">Explora el viaje de una leyenda</div>
         
-        <div class="timeline-moment" data-year="1971">
-          <div class="moment-year">1971</div>
-          <div class="moment-dot"></div>
-          <div class="moment-content">
-            <div class="moment-image">
-              <img src="img/tupac-bebe.jpg" alt="Nacimiento de Tupac" loading="lazy">
+        <div class="moments-carousel">
+          <div class="moments-track">
+            <!-- Momento 1 -->
+            <div class="moment-card" data-year="1971">
+              <div class="moment-year">1971</div>
+              <div class="moment-image">
+                <img src="img/tupac-bebe.jpg" alt="Nacimiento de Tupac" loading="lazy">
+              </div>
+              <div class="moment-content">
+                <h3>Nacimiento</h3>
+                <p>Tupac Amaru Shakur nace el 16 de junio en East Harlem, Nueva York.</p>
+              </div>
             </div>
-            <div class="moment-info">
-              <h3>Nacimiento</h3>
-              <p>Tupac Amaru Shakur nace el 16 de junio en East Harlem, Nueva York.</p>
+            
+            <!-- Momento 2 -->
+            <div class="moment-card" data-year="1991">
+              <div class="moment-year">1991</div>
+              <div class="moment-image">
+                <img src="img/2PacalypseNow.jpg" alt="Debut musical" loading="lazy">
+              </div>
+              <div class="moment-content">
+                <h3>Debut Musical</h3>
+                <p>Lanza su álbum debut "2Pacalypse Now", estableciendo su voz como comentarista social.</p>
+              </div>
             </div>
+            
+            <!-- Momento 3 -->
+            <div class="moment-card" data-year="1993">
+              <div class="moment-year">1993</div>
+              <div class="moment-image">
+                <img src="img/actuando.jpg" alt="Carrera actoral" loading="lazy">
+              </div>
+              <div class="moment-content">
+                <h3>Carrera Actoral</h3>
+                <p>Protagoniza junto a Janet Jackson la película "Poetic Justice", mostrando su versatilidad artística.</p>
+              </div>
+            </div>
+            
+            <!-- Momento 4 - Destacado -->
+            <div class="moment-card featured" data-year="1995">
+              <div class="moment-year">1995</div>
+              <div class="moment-image">
+                <img src="img/me-against-the-world.jpg" alt="Me Against the World" loading="lazy">
+              </div>
+              <div class="moment-content">
+                <h3>Me Against the World</h3>
+                <p>Lanza su aclamado álbum mientras cumple condena en prisión, alcanzando el #1 en Billboard 200.</p>
+                <div class="moment-badge">Momento Crucial</div>
+              </div>
+            </div>
+            
+            <!-- Momento 5 -->
+            <div class="moment-card" data-year="1996">
+              <div class="moment-year">1996</div>
+              <div class="moment-image">
+                <img src="img/all-eyez-on-me.jpg" alt="All Eyez On Me" loading="lazy">
+              </div>
+              <div class="moment-content">
+                <h3>All Eyez On Me</h3>
+                <p>Publica su obra maestra, un álbum doble que define una era y consolida su legado.</p>
+              </div>
+            </div>
+            
+            <!-- Momento 6 -->
+            <div class="moment-card" data-year="1996">
+              <div class="moment-year">1996</div>
+              <div class="moment-image">
+                <img src="img/img11.jpg" alt="Legado" loading="lazy">
+              </div>
+              <div class="moment-content">
+                <h3>Legado Eterno</h3>
+                <p>El 13 de septiembre, Tupac fallece a los 25 años, pero su influencia continúa creciendo décadas después.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Línea de tiempo visual -->
+          <div class="timeline-visual">
+            <div class="timeline-progress"></div>
+            <div class="timeline-markers">
+              <div class="timeline-marker active" data-year="1971"></div>
+              <div class="timeline-marker" data-year="1991"></div>
+              <div class="timeline-marker" data-year="1993"></div>
+              <div class="timeline-marker" data-year="1995"></div>
+              <div class="timeline-marker" data-year="1996"></div>
+              <div class="timeline-marker" data-year="1996"></div>
+            </div>
+          </div>
+          
+          <!-- Controles de navegación -->
+          <div class="carousel-controls">
+            <button class="carousel-nav carousel-prev" aria-label="Momento anterior">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="carousel-dots">
+              <div class="carousel-dot active" data-index="0"></div>
+              <div class="carousel-dot" data-index="1"></div>
+              <div class="carousel-dot" data-index="2"></div>
+              <div class="carousel-dot" data-index="3"></div>
+              <div class="carousel-dot" data-index="4"></div>
+              <div class="carousel-dot" data-index="5"></div>
+            </div>
+            
+            <button class="carousel-nav carousel-next" aria-label="Momento siguiente">
+              <i class="fas fa-chevron-right"></i>
+            </button>
           </div>
         </div>
         
-        <div class="timeline-moment" data-year="1991">
-          <div class="moment-year">1991</div>
-          <div class="moment-dot"></div>
-          <div class="moment-content">
-            <div class="moment-image">
-              <img src="img/2PacalypseNow.jpg" alt="Debut musical" loading="lazy">
-            </div>
-            <div class="moment-info">
-              <h3>Debut Musical</h3>
-              <p>Lanza su álbum debut "2Pacalypse Now", estableciendo su voz como comentarista social.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline-moment" data-year="1993">
-          <div class="moment-year">1993</div>
-          <div class="moment-dot"></div>
-          <div class="moment-content">
-            <div class="moment-image">
-              <img src="img/actuando.jpg" alt="Carrera actoral" loading="lazy">
-            </div>
-            <div class="moment-info">
-              <h3>Carrera Actoral</h3>
-              <p>Protagoniza junto a Janet Jackson la película "Poetic Justice", mostrando su versatilidad artística.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline-moment featured" data-year="1995">
-          <div class="moment-year">1995</div>
-          <div class="moment-dot"></div>
-          <div class="moment-content">
-            <div class="moment-image">
-              <img src="img/me-against-the-world.jpg" alt="Me Against the World" loading="lazy">
-            </div>
-            <div class="moment-info">
-              <h3>Me Against the World</h3>
-              <p>Lanza su aclamado álbum mientras cumple condena en prisión, alcanzando el #1 en Billboard 200.</p>
-              <div class="moment-badge">Momento Crucial</div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline-moment" data-year="1996">
-          <div class="moment-year">1996</div>
-          <div class="moment-dot"></div>
-          <div class="moment-content">
-            <div class="moment-image">
-              <img src="img/all-eyez-on-me.jpg" alt="All Eyez On Me" loading="lazy">
-            </div>
-            <div class="moment-info">
-              <h3>All Eyez On Me</h3>
-              <p>Publica su obra maestra, un álbum doble que define una era y consolida su legado.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline-moment" data-year="1996-2">
-          <div class="moment-year">1996</div>
-          <div class="moment-dot"></div>
-          <div class="moment-content">
-            <div class="moment-image">
-              <img src="img/img11.jpg" alt="Legado" loading="lazy">
-            </div>
-            <div class="moment-info">
-              <h3>Legado Eterno</h3>
-              <p>El 13 de septiembre, Tupac fallece a los 25 años, pero su influencia continúa creciendo décadas después.</p>
-            </div>
-          </div>
+        <div class="timeline-explore">
+          <a href="biografia.html" class="timeline-explore-btn">
+            Explorar biografía completa
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </a>
         </div>
       </div>
-      
-      <div class="timeline-navigation">
-        <button class="timeline-nav prev" aria-label="Momento anterior">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="timeline-years">
-          <div class="timeline-year-marker active" data-year="1971">1971</div>
-          <div class="timeline-year-marker" data-year="1991">1991</div>
-          <div class="timeline-year-marker" data-year="1993">1993</div>
-          <div class="timeline-year-marker" data-year="1995">1995</div>
-          <div class="timeline-year-marker" data-year="1996">1996</div>
-          <div class="timeline-year-marker" data-year="1996-2">1996</div>
-        </div>
-        <button class="timeline-nav next" aria-label="Momento siguiente">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
-      
-      <div class="timeline-explore">
-        <a href="biografia.html" class="timeline-explore-btn">
-          Explorar biografía completa
-          <i class="fas fa-long-arrow-alt-right"></i>
-        </a>
-      </div>
-    </div>
-    </div>
     </section>
+
+
+
     <!-- Sección: Experiencia Musical Inmersiva -->
     <section class="music-experience">
       <div class="container">
@@ -418,6 +422,7 @@
         </div>
       </div>
     </section>
+
     <!-- Sección: El Alma Poética -->
     <section class="poetic-soul">
       <div class="poetic-particles" id="particles-js"></div>
@@ -982,8 +987,11 @@
             <ul>
               <li><a href="index.html">Inicio</a></li>
               <li><a href="biografia.html">Biografía</a></li>
+              <li><a href="perfil.html">Perfil</a></li>
               <li><a href="discografia.html">Discografía</a></li>
               <li><a href="legado.html">Legado</a></li>
+              <li><a href="poesia.html">Poesia</a></li>
+              
             </ul>
           </div>
           <div class="footer-social">
@@ -1012,6 +1020,7 @@
 
   <script src="menu.js"></script>
   <script src="script.js"></script>
+  <script src="moments.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </body>
 

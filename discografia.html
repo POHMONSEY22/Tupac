@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="logo.css">
   <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="virtual.css">
+  <link rel="stylesheet" href="song.css">
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
 
@@ -560,155 +562,465 @@
       </div>
     </section>
 
-    <!-- Canciones destacadas -->
-    <section class="disco-top-songs">
-      <div class="container">
-        <h2 class="section-title-v2">Canciones Más Populares</h2>
+    <!-- Canciones Más Populares - Versión Premium (Aislada) -->
+    <section class="tps-disco-top-songs">
+      <div class="tps-top-songs-background">
+        <div class="tps-animated-wave"></div>
+        <div class="tps-animated-particles" id="tps-song-particles"></div>
+      </div>
+      
+      <div class="tps-container">
+        <div class="tps-section-header">
+          <h2 class="tps-section-title">Canciones Más Populares</h2>
+          <div class="tps-view-controls">
+            <button class="tps-view-btn tps-active" data-view="list">
+              <i class="fas fa-list"></i>
+            </button>
+            <button class="tps-view-btn" data-view="grid">
+              <i class="fas fa-th-large"></i>
+            </button>
+            <button class="tps-view-btn" data-view="covers">
+              <i class="fas fa-images"></i>
+            </button>
+          </div>
+        </div>
         
-        <div class="top-songs-container">
-          <div class="top-songs-list">
-            <div class="song-item">
-              <div class="song-number">01</div>
-              <div class="song-info">
-                <div class="song-title">California Love</div>
-                <div class="song-album">All Eyez On Me (1996)</div>
+        <div class="tps-top-songs-container">
+          <!-- Vista lista (predeterminada) -->
+          <div class="tps-songs-view tps-list-view tps-active" id="tps-list-view">
+            <div class="tps-songs-table">
+              <div class="tps-songs-header">
+                <div class="tps-header-item tps-header-number">#</div>
+                <div class="tps-header-item tps-header-title">Título</div>
+                <div class="tps-header-item tps-header-album">Álbum</div>
+                <div class="tps-header-item tps-header-plays">Reproducciones</div>
+                <div class="tps-header-item tps-header-duration">Duración</div>
+                <div class="tps-header-item tps-header-actions"></div>
               </div>
-              <div class="song-plays">1.2B</div>
-              <div class="song-duration">4:45</div>
-              <a href="https://open.spotify.com/track/5Jq4Qy1A8PIlWRF9WYESm4" class="song-play" target="_blank">
-                <i class="fas fa-play"></i>
-              </a>
-            </div>
-            
-            <div class="song-item">
-              <div class="song-number">02</div>
-              <div class="song-info">
-                <div class="song-title">Changes</div>
-                <div class="song-album">Greatest Hits (1998)</div>
+              
+              <div class="tps-songs-body">
+                <div class="tps-song-item" data-song="california-love">
+                  <div class="tps-song-number">01</div>
+                  <div class="tps-song-title-info">
+                    <div class="tps-song-title">California Love</div>
+                    <div class="tps-song-features">feat. Dr. Dre</div>
+                  </div>
+                  <div class="tps-song-album">All Eyez On Me (1996)</div>
+                  <div class="tps-song-plays">
+                    <span class="tps-plays-count">1.2B</span>
+                    <div class="tps-plays-bar" style="width: 100%"></div>
+                  </div>
+                  <div class="tps-song-duration">4:45</div>
+                  <div class="tps-song-actions">
+                    <button class="tps-song-preview" data-preview="california-love">
+                      <i class="fas fa-play"></i>
+                    </button>
+                    <div class="tps-song-options">
+                      <button class="tps-options-btn">
+                        <i class="fas fa-ellipsis-h"></i>
+                      </button>
+                      <div class="tps-options-menu">
+                        <a href="https://open.spotify.com/track/5Jq4Qy1A8PIlWRF9WYESm4" target="_blank" class="tps-option-item">
+                          <i class="fab fa-spotify"></i> Spotify
+                        </a>
+                        <a href="https://music.apple.com/us/album/california-love/1440782222?i=1440782230" target="_blank" class="tps-option-item">
+                          <i class="fab fa-apple"></i> Apple Music
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=5wBTdfAkqGU" target="_blank" class="tps-option-item">
+                          <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="tps-song-item" data-song="changes">
+                  <div class="tps-song-number">02</div>
+                  <div class="tps-song-title-info">
+                    <div class="tps-song-title">Changes</div>
+                    <div class="tps-song-features">feat. Talent</div>
+                  </div>
+                  <div class="tps-song-album">Greatest Hits (1998)</div>
+                  <div class="tps-song-plays">
+                    <span class="tps-plays-count">980M</span>
+                    <div class="tps-plays-bar" style="width: 82%"></div>
+                  </div>
+                  <div class="tps-song-duration">4:29</div>
+                  <div class="tps-song-actions">
+                    <button class="tps-song-preview" data-preview="changes">
+                      <i class="fas fa-play"></i>
+                    </button>
+                    <div class="tps-song-options">
+                      <button class="tps-options-btn">
+                        <i class="fas fa-ellipsis-h"></i>
+                      </button>
+                      <div class="tps-options-menu">
+                        <a href="https://open.spotify.com/track/67Hna13dNDkZvBpTXRIaOJ" target="_blank" class="tps-option-item">
+                          <i class="fab fa-spotify"></i> Spotify
+                        </a>
+                        <a href="https://music.apple.com/us/album/changes/1440751015?i=1440751169" target="_blank" class="tps-option-item">
+                          <i class="fab fa-apple"></i> Apple Music
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=eXvBjCO19QY" target="_blank" class="tps-option-item">
+                          <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="tps-song-item" data-song="dear-mama">
+                  <div class="tps-song-number">03</div>
+                  <div class="tps-song-title-info">
+                    <div class="tps-song-title">Dear Mama</div>
+                    <div class="tps-song-features"></div>
+                  </div>
+                  <div class="tps-song-album">Me Against the World (1995)</div>
+                  <div class="tps-song-plays">
+                    <span class="tps-plays-count">750M</span>
+                    <div class="tps-plays-bar" style="width: 63%"></div>
+                  </div>
+                  <div class="tps-song-duration">4:40</div>
+                  <div class="tps-song-actions">
+                    <button class="tps-song-preview" data-preview="dear-mama">
+                      <i class="fas fa-play"></i>
+                    </button>
+                    <div class="tps-song-options">
+                      <button class="tps-options-btn">
+                        <i class="fas fa-ellipsis-h"></i>
+                      </button>
+                      <div class="tps-options-menu">
+                        <a href="https://open.spotify.com/track/6tDxrq4FxEL2q15y37tXT9" target="_blank" class="tps-option-item">
+                          <i class="fab fa-spotify"></i> Spotify
+                        </a>
+                        <a href="https://music.apple.com/us/album/dear-mama/1440770702?i=1440771421" target="_blank" class="tps-option-item">
+                          <i class="fab fa-apple"></i> Apple Music
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=Mb1ZvUDvLDY" target="_blank" class="tps-option-item">
+                          <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="tps-song-item" data-song="hit-em-up">
+                  <div class="tps-song-number">04</div>
+                  <div class="tps-song-title-info">
+                    <div class="tps-song-title">Hit 'Em Up</div>
+                    <div class="tps-song-features">feat. Outlawz</div>
+                  </div>
+                  <div class="tps-song-album">Greatest Hits (1998)</div>
+                  <div class="tps-song-plays">
+                    <span class="tps-plays-count">720M</span>
+                    <div class="tps-plays-bar" style="width: 60%"></div>
+                  </div>
+                  <div class="tps-song-duration">5:12</div>
+                  <div class="tps-song-actions">
+                    <button class="tps-song-preview" data-preview="hit-em-up">
+                      <i class="fas fa-play"></i>
+                    </button>
+                    <div class="tps-song-options">
+                      <button class="tps-options-btn">
+                        <i class="fas fa-ellipsis-h"></i>
+                      </button>
+                      <div class="tps-options-menu">
+                        <a href="https://open.spotify.com/track/3cXP2VW7QZNruKUZRAAeOx" target="_blank" class="tps-option-item">
+                          <i class="fab fa-spotify"></i> Spotify
+                        </a>
+                        <a href="https://music.apple.com/us/album/hit-em-up-single-version/1440749808?i=1440750076" target="_blank" class="tps-option-item">
+                          <i class="fab fa-apple"></i> Apple Music
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=41qC3w3UUkU" target="_blank" class="tps-option-item">
+                          <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="tps-song-item" data-song="hail-mary">
+                  <div class="tps-song-number">05</div>
+                  <div class="tps-song-title-info">
+                    <div class="tps-song-title">Hail Mary</div>
+                    <div class="tps-song-features">feat. Outlawz & Prince Ital Joe</div>
+                  </div>
+                  <div class="tps-song-album">The Don Killuminati (1996)</div>
+                  <div class="tps-song-plays">
+                    <span class="tps-plays-count">680M</span>
+                    <div class="tps-plays-bar" style="width: 57%"></div>
+                  </div>
+                  <div class="tps-song-duration">5:12</div>
+                  <div class="tps-song-actions">
+                    <button class="tps-song-preview" data-preview="hail-mary">
+                      <i class="fas fa-play"></i>
+                    </button>
+                    <div class="tps-song-options">
+                      <button class="tps-options-btn">
+                        <i class="fas fa-ellipsis-h"></i>
+                      </button>
+                      <div class="tps-options-menu">
+                        <a href="https://open.spotify.com/track/6DXFVsLcEvOTSrkG9G1Cb1" target="_blank" class="tps-option-item">
+                          <i class="fab fa-spotify"></i> Spotify
+                        </a>
+                        <a href="https://music.apple.com/us/album/hail-mary/1440752542?i=1440753367" target="_blank" class="tps-option-item">
+                          <i class="fab fa-apple"></i> Apple Music
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=nkJA6SYwa94" target="_blank" class="tps-option-item">
+                          <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="song-plays">980M</div>
-              <div class="song-duration">4:29</div>
-              <a href="https://open.spotify.com/track/67Hna13dNDkZvBpTXRIaOJ" class="song-play" target="_blank">
-                <i class="fas fa-play"></i>
-              </a>
-            </div>
-            
-            <div class="song-item">
-              <div class="song-number">03</div>
-              <div class="song-info">
-                <div class="song-title">Dear Mama</div>
-                <div class="song-album">Me Against the World (1995)</div>
-              </div>
-              <div class="song-plays">750M</div>
-              <div class="song-duration">4:40</div>
-              <a href="https://open.spotify.com/track/6tDxrq4FxEL2q15y37tXT9" class="song-play" target="_blank">
-                <i class="fas fa-play"></i>
-              </a>
-            </div>
-            
-            <div class="song-item">
-              <div class="song-number">04</div>
-              <div class="song-info">
-                <div class="song-title">Hit 'Em Up</div>
-                <div class="song-album">Greatest Hits (1998)</div>
-              </div>
-              <div class="song-plays">720M</div>
-              <div class="song-duration">5:12</div>
-              <a href="https://open.spotify.com/track/3cXP2VW7QZNruKUZRAAeOx" class="song-play" target="_blank">
-                <i class="fas fa-play"></i>
-              </a>
-            </div>
-            
-            <div class="song-item">
-              <div class="song-number">05</div>
-              <div class="song-info">
-                <div class="song-title">Hail Mary</div>
-                <div class="song-album">The Don Killuminati (1996)</div>
-              </div>
-              <div class="song-plays">680M</div>
-              <div class="song-duration">5:12</div>
-              <a href="https://open.spotify.com/track/6DXFVsLcEvOTSrkG9G1Cb1" class="song-play" target="_blank">
-                <i class="fas fa-play"></i>
-              </a>
-            </div>
-            
-            <div class="song-item">
-              <div class="song-number">06</div>
-              <div class="song-info">
-                <div class="song-title">Ambitionz Az a Ridah</div>
-                <div class="song-album">All Eyez On Me (1996)</div>
-              </div>
-              <div class="song-plays">650M</div>
-              <div class="song-duration">4:39</div>
-              <a href="https://open.spotify.com/track/0PV1TFUMTBrDETzW6KQulB" class="song-play" target="_blank">
-                <i class="fas fa-play"></i>
-              </a>
-            </div>
-            
-            <div class="song-item">
-              <div class="song-number">07</div>
-              <div class="song-info">
-                <div class="song-title">All Eyez On Me</div>
-                <div class="song-album">All Eyez On Me (1996)</div>
-              </div>
-              <div class="song-plays">620M</div>
-              <div class="song-duration">5:08</div>
-              <a href="https://open.spotify.com/track/2mADwE7htRlYjYLcT0ukBk" class="song-play" target="_blank">
-                <i class="fas fa-play"></i>
-              </a>
-            </div>
-            
-            <div class="song-item">
-              <div class="song-number">08</div>
-              <div class="song-info">
-                <div class="song-title">Keep Ya Head Up</div>
-                <div class="song-album">Strictly 4 My N.I.G.G.A.Z... (1993)</div>
-              </div>
-              <div class="song-plays">580M</div>
-              <div class="song-duration">4:24</div>
-              <a href="https://open.spotify.com/track/3zdcQNzZfxPzTYEP3WGzqG" class="song-play" target="_blank">
-                <i class="fas fa-play"></i>
-              </a>
-            </div>
-            
-            <div class="song-item">
-              <div class="song-number">09</div>
-              <div class="song-info">
-                <div class="song-title">2 of Amerikaz Most Wanted</div>
-                <div class="song-album">All Eyez On Me (1996)</div>
-              </div>
-              <div class="song-plays">550M</div>
-              <div class="song-duration">4:07</div>
-              <a href="https://open.spotify.com/track/62vpOSh6dEygc8Vn4dJU2r" class="song-play" target="_blank">
-                <i class="fas fa-play"></i>
-              </a>
-            </div>
-            
-            <div class="song-item">
-              <div class="song-number">10</div>
-              <div class="song-info">
-                <div class="song-title">Life Goes On</div>
-                <div class="song-album">All Eyez On Me (1996)</div>
-              </div>
-              <div class="song-plays">520M</div>
-              <div class="song-duration">5:02</div>
-              <a href="https://open.spotify.com/track/63DTXKZy3UFK5fvCQHWYxj" class="song-play" target="_blank">
-                <i class="fas fa-play"></i>
-              </a>
             </div>
           </div>
           
-          <div class="top-songs-visual">
-            <div class="visual-header">
-              <h3>Reproducciones por Álbum</h3>
+          <!-- Vista de grid (tarjetas) -->
+          <div class="tps-songs-view tps-grid-view" id="tps-grid-view">
+            <div class="tps-songs-grid">
+              <!-- Canción 1 -->
+              <div class="tps-song-card" data-song="california-love">
+                <div class="tps-card-artwork">
+                  <img src="img/songs/california-love.jpg" alt="California Love" loading="lazy">
+                  <div class="tps-card-overlay">
+                    <button class="tps-card-play" data-preview="california-love">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="tps-card-info">
+                  <div class="tps-card-title">California Love</div>
+                  <div class="tps-card-artist">feat. Dr. Dre</div>
+                  <div class="tps-card-stats">
+                    <div class="tps-card-plays">1.2B plays</div>
+                    <div class="tps-card-year">1996</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Canción 2 -->
+              <div class="tps-song-card" data-song="changes">
+                <div class="tps-card-artwork">
+                  <img src="img/songs/changes.jpg" alt="Changes" loading="lazy">
+                  <div class="tps-card-overlay">
+                    <button class="tps-card-play" data-preview="changes">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="tps-card-info">
+                  <div class="tps-card-title">Changes</div>
+                  <div class="tps-card-artist">feat. Talent</div>
+                  <div class="tps-card-stats">
+                    <div class="tps-card-plays">980M plays</div>
+                    <div class="tps-card-year">1998</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Canción 3 -->
+              <div class="tps-song-card" data-song="dear-mama">
+                <div class="tps-card-artwork">
+                  <img src="img/songs/dear-mama.jpg" alt="Dear Mama" loading="lazy">
+                  <div class="tps-card-overlay">
+                    <button class="tps-card-play" data-preview="dear-mama">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="tps-card-info">
+                  <div class="tps-card-title">Dear Mama</div>
+                  <div class="tps-card-artist"></div>
+                  <div class="tps-card-stats">
+                    <div class="tps-card-plays">750M plays</div>
+                    <div class="tps-card-year">1995</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Canción 4 -->
+              <div class="tps-song-card" data-song="hit-em-up">
+                <div class="tps-card-artwork">
+                  <img src="img/songs/hit-em-up.jpg" alt="Hit 'Em Up" loading="lazy">
+                  <div class="tps-card-overlay">
+                    <button class="tps-card-play" data-preview="hit-em-up">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="tps-card-info">
+                  <div class="tps-card-title">Hit 'Em Up</div>
+                  <div class="tps-card-artist">feat. Outlawz</div>
+                  <div class="tps-card-stats">
+                    <div class="tps-card-plays">720M plays</div>
+                    <div class="tps-card-year">1998</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Canción 5 -->
+              <div class="tps-song-card" data-song="hail-mary">
+                <div class="tps-card-artwork">
+                  <img src="img/songs/hail-mary.jpg" alt="Hail Mary" loading="lazy">
+                  <div class="tps-card-overlay">
+                    <button class="tps-card-play" data-preview="hail-mary">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="tps-card-info">
+                  <div class="tps-card-title">Hail Mary</div>
+                  <div class="tps-card-artist">feat. Outlawz & Prince Ital Joe</div>
+                  <div class="tps-card-stats">
+                    <div class="tps-card-plays">680M plays</div>
+                    <div class="tps-card-year">1996</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="visual-chart">
-              <canvas id="albumsChart"></canvas>
+          </div>
+          
+          <!-- Vista de portadas (carrusel) -->
+          <div class="tps-songs-view tps-covers-view" id="tps-covers-view">
+            <div class="tps-album-carousel">
+              <div class="tps-carousel-container">
+                <div class="tps-carousel-track">
+                  <!-- Álbum 1 -->
+                  <div class="tps-album-slide">
+                    <div class="tps-album-cover">
+                      <img src="img/albums/all-eyez-on-me.jpg" alt="All Eyez On Me" loading="lazy">
+                      <div class="tps-album-overlay">
+                        <div class="tps-album-title">All Eyez On Me</div>
+                        <div class="tps-album-year">1996</div>
+                        <div class="tps-album-songs">5 canciones en el Top 10</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Álbum 2 -->
+                  <div class="tps-album-slide">
+                    <div class="tps-album-cover">
+                      <img src="img/albums/greatest-hits.jpg" alt="Greatest Hits" loading="lazy">
+                      <div class="tps-album-overlay">
+                        <div class="tps-album-title">Greatest Hits</div>
+                        <div class="tps-album-year">1998</div>
+                        <div class="tps-album-songs">2 canciones en el Top 10</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Álbum 3 -->
+                  <div class="tps-album-slide">
+                    <div class="tps-album-cover">
+                      <img src="img/albums/me-against-the-world.jpg" alt="Me Against the World" loading="lazy">
+                      <div class="tps-album-overlay">
+                        <div class="tps-album-title">Me Against the World</div>
+                        <div class="tps-album-year">1995</div>
+                        <div class="tps-album-songs">1 canción en el Top 10</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Controles del carrusel -->
+                <button class="tps-carousel-control tps-prev-control" aria-label="Anterior álbum">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="tps-carousel-control tps-next-control" aria-label="Siguiente álbum">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+              
+              <div class="tps-carousel-indicators">
+                <button class="tps-indicator tps-active" data-slide="0"></button>
+                <button class="tps-indicator" data-slide="1"></button>
+                <button class="tps-indicator" data-slide="2"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Reproductor de audio para previews -->
+        <div class="tps-audio-player" id="tps-audio-player">
+          <div class="tps-player-track">
+            <div class="tps-track-info">
+              <div class="tps-track-title" id="tps-player-title">No seleccionado</div>
+              <div class="tps-track-album" id="tps-player-album"></div>
+            </div>
+            <div class="tps-track-progress">
+              <div class="tps-progress-bar">
+                <div class="tps-progress-fill" id="tps-player-progress"></div>
+              </div>
+              <div class="tps-time-display">
+                <span id="tps-current-time">0:00</span> / <span id="tps-total-time">0:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="tps-player-controls">
+            <button class="tps-player-btn" id="tps-player-prev">
+              <i class="fas fa-step-backward"></i>
+            </button>
+            <button class="tps-player-btn tps-play-btn" id="tps-player-play">
+              <i class="fas fa-play"></i>
+            </button>
+            <button class="tps-player-btn" id="tps-player-next">
+              <i class="fas fa-step-forward"></i>
+            </button>
+            <div class="tps-volume-control">
+              <button class="tps-player-btn" id="tps-player-volume">
+                <i class="fas fa-volume-up"></i>
+              </button>
+              <div class="tps-volume-slider">
+                <input type="range" min="0" max="100" value="100" id="tps-volume-range">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+            <!-- Modal para detalles de canción -->
+            <div class="tps-song-modal" id="tps-song-modal">
+              <div class="tps-modal-content">
+                <button class="tps-modal-close" id="tps-modal-close">
+                  <i class="fas fa-times"></i>
+                </button>
+                <div class="tps-modal-body">
+                  <div class="tps-modal-artwork">
+                    <img id="tps-modal-image" src="/placeholder.svg" alt="Album Artwork">
+                  </div>
+                  <div class="tps-modal-info">
+                    <div class="tps-modal-title" id="tps-modal-title"></div>
+                    <div class="tps-modal-artist" id="tps-modal-artist"></div>
+                    <div class="tps-modal-album" id="tps-modal-album"></div>
+                    <div class="tps-modal-stats">
+                      <div class="tps-stat-item">
+                        <div class="tps-stat-value" id="tps-modal-plays"></div>
+                        <div class="tps-stat-label">Reproducciones</div>
+                      </div>
+                      <div class="tps-stat-item">
+                        <div class="tps-stat-value" id="tps-modal-duration"></div>
+                        <div class="tps-stat-label">Duración</div>
+                      </div>
+                      <div class="tps-stat-item">
+                        <div class="tps-stat-value" id="tps-modal-year"></div>
+                        <div class="tps-stat-label">Año</div>
+                      </div>
+                    </div>
+                    <div class="tps-modal-actions">
+                      <a href="#" class="tps-modal-action-btn tps-spotify-btn" id="tps-modal-spotify" target="_blank">
+                        <i class="fab fa-spotify"></i> Escuchar en Spotify
+                      </a>
+                      <a href="#" class="tps-modal-action-btn tps-youtube-btn" id="tps-modal-youtube" target="_blank">
+                        <i class="fab fa-youtube"></i> Ver en YouTube
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
     <!-- Colaboraciones -->
     <section class="disco-collaborations">
@@ -771,50 +1083,115 @@
       </div>
     </section>
 
-    <!-- Estudio Virtual 2Pac -->
+    <!-- Estudio Virtual 2Pac - Versión Moderna -->
     <section class="virtual-studio">
-      <div class="studio-bg-particles" id="studio-particles"></div>
+      <div class="studio-bg"></div>
+      <div class="studio-particles" id="studio-particles"></div>
+      
       <div class="container">
-        <h2 class="section-title-v2">Estudio Virtual</h2>
-        <div class="studio-subtitle">Mezcla, experimenta y crea con los sonidos de Tupac</div>
+        <div class="studio-header">
+          <h2 class="section-title-v2">Estudio Virtual</h2>
+          <div class="studio-subtitle">Mezcla, experimenta y crea con los sonidos de Tupac</div>
+        </div>
         
         <div class="studio-interface">
-          <div class="studio-controls">
-            <div class="studio-header">
+          <!-- Panel de control principal -->
+          <div class="studio-main-panel">
+            <div class="studio-branding">
               <div class="studio-logo">
                 <img src="img/logo.png" alt="2Pac Logo" class="logo">
               </div>
               <div class="studio-title">Death Row Records</div>
               <div class="studio-power">
-                <button class="power-btn" id="power-btn">
-                  <i class="fas fa-power-off"></i>
+                <button class="power-btn" id="power-btn" aria-label="Encender/Apagar">
+                  <span class="power-icon"></span>
                 </button>
-                <div class="power-indicator"></div>
               </div>
             </div>
             
-            <div class="mixer-container">
-              <div class="mixer-tracks">
-                <div class="mixer-track">
-                  <div class="track-info">
-                    <div class="track-name">Beats</div>
-                    <div class="track-source">All Eyez On Me</div>
-                  </div>
+            <!-- Visualizador principal -->
+            <div class="studio-visualizer">
+              <canvas id="main-visualizer"></canvas>
+              <div class="visualizer-overlay">
+                <div class="time-display">
+                  <span id="current-time">00:00</span> / <span id="total-time">00:00</span>
+                </div>
+              </div>
+              <div class="visualizer-modes">
+                <button class="viz-mode-btn active" data-mode="waveform" aria-label="Modo forma de onda">
+                  <i class="fas fa-wave-square"></i>
+                </button>
+                <button class="viz-mode-btn" data-mode="bars" aria-label="Modo barras">
+                  <i class="fas fa-chart-bar"></i>
+                </button>
+                <button class="viz-mode-btn" data-mode="circular" aria-label="Modo circular">
+                  <i class="fas fa-circle-notch"></i>
+                </button>
+              </div>
+            </div>
+            
+            <!-- Controles de transporte -->
+            <div class="transport-controls">
+              <button class="transport-btn" id="rewind-btn" aria-label="Retroceder">
+                <i class="fas fa-backward"></i>
+              </button>
+              <button class="transport-btn play-btn" id="play-btn" aria-label="Reproducir/Pausar">
+                <i class="fas fa-play"></i>
+              </button>
+              <button class="transport-btn" id="stop-btn" aria-label="Detener">
+                <i class="fas fa-stop"></i>
+              </button>
+              <button class="transport-btn" id="forward-btn" aria-label="Adelantar">
+                <i class="fas fa-forward"></i>
+              </button>
+              <button class="transport-btn record-btn" id="record-btn" aria-label="Grabar">
+                <i class="fas fa-circle"></i>
+              </button>
+            </div>
+            
+            <!-- Barra de progreso -->
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+                <div class="progress-handle" id="progress-handle"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Panel de mezcla -->
+          <div class="mixer-panel">
+            <div class="mixer-tracks">
+              <!-- Track 1: Beats -->
+              <div class="mixer-track" data-track="beat">
+                <div class="track-header">
+                  <div class="track-name">Beats</div>
                   <div class="track-controls">
-                    <div class="track-slider-container">
-                      <input type="range" min="0" max="100" value="70" class="track-slider" id="beat-volume">
-                    </div>
-                    <div class="track-buttons">
-                      <button class="track-btn mute-btn" data-track="beat">
-                        <i class="fas fa-volume-mute"></i>
-                      </button>
-                      <button class="track-btn solo-btn" data-track="beat">
-                        <i class="fas fa-headphones"></i>
-                      </button>
-                    </div>
+                    <button class="track-btn mute-btn" data-track="beat" aria-label="Silenciar beats">
+                      <i class="fas fa-volume-mute"></i>
+                    </button>
+                    <button class="track-btn solo-btn" data-track="beat" aria-label="Solo beats">
+                      <i class="fas fa-headphones"></i>
+                    </button>
                   </div>
+                </div>
+                
+                <div class="track-body">
+                  <div class="track-meter">
+                    <div class="meter-fill" id="beat-meter"></div>
+                  </div>
+                  
+                  <div class="track-fader">
+                    <input type="range" min="0" max="100" value="70" class="fader" id="beat-volume" aria-label="Volumen de beats">
+                    <div class="fader-value" id="beat-volume-value">70%</div>
+                  </div>
+                  
+                  <div class="track-pan">
+                    <input type="range" min="-100" max="100" value="0" class="pan-slider" id="beat-pan" aria-label="Panorámica de beats">
+                    <div class="pan-value" id="beat-pan-value">C</div>
+                  </div>
+                  
                   <div class="track-selector">
-                    <select id="beat-selector" class="audio-selector">
+                    <select id="beat-selector" class="audio-selector" aria-label="Seleccionar beat">
                       <option value="ambitionz">Ambitionz Az a Ridah</option>
                       <option value="california">California Love</option>
                       <option value="hitmup">Hit 'Em Up</option>
@@ -822,27 +1199,39 @@
                     </select>
                   </div>
                 </div>
-                
-                <div class="mixer-track">
-                  <div class="track-info">
-                    <div class="track-name">Voces</div>
-                    <div class="track-source">Acapellas</div>
-                  </div>
+              </div>
+              
+              <!-- Track 2: Voces -->
+              <div class="mixer-track" data-track="vocal">
+                <div class="track-header">
+                  <div class="track-name">Voces</div>
                   <div class="track-controls">
-                    <div class="track-slider-container">
-                      <input type="range" min="0" max="100" value="80" class="track-slider" id="vocal-volume">
-                    </div>
-                    <div class="track-buttons">
-                      <button class="track-btn mute-btn" data-track="vocal">
-                        <i class="fas fa-volume-mute"></i>
-                      </button>
-                      <button class="track-btn solo-btn" data-track="vocal">
-                        <i class="fas fa-headphones"></i>
-                      </button>
-                    </div>
+                    <button class="track-btn mute-btn" data-track="vocal" aria-label="Silenciar voces">
+                      <i class="fas fa-volume-mute"></i>
+                    </button>
+                    <button class="track-btn solo-btn" data-track="vocal" aria-label="Solo voces">
+                      <i class="fas fa-headphones"></i>
+                    </button>
                   </div>
+                </div>
+                
+                <div class="track-body">
+                  <div class="track-meter">
+                    <div class="meter-fill" id="vocal-meter"></div>
+                  </div>
+                  
+                  <div class="track-fader">
+                    <input type="range" min="0" max="100" value="80" class="fader" id="vocal-volume" aria-label="Volumen de voces">
+                    <div class="fader-value" id="vocal-volume-value">80%</div>
+                  </div>
+                  
+                  <div class="track-pan">
+                    <input type="range" min="-100" max="100" value="0" class="pan-slider" id="vocal-pan" aria-label="Panorámica de voces">
+                    <div class="pan-value" id="vocal-pan-value">C</div>
+                  </div>
+                  
                   <div class="track-selector">
-                    <select id="vocal-selector" class="audio-selector">
+                    <select id="vocal-selector" class="audio-selector" aria-label="Seleccionar voz">
                       <option value="ambitionz">Ambitionz Az a Ridah</option>
                       <option value="california">California Love</option>
                       <option value="changes">Changes</option>
@@ -850,27 +1239,39 @@
                     </select>
                   </div>
                 </div>
-                
-                <div class="mixer-track">
-                  <div class="track-info">
-                    <div class="track-name">Samples</div>
-                    <div class="track-source">Elementos</div>
-                  </div>
+              </div>
+              
+              <!-- Track 3: Samples -->
+              <div class="mixer-track" data-track="sample">
+                <div class="track-header">
+                  <div class="track-name">Samples</div>
                   <div class="track-controls">
-                    <div class="track-slider-container">
-                      <input type="range" min="0" max="100" value="50" class="track-slider" id="sample-volume">
-                    </div>
-                    <div class="track-buttons">
-                      <button class="track-btn mute-btn" data-track="sample">
-                        <i class="fas fa-volume-mute"></i>
-                      </button>
-                      <button class="track-btn solo-btn" data-track="sample">
-                        <i class="fas fa-headphones"></i>
-                      </button>
-                    </div>
+                    <button class="track-btn mute-btn" data-track="sample" aria-label="Silenciar samples">
+                      <i class="fas fa-volume-mute"></i>
+                    </button>
+                    <button class="track-btn solo-btn" data-track="sample" aria-label="Solo samples">
+                      <i class="fas fa-headphones"></i>
+                    </button>
                   </div>
+                </div>
+                
+                <div class="track-body">
+                  <div class="track-meter">
+                    <div class="meter-fill" id="sample-meter"></div>
+                  </div>
+                  
+                  <div class="track-fader">
+                    <input type="range" min="0" max="100" value="50" class="fader" id="sample-volume" aria-label="Volumen de samples">
+                    <div class="fader-value" id="sample-volume-value">50%</div>
+                  </div>
+                  
+                  <div class="track-pan">
+                    <input type="range" min="-100" max="100" value="0" class="pan-slider" id="sample-pan" aria-label="Panorámica de samples">
+                    <div class="pan-value" id="sample-pan-value">C</div>
+                  </div>
+                  
                   <div class="track-selector">
-                    <select id="sample-selector" class="audio-selector">
+                    <select id="sample-selector" class="audio-selector" aria-label="Seleccionar sample">
                       <option value="piano">Piano Melódico</option>
                       <option value="strings">Cuerdas</option>
                       <option value="drums">Percusión Adicional</option>
@@ -880,165 +1281,244 @@
                 </div>
               </div>
               
-              <div class="mixer-master">
-                <div class="master-label">Master</div>
-                <div class="master-slider-container">
-                  <input type="range" min="0" max="100" value="75" class="master-slider" id="master-volume" orient="vertical">
-                </div>
-                <div class="master-controls">
-                  <button class="master-btn play-btn" id="play-btn">
-                    <i class="fas fa-play"></i>
-                  </button>
-                  <button class="master-btn stop-btn" id="stop-btn">
-                    <i class="fas fa-stop"></i>
-                  </button>
-                  <button class="master-btn record-btn" id="record-btn">
-                    <i class="fas fa-circle"></i>
-                  </button>
-                </div>
-                <div class="tempo-control">
-                  <div class="tempo-label">Tempo</div>
-                  <div class="tempo-value" id="tempo-value">90 BPM</div>
-                  <input type="range" min="60" max="120" value="90" class="tempo-slider" id="tempo-slider">
-                </div>
-              </div>
-            </div>
-            
-            <div class="effects-rack">
-              <div class="effect-unit">
-                <div class="effect-name">Reverb</div>
-                <div class="effect-knobs">
-                  <div class="effect-knob">
-                    <div class="knob" id="reverb-size-knob"></div>
-                    <div class="knob-label">Size</div>
-                  </div>
-                  <div class="effect-knob">
-                    <div class="knob" id="reverb-decay-knob"></div>
-                    <div class="knob-label">Decay</div>
+              <!-- Master Track -->
+              <div class="mixer-track master-track">
+                <div class="track-header">
+                  <div class="track-name">Master</div>
+                  <div class="track-controls">
+                    <button class="track-btn master-btn" id="master-mute" aria-label="Silenciar master">
+                      <i class="fas fa-volume-mute"></i>
+                    </button>
                   </div>
                 </div>
-                <div class="effect-switch">
-                  <label class="switch">
-                    <input type="checkbox" id="reverb-switch">
-                    <span class="slider round"></span>
-                  </label>
-                </div>
-              </div>
-              
-              <div class="effect-unit">
-                <div class="effect-name">Delay</div>
-                <div class="effect-knobs">
-                  <div class="effect-knob">
-                    <div class="knob" id="delay-time-knob"></div>
-                    <div class="knob-label">Time</div>
+                
+                <div class="track-body">
+                  <div class="track-meter master-meter">
+                    <div class="meter-fill-l" id="master-meter-l"></div>
+                    <div class="meter-fill-r" id="master-meter-r"></div>
                   </div>
-                  <div class="effect-knob">
-                    <div class="knob" id="delay-feedback-knob"></div>
-                    <div class="knob-label">Feedback</div>
+                  
+                  <div class="track-fader master-fader">
+                    <input type="range" min="0" max="100" value="75" class="fader" id="master-volume" aria-label="Volumen master">
+                    <div class="fader-value" id="master-volume-value">75%</div>
                   </div>
-                </div>
-                <div class="effect-switch">
-                  <label class="switch">
-                    <input type="checkbox" id="delay-switch">
-                    <span class="slider round"></span>
-                  </label>
-                </div>
-              </div>
-              
-              <div class="effect-unit">
-                <div class="effect-name">Filter</div>
-                <div class="effect-knobs">
-                  <div class="effect-knob">
-                    <div class="knob" id="filter-freq-knob"></div>
-                    <div class="knob-label">Freq</div>
+                  
+                  <div class="tempo-control">
+                    <div class="tempo-label">Tempo</div>
+                    <div class="tempo-value" id="tempo-value">90 BPM</div>
+                    <input type="range" min="60" max="120" value="90" class="tempo-slider" id="tempo-slider" aria-label="Ajustar tempo">
                   </div>
-                  <div class="effect-knob">
-                    <div class="knob" id="filter-res-knob"></div>
-                    <div class="knob-label">Res</div>
-                  </div>
-                </div>
-                <div class="effect-switch">
-                  <label class="switch">
-                    <input type="checkbox" id="filter-switch">
-                    <span class="slider round"></span>
-                  </label>
                 </div>
               </div>
             </div>
           </div>
           
-          <div class="studio-visualizer">
-            <div class="visualizer-container">
-              <canvas id="waveform-canvas"></canvas>
-              <canvas id="spectrum-canvas"></canvas>
+          <!-- Panel de efectos -->
+          <div class="effects-panel">
+            <div class="effects-header">
+              <h3>Efectos</h3>
             </div>
-            <div class="visualizer-controls">
-              <button class="viz-btn active" data-viz="waveform">
-                <i class="fas fa-wave-square"></i> Forma de onda
-              </button>
-              <button class="viz-btn" data-viz="spectrum">
-                <i class="fas fa-chart-bar"></i> Espectro
-              </button>
+            
+            <div class="effects-rack">
+              <!-- Efecto: Reverb -->
+              <div class="effect-unit">
+                <div class="effect-header">
+                  <div class="effect-name">Reverb</div>
+                  <div class="effect-switch">
+                    <label class="switch">
+                      <input type="checkbox" id="reverb-switch">
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                </div>
+                
+                <div class="effect-body">
+                  <div class="effect-knob-container">
+                    <div class="effect-knob" id="reverb-size-knob">
+                      <div class="knob-dot"></div>
+                    </div>
+                    <div class="knob-label">Size</div>
+                    <div class="knob-value" id="reverb-size-value">50%</div>
+                  </div>
+                  
+                  <div class="effect-knob-container">
+                    <div class="effect-knob" id="reverb-decay-knob">
+                      <div class="knob-dot"></div>
+                    </div>
+                    <div class="knob-label">Decay</div>
+                    <div class="knob-value" id="reverb-decay-value">50%</div>
+                  </div>
+                  
+                  <div class="effect-knob-container">
+                    <div class="effect-knob" id="reverb-mix-knob">
+                      <div class="knob-dot"></div>
+                    </div>
+                    <div class="knob-label">Mix</div>
+                    <div class="knob-value" id="reverb-mix-value">50%</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Efecto: Delay -->
+              <div class="effect-unit">
+                <div class="effect-header">
+                  <div class="effect-name">Delay</div>
+                  <div class="effect-switch">
+                    <label class="switch">
+                      <input type="checkbox" id="delay-switch">
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                </div>
+                
+                <div class="effect-body">
+                  <div class="effect-knob-container">
+                    <div class="effect-knob" id="delay-time-knob">
+                      <div class="knob-dot"></div>
+                    </div>
+                    <div class="knob-label">Time</div>
+                    <div class="knob-value" id="delay-time-value">50%</div>
+                  </div>
+                  
+                  <div class="effect-knob-container">
+                    <div class="effect-knob" id="delay-feedback-knob">
+                      <div class="knob-dot"></div>
+                    </div>
+                    <div class="knob-label">Feedback</div>
+                    <div class="knob-value" id="delay-feedback-value">50%</div>
+                  </div>
+                  
+                  <div class="effect-knob-container">
+                    <div class="effect-knob" id="delay-mix-knob">
+                      <div class="knob-dot"></div>
+                    </div>
+                    <div class="knob-label">Mix</div>
+                    <div class="knob-value" id="delay-mix-value">50%</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Efecto: Filter -->
+              <div class="effect-unit">
+                <div class="effect-header">
+                  <div class="effect-name">Filter</div>
+                  <div class="effect-switch">
+                    <label class="switch">
+                      <input type="checkbox" id="filter-switch">
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                </div>
+                
+                <div class="effect-body">
+                  <div class="effect-knob-container">
+                    <div class="effect-knob" id="filter-freq-knob">
+                      <div class="knob-dot"></div>
+                    </div>
+                    <div class="knob-label">Freq</div>
+                    <div class="knob-value" id="filter-freq-value">50%</div>
+                  </div>
+                  
+                  <div class="effect-knob-container">
+                    <div class="effect-knob" id="filter-res-knob">
+                      <div class="knob-dot"></div>
+                    </div>
+                    <div class="knob-label">Res</div>
+                    <div class="knob-value" id="filter-res-value">50%</div>
+                  </div>
+                  
+                  <div class="effect-knob-container">
+                    <div class="effect-knob" id="filter-type-knob">
+                      <div class="knob-dot"></div>
+                    </div>
+                    <div class="knob-label">Type</div>
+                    <div class="knob-value" id="filter-type-value">LP</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         
-        <div class="studio-presets">
-          <div class="presets-title">Presets</div>
-          <div class="presets-grid">
-            <div class="preset-item" data-preset="classic">
-              <div class="preset-icon">
-                <i class="fas fa-star"></i>
-              </div>
-              <div class="preset-name">Clásico West Coast</div>
+        <!-- Presets y creaciones -->
+        <div class="studio-bottom-panel">
+          <div class="presets-section">
+            <div class="section-header">
+              <h3>Presets</h3>
             </div>
-            <div class="preset-item" data-preset="emotional">
-              <div class="preset-icon">
-                <i class="fas fa-heart"></i>
+            
+            <div class="presets-grid">
+              <div class="preset-item" data-preset="classic">
+                <div class="preset-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="preset-name">Clásico West Coast</div>
               </div>
-              <div class="preset-name">Emocional</div>
+              
+              <div class="preset-item" data-preset="emotional">
+                <div class="preset-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <div class="preset-name">Emocional</div>
+              </div>
+              
+              <div class="preset-item" data-preset="aggressive">
+                <div class="preset-icon">
+                  <i class="fas fa-fire"></i>
+                </div>
+                <div class="preset-name">Agresivo</div>
+              </div>
+              
+              <div class="preset-item" data-preset="modern">
+                <div class="preset-icon">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <div class="preset-name">Moderno</div>
+              </div>
             </div>
-            <div class="preset-item" data-preset="aggressive">
-              <div class="preset-icon">
-                <i class="fas fa-fire"></i>
-              </div>
-              <div class="preset-name">Agresivo</div>
+          </div>
+          
+          <div class="creations-section">
+            <div class="section-header">
+              <h3>Tus Creaciones</h3>
             </div>
-            <div class="preset-item" data-preset="modern">
-              <div class="preset-icon">
-                <i class="fas fa-bolt"></i>
+            
+            <div class="creations-container">
+              <div class="creations-empty" id="creations-empty">
+                <div class="empty-icon">
+                  <i class="fas fa-music"></i>
+                </div>
+                <div class="empty-text">Tus mezclas aparecerán aquí</div>
+                <div class="empty-subtext">Presiona el botón de grabación para empezar</div>
               </div>
-              <div class="preset-name">Moderno</div>
+              
+              <div class="creations-list" id="creations-list">
+                <!-- Las creaciones se añadirán dinámicamente aquí -->
+              </div>
             </div>
           </div>
         </div>
         
-        <div class="studio-creations">
-          <div class="creations-title">Tus Creaciones</div>
-          <div class="creations-empty" id="creations-empty">
-            <div class="empty-icon">
-              <i class="fas fa-music"></i>
-            </div>
-            <div class="empty-text">Tus mezclas aparecerán aquí</div>
-            <div class="empty-subtext">Presiona el botón de grabación para empezar</div>
-          </div>
-          <div class="creations-list" id="creations-list">
-            <!-- Las creaciones se añadirán dinámicamente aquí -->
-          </div>
-        </div>
-        
+        <!-- Información del estudio -->
         <div class="studio-info">
-          <div class="info-title">Sobre el Estudio Virtual</div>
-          <div class="info-text">
-            <p>Este estudio virtual te permite experimentar con los elementos musicales de las canciones más icónicas de Tupac Shakur. Mezcla beats, voces y samples, ajusta efectos y crea tus propias versiones.</p>
-            <p>Inspirado en los estudios de grabación donde Tupac creó su música legendaria, esta herramienta te acerca a su proceso creativo y te permite apreciar la complejidad de sus composiciones.</p>
+          <div class="info-toggle" id="info-toggle">
+            <i class="fas fa-info-circle"></i> Sobre el Estudio Virtual
           </div>
-          <div class="info-disclaimer">
-            <p>Nota: Este estudio virtual utiliza recreaciones y samples inspirados en la música de Tupac con fines educativos y de homenaje. Todas las creaciones son para uso personal.</p>
+          
+          <div class="info-content" id="info-content">
+            <div class="info-text">
+              <p>Este estudio virtual te permite experimentar con los elementos musicales de las canciones más icónicas de Tupac Shakur. Mezcla beats, voces y samples, ajusta efectos y crea tus propias versiones.</p>
+              <p>Inspirado en los estudios de grabación donde Tupac creó su música legendaria, esta herramienta te acerca a su proceso creativo y te permite apreciar la complejidad de sus composiciones.</p>
+            </div>
+            
+            <div class="info-disclaimer">
+              <p>Nota: Este estudio virtual utiliza recreaciones y samples inspirados en la música de Tupac con fines educativos y de homenaje. Todas las creaciones son para uso personal.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
 
     <!-- Slider de frases célebres -->
     <section class="frases-inmersivas">
@@ -1131,6 +1611,9 @@
     </div>
   </footer>
   <script src="menu.js"></script>
+  <script src="discografia.js"></script>
+  <script src="top-song.js"></script>
+  <script src="song.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
