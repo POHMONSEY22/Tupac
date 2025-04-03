@@ -67,7 +67,7 @@ Este tributo no es solo un sitio web, es un viaje visual, sonoro y emocional a t
 
 ## 🖤 Homenaje  
 
-🎨 **Diseñado & desarrollado por:** [Tu Nombre o Usuario](https://github.com/TUUSUARIO)  
+🎨 **Diseñado & desarrollado por:** [POHMONSET22](https://github.com/POHMONSEY22)  
 🎵 **Inspirado en:** El alma y la revolución de **Tupac Shakur**.  
 
 <p align="center">
